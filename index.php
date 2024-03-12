@@ -20,6 +20,7 @@
       crossorigin="anonymous"
     ></script>
     <title>DOGETHER</title>
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
   </head>
   <body>
 
