@@ -1,0 +1,107 @@
+#section-1 {
+  width: 100%;
+  height: calc(100vh - 100px);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right center;
+  background-image: url("../images/main-img.svg");
+}
+/* 메인 컨테이너 */
+.section-1-container {
+  width: 100%;
+  height: 100%;
+  max-width: 1280px;
+  padding: 0 1rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  word-break: keep-all;
+}
+/* 메인 설명 */
+.section-1-container .sectiion-1-main-text {
+  width: 100%;
+  z-index: 99;
+  font-size: 1.5rem;
+  text-align: start;
+}
+/* LET'S DOGETHER */
+.section-1-container p:nth-child(1) {
+  font-size: 6rem;
+  transition: var(--font-transition);
+  font-weight: bold;
+  color: #14471e;
+  margin-bottom: 20px;
+  font-family: "yg-jalnan";
+}
+.section-1-container p:nth-child(2) {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.section-1-container P:nth-child(2) b {
+  font-size: 2rem;
+  transition: var(--font-transition);
+  color: #f0a646;
+}
+.section-1-container p:nth-child(3) {
+  font-size: 0.9rem;
+  color: gray;
+  transition: var(--font-transition);
+}
+/* 버튼 */
+.section-2-move {
+  margin: 1.5rem 0;
+}
+.section-2-move a {
+  display: block;
+  padding: 1rem 1.5rem;
+  width: fit-content;
+  background-color: #14471e;
+  color: #fff;
+  border-radius: 1rem;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .section-1-container p:nth-child(1) {
+    font-size: 4rem;
+  }
+  #section-1 {
+    background-position: bottom center;
+  }
+}
+@media screen and (max-width: 640px) {
+  .section-1-container .sectiion-1-main-text {
+    font-size: 1.25rem;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center; */
+  }
+  .section-1-container P:nth-child(1) {
+    font-size: 3.8rem;
+  }
+  .section-1-container p:nth-child(2) {
+    font-size: 1.2rem;
+  }
+  /* 주황글씨 부분 */
+  .section-1-container P:nth-child(2) b {
+    font-size: 1.5rem;
+  }
+  .section-1-container p:nth-child(3) {
+    font-size: 0.9rem;
+  }
+  .section-1-container {
+    height: 70%;
+  }
+  .section-1-container {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+  }
+  #section-1 {
+    background-size: 150%;
+    background-position: 120% 100%;
+  }
+}

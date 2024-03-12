@@ -1,0 +1,103 @@
+/* 섹션-2*/
+#section-2 {
+  width: 100%;
+  /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+  background: url("../images/graydog.png");
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  margin-top: 100px;
+}
+
+.section-2-container {
+  width: 100%;
+  /* height: 100%; */
+  max-width: 1280px;
+  margin: 100px auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
+}
+.section-2-main-text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 4.5rem;
+  font-family: "yg-jalnan";
+  text-align: center;
+  padding: 0 1rem;
+  transition: opacity 1s ease;
+}
+.section-2-main-text p:nth-child(2) {
+  font-size: 2rem;
+  color: #ee9b01;
+}
+
+.listbox {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  word-break: keep-all;
+}
+
+.section-2-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+.section-2-list div {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  height: 150px;
+}
+
+.section-2-list i {
+  color: #ee9b01;
+  font-size: 1.8rem;
+}
+
+.sub-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.sub-text {
+  font-size: 1.1rem;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .section-2-container {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .section-2-main-text {
+    width: 100%;
+    margin-bottom: 100px;
+  }
+  .section-2-list {
+    width: 100%;
+  }
+  .listbox {
+    width: 100%;
+  }
+  .section-2-main-text p {
+    font-size: 3rem;
+  }
+  .section-2-list div {
+    text-align: center;
+    margin-bottom: 30px;
+    height: 160px
+
+  }
+  .sub-title {
+    font-size: 1.8rem;
+  }
+}
