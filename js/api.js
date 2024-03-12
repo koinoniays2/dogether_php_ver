@@ -661,7 +661,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // 병원&약국 데이터
   const hospitalData = () => {
-    fetch("http://dogether.dothome.co.kr/dogether/json/cafe.json")
+    fetch("../json/cafe.json")
       .then((response) => response.json())
       .then((data) => {
         let hospital = [];
@@ -728,7 +728,7 @@ document.addEventListener("DOMContentLoaded", function () {
   };
   // 페이지 데이터 요청 함수
   const requesthospitalPage = (page) => {
-    fetch("http://dogether.dothome.co.kr/dogether/json/cafe.json")
+    fetch("../json/cafe.json")
       .then((response) => response.json())
       .then((data) => {
         let hospital = [];
