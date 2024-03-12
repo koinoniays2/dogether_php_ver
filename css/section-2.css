@@ -20,7 +20,7 @@
   /* height: 100%; */
   max-width: 1280px;
   margin: 100px auto;
-  padding: 0 1rem;
+  /* padding: 0 1rem; */
   display: flex;
   justify-content: space-between;
   z-index: 100;
@@ -29,7 +29,7 @@
   width: 50%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   font-size: 4.5rem;
   font-family: "yg-jalnan";
