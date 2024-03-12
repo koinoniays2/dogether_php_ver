@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/index.css" type="text/css" />
     <link rel="stylesheet" href="css/header.css" type="text/css" />
     <link rel="stylesheet" href="css/footer.css" type="text/css" />
-
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
     <script
       type="text/javascript"
       src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c4bae9c95198a725f932a1e32a9cad1f&libraries=services"

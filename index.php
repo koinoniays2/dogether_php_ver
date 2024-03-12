@@ -24,8 +24,13 @@
     <title>DOGETHER</title>
     <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
   </head>
+  <style>
+    <?php $cursorImage = "images/cursor.png";
+    $hoverCursorImage = "images/hoverCursor.png";
+    echo "html { cursor: url($cursorImage), auto; }";
+    echo "a { cursor: url($hoverCursorImage), auto; }"; ?>
+  </style>
   <body>
-
     <!-- 헤더 -->
     <header id="header">
         <?php include "header.php";?>

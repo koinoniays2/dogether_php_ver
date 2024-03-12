@@ -12,9 +12,12 @@
   justify-content: space-between;
   align-items: center;
 }
+<<<<<<< HEAD
+=======
 #check_box {
   display: none;
 }
+>>>>>>> 20a0ee4c714ae57c75238286271acad4e63ee6e8
 
 #logo img {
   width: 4rem;
@@ -36,6 +39,8 @@
 }
 
 #check_box {
+<<<<<<< HEAD
+=======
   display: none;
 }
 
@@ -44,8 +49,18 @@
 }
 
 label {
+>>>>>>> 20a0ee4c714ae57c75238286271acad4e63ee6e8
   display: none;
 }
+
+label {
+  display: none;
+}
+
+#side_menu {
+  display: none;
+}
+
 
 @media screen and (max-width: 768px) {
   #menu {

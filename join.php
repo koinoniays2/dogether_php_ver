@@ -10,9 +10,11 @@
     <link rel="stylesheet" href="css/index.css" type="text/css" />
     <link rel="stylesheet" href="css/header.css" type="text/css" />
     <link rel="stylesheet" href="css/login_form.css" type="text/css" />
+    <link rel="stylesheet" href="css/join.css" type="text/css" />
+
     <!-- 제이쿼리 -->
     <script src="js/jquery-3.7.1.min.js"></script>
-    <title>로그인</title>
+    <title>회원가입</title>
 </head>
 <body>
     <header id="header">
@@ -29,30 +31,16 @@
                         <!-- name=폼 제출시 요소의 값 식별, action=데이터를 전송 할 URL -->
                         <ul>
                             <li><input type="text" id="id" name="id" placeholder="아이디" /></li>
-                            <li><input type="password" id="password" name="password" placeholder="비밀번호" />
-                            <span class="error-text"></span>
-                            </li>
+                            <li><input type="password" id="password" name="password" placeholder="비밀번호" /></li>
+                            <li><input type="password" id="passwordCheck" name="passwordCheck" placeholder="비밀번호 확인" /></li>
+                            <li><input type="text" id="phoneNum" name="password" placeholder="'-'없이 전화번호를 입력해주세요." /></li>
                         </ul>
+                        <div id="error_text">
+                        </div>
                         <div id="login_btn">
-                            로그인
+                            회원가입
                         </div>
                     </form>
-                </div>
-                <div id="login_option">
-                    <p>아이디 찾기</p>
-                    <p>비밀번호 찾기</p>
-                    <p>회원가입</p>
-                </div>
-                <div id="login_social"> 
-                    <div>
-                        <img src="images/카카오톡.png" alt="카카오톡" />
-                    </div>
-                    <div>
-                        <img src="images/구글.png" alt="구글" />
-                    </div>
-                    <div>
-                        <img src="images/네이버.png" alt="네이버" />
-                    </div>
                 </div>
         </section>
     </main>

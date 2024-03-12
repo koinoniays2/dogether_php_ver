@@ -124,11 +124,11 @@ document.addEventListener("DOMContentLoaded", function () {
       textDiv.classList.add("detailList");
       category.textContent = item.title;
       address.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center;"><img src="./images/map.png" alt="" />주소</p>${item.address}`;
-      tel.innerHTML = `<p style="font-size: 1.5rem;">전화번호</p>${item.tel}`;
+      tel.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center;"><img src="./images/emergency-call.png" alt="" />전화번호</p>${item.tel}`;
       sales.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center;"><img src="./images/open.png" alt="" />영업시간</p>${
         item.operatingTime ? item.operatingTime.replace(/-/g, "~") : ""
       }`;
-      date.innerHTML = `<p style="font-size: 1.5rem;">기타정보</p>${item.information.replace(
+      date.innerHTML = `<p style="font-size: 1.5rem;display: flex; align-items: center;"><img src="./images/collection.png" alt="" />기타정보</p>${item.information.replace(
         /\|/g,
         "/"
       )}`;
@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // 카페 데이터
   // 페이지네이션
   const cafeData = () => {
-    fetch("http://dogether.dothome.co.kr/dogether/json/cafe.json")
+    fetch("http://localhost/dogether_php_ver/json/cafe.json")
       .then((response) => response.json())
       .then((data) => {
         let cafe = [];
@@ -214,7 +214,7 @@ document.addEventListener("DOMContentLoaded", function () {
   };
   // 페이지 데이터 요청 함수
   const requestPage = (page) => {
-    fetch("http://dogether.dothome.co.kr/dogether/json/cafe.json")
+    fetch("http://localhost/dogether_php_ver/json/cafe.json")
       .then((response) => response.json())
       .then((data) => {
         let cafe = [];
@@ -257,9 +257,9 @@ document.addEventListener("DOMContentLoaded", function () {
       textDiv.classList.add("detailList");
 
       name.textContent = item.FCLTY_NM;
-      type.innerHTML = `<p style="font-size: 1.5rem;">종류</p> ${item.FCLTY_INFO_DC}`;
+      type.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center;"><img src="./images/animal_cafe.png" alt="" />종류</p> ${item.FCLTY_INFO_DC}`;
       address.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center;"><img src="./images/map.png" alt="" />주소</p> ${item.LNM_ADDR}`;
-      facility.innerHTML = `<p style="font-size: 1.5rem;">시설정보설명</p> ${item.FCLTY_INFO_DC}`;
+      facility.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center;"><img src="./images/collection.png" alt="" />시설정보설명</p> ${item.FCLTY_INFO_DC}`;
       open.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center;"><img src="./images/open.png" alt="" />영업시간</p> ${item.OPER_TIME}`;
       closed.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center; "><img src="./images/closed.png" alt="" />휴무일</p> ${item.RSTDE_GUID_CN}`;
 
@@ -279,7 +279,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // 숙소 데이터
   const hotelData = () => {
-    fetch("http://dogether.dothome.co.kr/dogether/json/hotel.json")
+    fetch("http://localhost/dogether_php_ver/json/hotel.json")
       .then((response) => response.json())
       .then((data) => {
         let petOk = [];
@@ -345,7 +345,7 @@ document.addEventListener("DOMContentLoaded", function () {
   };
   // 페이지 데이터 요청 함수
   const requestPage1 = (page) => {
-    fetch("http://dogether.dothome.co.kr/dogether/json/hotel.json")
+    fetch("http://localhost/dogether_php_ver/json/hotel.json")
       .then((response) => response.json())
       .then((data) => {
         let petOk = [];
@@ -385,8 +385,8 @@ document.addEventListener("DOMContentLoaded", function () {
       textDiv.classList.add("detailList");
 
       name.textContent = item.ldgs_nm;
-      address.innerHTML = `<p style="font-size: 1.5rem; ">주소</p> ${item.ldgs_addr}`;
-      date.innerHTML = `<p style="font-size: 1.5rem;">기타정보</p> ${item.pet_info_cn}`;
+      address.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center;"><img src="./images/map.png" alt="" />주소</p> ${item.ldgs_addr}`;
+      date.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center;"><img src="./images/collection.png" alt="" />기타정보</p> ${item.pet_info_cn}`;
       wrapperDiv.appendChild(name);
 
       textDiv.appendChild(address);
@@ -401,7 +401,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // 미술관 데이터
   const galleryData = () => {
-    fetch("http://dogether.dothome.co.kr/dogether/json/cafe.json")
+    fetch("http://localhost/dogether_php_ver/json/cafe.json")
       .then((response) => response.json())
       .then((data) => {
         let gallery = [];
@@ -466,7 +466,7 @@ document.addEventListener("DOMContentLoaded", function () {
   };
   // 페이지 데이터 요청 함수
   const requestPage2 = (page) => {
-    fetch("http://dogether.dothome.co.kr/dogether/json/cafe.json")
+    fetch("http://localhost/dogether_php_ver/json/cafe.json")
       .then((response) => response.json())
       .then((data) => {
         let gallery = [];
@@ -508,9 +508,9 @@ document.addEventListener("DOMContentLoaded", function () {
       wrapperDiv.classList.add("detailtitle");
       textDiv.classList.add("detailList");
       name.textContent = item.FCLTY_NM;
-      type.innerHTML = `<p style="font-size: 1.5rem;">종류</p> ${item.FCLTY_INFO_DC}`;
+      type.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center;"><img src="./images/art-gallery.png" alt="" />종류</p> ${item.FCLTY_INFO_DC}`;
       address.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center;"><img src="./images/map.png" alt="" />주소</p> ${item.LNM_ADDR}`;
-      facility.innerHTML = `<p style="font-size: 1.5rem; ">시설정보설명</p> ${item.FCLTY_INFO_DC}`;
+      facility.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center;"><img src="./images/collection.png" alt="" />시설정보설명</p> ${item.FCLTY_INFO_DC}`;
       open.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center;"><img src="./images/open.png" alt="" />영업시간</p> ${item.OPER_TIME}`;
       closed.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center; "><img src="./images/closed.png" alt="" />휴무일</p> ${item.RSTDE_GUID_CN}`;
       // date.textContent = `<p style="font-size: 1.5rem; ">기타정보</p> ${item.pet_info_cn}`;
@@ -530,7 +530,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // 병원&약국 데이터
   const hairData = () => {
-    fetch("http://dogether.dothome.co.kr/dogether/json/cafe.json")
+    fetch("http://localhost/dogether_php_ver/json/cafe.json")
       .then((response) => response.json())
       .then((data) => {
         let hair = [];
@@ -597,7 +597,7 @@ document.addEventListener("DOMContentLoaded", function () {
   };
   // 페이지 데이터 요청 함수
   const requesthairPage = (page) => {
-    fetch("http://dogether.dothome.co.kr/dogether/json/cafe.json")
+    fetch("http://localhost/dogether_php_ver/json/cafe.json")
       .then((response) => response.json())
       .then((data) => {
         let hair = [];
@@ -639,9 +639,9 @@ document.addEventListener("DOMContentLoaded", function () {
       wrapperDiv.classList.add("detailtitle");
       textDiv.classList.add("detailList");
       name.textContent = item.FCLTY_NM;
-      type.innerHTML = `<p class="title" style="font-size: 1.5rem; ">종류</p> ${item.FCLTY_INFO_DC}`;
+      type.innerHTML = `<p class="title" style="font-size: 1.5rem; display: flex; align-items: center;"><img src="./images/grooming.png" alt="" />종류</p> ${item.FCLTY_INFO_DC}`;
       address.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center;"><img src="./images/map.png" alt="" />주소</p> ${item.LNM_ADDR}`;
-      facility.innerHTML = `<p style="font-size: 1.5rem; ">시설정보설명</p> ${item.FCLTY_INFO_DC}`;
+      facility.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center;"><img src="./images/collection.png" alt="" />시설정보설명</p> ${item.FCLTY_INFO_DC}`;
       open.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center; "><img src="./images/open.png" alt="" />영업시간</p> ${item.OPER_TIME}`;
       closed.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center; "><img src="./images/closed.png" alt="" />휴무일</p> ${item.RSTDE_GUID_CN}`;
       // date.textContent = `<p style="font-size: 1.5rem; ">기타정보</p> ${item.pet_info_cn}`;
@@ -661,7 +661,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // 병원&약국 데이터
   const hospitalData = () => {
-    fetch("../json/cafe.json")
+    fetch("http://localhost/dogether_php_ver/json/cafe.json")
       .then((response) => response.json())
       .then((data) => {
         let hospital = [];
@@ -728,7 +728,7 @@ document.addEventListener("DOMContentLoaded", function () {
   };
   // 페이지 데이터 요청 함수
   const requesthospitalPage = (page) => {
-    fetch("../json/cafe.json")
+    fetch("http://localhost/dogether_php_ver/json/cafe.json")
       .then((response) => response.json())
       .then((data) => {
         let hospital = [];
@@ -770,9 +770,9 @@ document.addEventListener("DOMContentLoaded", function () {
       wrapperDiv.classList.add("detailtitle");
       textDiv.classList.add("detailList");
       name.textContent = item.FCLTY_NM;
-      type.innerHTML = `<p style="font-size: 1.5rem; ">종류</p> ${item.FCLTY_INFO_DC}`;
+      type.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center;"><img src="./images/veterinary.png" alt="" />종류</p> ${item.FCLTY_INFO_DC}`;
       address.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center;"><img src="./images/map.png" alt="" />주소</p> ${item.LNM_ADDR}`;
-      facility.innerHTML = `<p style="font-size: 1.5rem; ">시설정보설명</p> ${item.FCLTY_INFO_DC}`;
+      facility.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center;"><img src="./images/collection.png" alt="" />시설정보설명</p> ${item.FCLTY_INFO_DC}`;
       open.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center; "><img src="./images/open.png" alt="" />영업시간</p> ${item.OPER_TIME}`;
       closed.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center; "><img src="./images/closed.png" alt="" />휴무일</p> ${item.RSTDE_GUID_CN}`;
       // date.textContent = `<p style="font-size: 1.5rem; ">기타정보</p> ${item.pet_info_cn}`;
