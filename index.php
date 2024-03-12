@@ -47,7 +47,7 @@
     <!-- 섹션-2 컨텐츠 목록 -->
     <section id="section-2">
       <div class="section-2-container">
-        <div class="section-2-main-text">
+        <div id="section2-t-event"class="section-2-main-text">
           <p>DOGETHER</p>
           <p>Pet and Companion Store</p>
         </div>
@@ -115,7 +115,7 @@
     <!-- 섹션-3 -->
     <section id="section-3">
       <div class="maxsection-3">
-        <div class="main-text3">
+        <div id="section3-event" class="main-text3">
           <p class="title-list3">
             반려동물과 함께하는<br />
             공공장소 에티켓 <br />꼭 지켜주세요.
