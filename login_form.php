@@ -29,10 +29,10 @@
                         <!-- name=폼 제출시 요소의 값 식별, action=데이터를 전송 할 URL -->
                         <ul>
                             <li><input type="text" id="id" name="id" placeholder="아이디" /></li>
-                            <li><input type="password" id="password" name="password" placeholder="비밀번호" /></li>
+                            <li><input type="password" id="password" name="password" placeholder="비밀번호" />
+                            <span class="error-text"></span>
+                            </li>
                         </ul>
-                        <div id="error_text">
-                        </div>
                         <div id="login_btn">
                             로그인
                         </div>
