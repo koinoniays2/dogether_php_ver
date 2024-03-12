@@ -13,7 +13,9 @@
     <link rel="stylesheet" href="css/guide.css" type="text/css" />
     <!-- JS -->
     <script src="./js/jquery-3.7.1.min.js"></script>
-    
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"></script>
     <!-- 폰트어썸 -->
     <script
       src="https://kit.fontawesome.com/96b5911d82.js"

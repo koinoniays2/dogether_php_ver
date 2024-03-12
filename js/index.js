@@ -57,7 +57,7 @@ section2Events.forEach((event, index) => {
       otherEvent.style.opacity = 1;
     });
   });
-  event.style.transition = "opacity 0.3s ease-in-out";
+  event.style.transition = "opacity 0.2s ease-in-out";
 });
 
 
@@ -80,6 +80,5 @@ const observer2 = new IntersectionObserver(
     rootMargin: "0px",
     threshold: 0.8, // 필요에 따라 이 임계값을 조절할 수 있습니다.
   }
-  
 );
 observer2.observe(section3TargetEvent);
