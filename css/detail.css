@@ -1,74 +1,75 @@
-body {
-  background: url("../images/dogfan.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: bottom;
-}
-body::after {
-  content: "";
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.7);
-  z-index: -1;
-}
 /* 디테일 설명 섹션 */
 #detail-intro {
-  max-width: 1280px;
-  margin: 100px auto;
+  width: 100%;
+  /* margin: 100px auto;
+  display: flex;
+  flex-direction: column; */
+  position: relative;
+}
+.bg-sticky,
+.bg-wrapper {
+  height: 0;
+  padding-bottom: 90vh;
+}
+.bg-wrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+  overflow: hidden;
+  transform: translateY(30%);
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
-#intro-box {
-  width: 100%;
+
+.intro-box {
+  max-width: 1280px;
   display: flex;
+  align-items: center;
+}
+#intro-box1 {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+#intro-box2 {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 1s ease-in-out;
 }
 .img-box {
-  width: 50%;
-  padding: 40px;
+  width: 70%;
 }
 .img-box img {
   width: 100%;
 }
 .text-box {
-  /* background-color: skyblue; */
-  width: 50%;
+  width: 40%;
   word-break: keep-all;
   font-size: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px;
-
+  padding: 0 40px;
 }
 
 /* 디테일 api지도 섹션 */
-
 #detail-section {
+  margin-top: 150px;
   width: 100%;
   height: calc(100vh-100);
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 5rem;
+  background-color: #fdf6eb;
 }
 
 .detail-title div:nth-child(1) {
   font-size: 2.5rem;
   font-weight: bold;
-  margin: 10px ;
+  margin: 10px;
 }
-/* .detail-img {
-  background-image: url("../images/pit-a-pat.svg");
-  width: 480px;
-  height: 160px;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin-bottom: 30px;
-} */
 .detail-container {
   width: 100%;
   height: 100%;
@@ -111,7 +112,6 @@ body::after {
 .detailList > p {
   margin-bottom: 20px;
 }
-
 
 /* map */
 .map_wrap,
@@ -284,13 +284,13 @@ body::after {
   background-color: transparent;
 }
 .page-btn:hover {
-  background-color: #F0A646;
-  color:white;
+  background-color: #f0a646;
+  color: white;
   border-radius: 15%;
 }
 
 .btn-on {
-  color: #F0A646;
+  color: #f0a646;
   font-weight: bold;
 }
 
@@ -299,17 +299,49 @@ body::after {
   padding: 0.5rem;
   margin: 1rem;
   background-color: transparent;
-  color: #F0A646;
+  color: #f0a646;
   border-radius: 10px;
   cursor: pointer;
 }
-.prev-btn:hover, .next-btn:hover {
-  background-color: #F0A646;
+.prev-btn:hover,
+.next-btn:hover {
+  background-color: #f0a646;
   color: white;
 }
 .selected {
   font-weight: bold;
-  color: #F0A646;
+  color: #f0a646;
+}
+
+/* detail-section img */
+#detail-section > img {
+  width: 50%;
+  margin-top: -140px;
+}
+/* 푸터 배경색 지정 */
+footer {
+  background-color: #fdf6eb;
+  
+}
+@media screen and (min-width: 375px) and (max-width: 768px) {
+  #intro-box1 {
+    flex-direction: column;
+  }
+  #intro-box2 {
+    flex-direction: column-reverse
+  }
+  .img-box {
+    width: 90%;
+  }
+  .text-box {
+    width: 90%;
+    padding: 20px 0;
+    font-size: 1.9rem;
+  }
+  #detail-section > img {
+    width: 80%;
+    margin-top: -30px;
+  }
 }
 
 @media screen and (max-width: 600px) {
