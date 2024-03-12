@@ -37,8 +37,6 @@ const observer = new IntersectionObserver(
 
 observer.observe(section2TargetEvent);
 
-
-
 // 섹션2 마우스오버효과
 const section2Events = document.querySelectorAll("#section2-event");
 
@@ -60,25 +58,52 @@ section2Events.forEach((event, index) => {
   event.style.transition = "opacity 0.2s ease-in-out";
 });
 
-
 // 섹션3 차례대로 나타남 효과주기
-const section3TargetEvent = document.getElementById("section3-event");
 
-// IntersectionObserver를 설정합니다.
-const observer2 = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        section3TargetEvent.style.opacity = 1;
-      } else {
-        section3TargetEvent.style.opacity = 0;
-      }
+
+gsap.registerPlugin(ScrollTrigger);
+
+const animateSection3 = () => {
+  const section3Event = document.getElementById("section3-event");
+  const textE1 = document.getElementById("section3-textE1");
+  const textE2 = document.getElementById("section3-textE2");
+  const textE3 = document.getElementById("section3-textE3");
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: section3Event,
+      start: "top center",
+      end: "bottom center",
+      toggleActions: "play none none none",
+    },
+  });
+  tl.from(section3Event, {
+    opacity: 0,
+    x: "-500px",
+    duration: 2,
+    ease: "power2.out",
+  })
+    .from(textE1, {
+      opacity: 0,
+      x: "500px",
+      duration: 1,
+      ease: "power2.out",
+    })
+    .from(textE2, {
+      opacity: 0,
+      x: "500px",
+      duration: 1,
+      ease: "power2.out",
+    })
+    .from(textE3, {
+      opacity: 0,
+      x: "500px",
+      duration: 1,
+      ease: "power2.out",
     });
-  },
-  {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.8, // 필요에 따라 이 임계값을 조절할 수 있습니다.
-  }
-);
-observer2.observe(section3TargetEvent);
+};
+
+// 페이지 로드 시에도 애니메이션을 실행합니다.
+window.addEventListener("DOMContentLoaded", animateSection3);
+
+// 창의 크기 변경 이벤트를 감지하여 애니메이션을 다시 실행합니다.
+window.addEventListener("resize", gsap.utils.debounce(animateSection3, 200));
