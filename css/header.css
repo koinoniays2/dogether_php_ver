@@ -12,12 +12,10 @@
   justify-content: space-between;
   align-items: center;
 }
-<<<<<<< HEAD
-=======
+
 #check_box {
   display: none;
 }
->>>>>>> 20a0ee4c714ae57c75238286271acad4e63ee6e8
 
 #logo img {
   width: 4rem;
@@ -39,17 +37,6 @@
 }
 
 #check_box {
-<<<<<<< HEAD
-=======
-  display: none;
-}
-
-#side_menu {
-  display: none;
-}
-
-label {
->>>>>>> 20a0ee4c714ae57c75238286271acad4e63ee6e8
   display: none;
 }
 
@@ -82,14 +69,16 @@ label {
     display: block;
   }
 
+
   #check_box + label {
     position: relative;
     display: block;
-    width: 45px;
-    height: 30px;
+    width: 33px;
+    height: 25px;
     cursor: pointer;
     z-index: 501;
   }
+
 
   #check_box + label > span {
     position: absolute;
@@ -101,30 +90,37 @@ label {
     transition: all 300ms;
   }
 
+  }
+
   #check_box:checked + label > span:nth-child(1) {
     top: 50%;
     transform: translate(0, -50%);
     transform: rotate(45deg);
   }
 
+
   #check_box + label > span:nth-child(2) {
     top: 50%;
     transform: translate(0, -50%);
   }
 
+
   #check_box:checked + label > span:nth-child(2) {
     opacity: 0;
   }
 
+
   #check_box + label > span:nth-child(3) {
     bottom: 0;
   }
+
 
   #check_box:checked + label > span:nth-child(3) {
     top: 50%;
     transform: translate(0, -50%);
     transform: rotate(-45deg);
   }
+
 
   #side_menu {
     position: fixed;
@@ -141,6 +137,7 @@ label {
   #side_menu ul li {
     margin-top: 10px;
   }
+
 
   #check_box:checked + label + #side_menu {
     left: 0px;
@@ -159,4 +156,4 @@ label {
   #side_menu > ul > li:hover > ul {
     display: block;
   }
-}
+
