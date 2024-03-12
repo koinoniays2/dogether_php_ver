@@ -47,13 +47,13 @@
     <!-- 섹션-2 컨텐츠 목록 -->
     <section id="section-2">
       <div class="section-2-container">
-        <div id= "section2-event" class="section-2-main-text">
+        <div class="section-2-main-text">
           <p>DOGETHER</p>
           <p>Pet and Companion Store</p>
         </div>
-        <div id="section2-event2" class="listbox">
+        <div class="listbox">
           <div class="section-2-list">
-            <div>
+            <div id= "section2-event">
               <a href="detail.php?dataId=병원">
                 <p class="sub-title">
                   <i class="fa-solid fa-angle-right"></i>&nbsp;동물병원&약국
@@ -64,7 +64,7 @@
                 </p>
               </a>
             </div>
-            <div>
+            <div id="section2-event">
               <a href="detail.php?dataId=음식점">
                 <p class="sub-title">
                   <i class="fa-solid fa-angle-right"></i>&nbsp;음식점
@@ -72,7 +72,7 @@
                 <p class="sub-text">반려동물과 동반입장 가능한 음식점</p>
               </a>
             </div>
-            <div>
+            <div id="section2-event">
               <a href="detail.php?dataId=카페">
                 <p class="sub-title">
                   <i class="fa-solid fa-angle-right"></i>&nbsp;카페
@@ -82,7 +82,7 @@
             </div>
           </div>
           <div class="section-2-list">
-            <div>
+            <div id="section2-event">
               <a href="detail.php?dataId=미용">
                 <p class="sub-title">
                   <i class="fa-solid fa-angle-right"></i>&nbsp;미용
@@ -91,7 +91,7 @@
               </a>
             </div>
 
-            <div>
+            <div id="section2-event">
               <a href="detail.php?dataId=미술관">
                 <p class="sub-title">
                   <i class="fa-solid fa-angle-right"></i>&nbsp;미술관
@@ -99,7 +99,7 @@
                 <p class="sub-text">반려동물과 동반입장 가능한 미술관</p>
               </a>
             </div>
-            <div>
+            <div id="section2-event">
               <a href="detail.php?dataId=숙소">
                 <p class="sub-title">
                   <i class="fa-solid fa-angle-right"></i>&nbsp;숙소
