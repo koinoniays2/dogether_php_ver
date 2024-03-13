@@ -33,7 +33,7 @@
       </div>
       <div id="intro-box2" class="intro-box">
         <div class="text-box">
-          동뭉별원부터 숙소까지 다양한 장소를 검색해보세요
+          동물병원부터 숙소까지 다양한 장소를 검색해보세요
         </div>
         <div class="img-box">
           <img src="./images/detail_hospital.jpg" alt="detail_img2" />
