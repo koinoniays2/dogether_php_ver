@@ -38,14 +38,14 @@
   transition: visibility 0s, opacity 1s ease-in-out;
 }
 .img-box {
-  width: 70%;
+  width: 60%;
 }
 .img-box img {
   width: 100%;
 }
 .text-box {
   /* background-color: skyblue; */
-  width: 30%;
+  width: 40%;
   word-break: keep-all;
   font-size: 2rem;
   display: flex;
