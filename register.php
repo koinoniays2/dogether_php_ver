@@ -11,8 +11,8 @@
     // $address_option = $_POST["address_option"];
     $address = "(".$address_postcode.")".$address_.$address_detail/*."(".$address_option.")"*/;
   
-    $regist_day = date("Y-m-d (H:i)");  // 현재의 '년-월-일-시-분'을 저장
-
+    $regist_day = date("Y-m-d (H:i)");  // 현재의 '년-월-일-시-분'을 저장 
+    
     $con = mysqli_connect("localhost", "admin", "admin", "dogether");
 
 	$sql = "INSERT INTO users(id, password, password_check, username, email, mobile_tel, regist_day, address) ";
