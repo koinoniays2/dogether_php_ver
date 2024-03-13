@@ -42,11 +42,11 @@
       </label>
       <div id="side_menu">
         <ul>
-          <li><a href="#">로그인</a></li>
-          <li><a href="#">회원가입</a></li>
-          <li><a href="#">커뮤니티</a></li>
+          <li><a href="login_form.php">로그인</a></li>
+          <li><a href="join.php">회원가입</a></li>
+          <li><a href="index.php">커뮤니티</a></li>
           <li id="toggleSubmenu">
-            <a href="#">제목을 뭐라고 적을 지 모르겠어요..</a>
+            <a href="#">ETC</a>
             <ul class="sub">
               <li><a href="detail.html?dataId=병원">동물병원&약국</a></li>
               <li><a href="detail.html?dataId=음식점">음식점</a></li>
