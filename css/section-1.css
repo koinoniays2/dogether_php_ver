@@ -4,16 +4,13 @@
   transition: opacity 1s ease-in-out;
 }
 
-
- 
-
 /* 섹션1 배경 */
 #section-1 {
   width: 100%;
   height: calc(100vh - 100px);
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: right center;
+  background-position: right bottom;
   background-image: url("../images/main-img.svg");
 }
 /* 메인 컨테이너 */
@@ -77,11 +74,11 @@
   .section-1-container p:nth-child(1) {
     font-size: 4rem;
   }
-  #section-1 {
-    background-position: bottom right;
-  }
 }
 @media screen and (max-width: 640px) {
+  #section-1 {
+    background-size: 640px;
+  }
   .section-1-container .sectiion-1-main-text {
     font-size: 1.25rem;
     /* display: flex;
@@ -109,8 +106,5 @@
     display: flex;
     justify-content: center;
     /* align-items: center; */
-  }
-  #section-1 {
-    background-size: 150%;
   }
 }

@@ -29,7 +29,7 @@
   width: 50%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  /* align-items: flex-start; */
   justify-content: center;
   font-size: 4.5rem;
   font-family: "yg-jalnan";
@@ -79,13 +79,16 @@
 
 
 @media screen and (max-width: 1024px) {
+  #section-2 {
+    background-size: 200px;
+  }
   .section-2-container {
     flex-direction: column;
     justify-content: center;
   }
   .section-2-main-text {
     width: 100%;
-    margin-bottom: 100px;
+    margin-bottom: 4rem;
   }
   .section-2-list {
     width: 100%;
