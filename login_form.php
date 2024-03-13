@@ -15,6 +15,7 @@
     <title>로그인</title>
 </head>
 <body>
+    <?php include "config/const.php"; ?>
     <header id="header">
         <?php include "header.php";?>
     </header>
@@ -53,7 +54,9 @@
                         <img src="images/카카오톡.png" alt="카카오톡" />
                     </div>
                     <div>
-                        <img src="images/구글.png" alt="구글" />
+                        <a href=<?php echo SocialLogin::socialLoginUrl("google") ?>>
+                            <img src="images/구글.png" alt="구글" />
+                        </a>
                     </div>
                     <div>
                         <img src="images/네이버.png" alt="네이버" />
