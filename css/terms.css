@@ -1,0 +1,43 @@
+#terms_form {
+    width: 100%; max-width: 1280px;
+    padding: 0 1rem; margin: 0 auto;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+}
+#terms_form h2 {
+    padding: 2rem 0;
+    font-size: 1.5rem;
+    width: 100%; text-align: left;
+}
+#terms_form textarea {
+    width:100%;
+    border: 1px solid #7990A3;
+    padding: 1rem;
+}
+.agree_box {
+    width: 100%; padding: 0.5rem 0;
+}
+
+#terms_form table {
+    width: 100%;
+}
+#terms_form thead th {
+    padding: 1rem 0;
+}
+#terms_form tbody td {
+    padding: 0.5rem 0;
+}
+th, td {
+    text-align: left;
+    border-bottom: 1px solid #7990A3;
+}
+h4 {
+    width: 100%; 
+    text-align: left; }
+
+#next_btn {
+    margin: 2rem 0;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    background-color: #7990A3; color: white; text-align: center; border-radius: 0.5rem;
+}
