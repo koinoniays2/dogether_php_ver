@@ -107,3 +107,4 @@ window.addEventListener("DOMContentLoaded", animateSection3);
 
 // 창의 크기 변경 이벤트를 감지하여 애니메이션을 다시 실행합니다.
 window.addEventListener("resize", gsap.utils.debounce(animateSection3, 200));
+ 

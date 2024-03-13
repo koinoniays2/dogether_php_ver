@@ -7,9 +7,9 @@
   position: relative;
 }
 .bg-sticky,
-.bg-wrapper {
+.bg-wrapper { 
   height: 0;
-  padding-bottom: 90vh;
+  padding-bottom: 90vh; 
 }
 .bg-wrapper {
   position: fixed;

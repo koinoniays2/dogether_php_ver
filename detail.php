@@ -16,7 +16,7 @@
   <title>DOGETHER</title>
 </head>
 
-<body>
+<body> 
   <!-- 헤더 -->
   <header id="header">
     <?php include "header.php"; ?>
