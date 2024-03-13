@@ -19,7 +19,6 @@ document.addEventListener("DOMContentLoaded", function () {
   introBox1.style.transition = "opacity 1s ease-in-out";
   introBox1.style.opacity = "1";
 
-  // 첫 번째 intro-box1를 3초 뒤에 서서히 사라지게 하고, 그 후 display: none;으로 변경
   setTimeout(function () {
     introBox1.style.opacity = "0";
 
@@ -34,5 +33,5 @@ document.addEventListener("DOMContentLoaded", function () {
       introBox2.style.transition = "opacity 1s ease-in-out";
       introBox2.style.opacity = "1";
     }, 1000);
-  }, 4000);
+  }, 2000);
 });
