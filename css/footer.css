@@ -1,16 +1,14 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  list-style: none;
+footer { width: 100%; }
+.footer-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem 1rem;
 }
-
 footer {
   display: flex;
   justify-content: center;
-  padding: 1rem;
 }
-
 #service_center {
   display: flex;
   flex-direction: column;
@@ -19,7 +17,6 @@ footer {
   font-size: 1rem; 
   margin-top: 20px;
 }
-
 #information {
   display: flex;
   justify-content: center;
@@ -27,7 +24,6 @@ footer {
 ol {
   padding: 20px;
 }
-
 ol img {
   width: 25px;
   height: 25px;
@@ -36,7 +32,7 @@ ol img {
 #information ol li:nth-child(1) {
   margin-bottom: 20px;
 }
-
+footer p {text-align: center;}
 
 @media screen and (min-width: 375px) and (max-width: 768px) {
   footer {

@@ -46,7 +46,7 @@ section2Events.forEach((event, index) => {
     // 마우스가 올라간 요소 이외의 모든 section2-event 요소의 투명도를 0으로 설정합니다.
     section2Events.forEach((otherEvent, otherIndex) => {
       if (otherIndex !== index) {
-        otherEvent.style.opacity = 0;
+        otherEvent.style.opacity = 0.2;
       }
     });
   });
@@ -79,7 +79,7 @@ const animateSection3 = () => {
   tl.from(section3Event, {
     opacity: 0,
     x: "-500px",
-    duration: 2,
+    duration: 1,
     ease: "power2.out",
   })
     .from(textE1, {
@@ -87,19 +87,19 @@ const animateSection3 = () => {
       x: "500px",
       duration: 1,
       ease: "power2.out",
-    })
+    }, "-=0.3")
     .from(textE2, {
       opacity: 0,
       x: "500px",
       duration: 1,
       ease: "power2.out",
-    })
+    }, "-=0.5")
     .from(textE3, {
       opacity: 0,
       x: "500px",
       duration: 1,
       ease: "power2.out",
-    });
+    }, "-=0.5");
 };
 
 // 페이지 로드 시에도 애니메이션을 실행합니다.

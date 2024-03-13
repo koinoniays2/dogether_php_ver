@@ -78,7 +78,7 @@
     font-size: 4rem;
   }
   #section-1 {
-    background-position: bottom center;
+    background-position: bottom right;
   }
 }
 @media screen and (max-width: 640px) {
@@ -90,7 +90,7 @@
     text-align: center; */
   }
   .section-1-container P:nth-child(1) {
-    font-size: 3.8rem;
+    font-size: 3rem;
   }
   .section-1-container p:nth-child(2) {
     font-size: 1.2rem;
@@ -112,6 +112,5 @@
   }
   #section-1 {
     background-size: 150%;
-    background-position: 120% 100%;
   }
 }

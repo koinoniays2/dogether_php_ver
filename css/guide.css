@@ -44,12 +44,17 @@
 }
 /* footer */
 #footer {
+  width: 100%;
   display: flex;
   justify-content: center;
   z-index: 99;
-  border-top: 1px solid black;
 }
-
+.footer-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem 1rem;
+}
 #service_center {
   display: flex;
   flex-direction: column;
