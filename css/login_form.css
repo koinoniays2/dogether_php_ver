@@ -39,3 +39,14 @@
     display: flex;
     gap: 2rem;
 }
+/* 에러메세지 */
+/* .id-error, .password-error {
+    display: block;
+    color: red;
+    padding-bottom: 0.5rem;
+} */
+.error-text {
+    display: block;
+    color: red;
+    padding-bottom: 0.5rem;
+}

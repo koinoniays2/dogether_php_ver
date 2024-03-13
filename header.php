@@ -72,8 +72,8 @@
 
         document.addEventListener("click", function (event) {
           const isClickInside =
-            toggleSubmenu.contains(event.target) ||
-            submenu.contains(event.target);
+            toggleSubmenu.contains(event.target) 
+            || submenu.contains(event.target);
 
           if (!isClickInside) {
             submenu.classList.remove("show");
