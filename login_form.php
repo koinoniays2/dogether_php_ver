@@ -25,17 +25,22 @@
                     <a href="index.php"><p>DOGETHER</p><span>with everyday</span></a>
                 </div>
                 <div id="login_form">
-                    <form name="login_form" method="post" action="login.php">
+                    <form name="login_form">
                         <!-- name=폼 제출시 요소의 값 식별, action=데이터를 전송 할 URL -->
                         <ul>
-                            <li><input type="text" id="id" name="id" placeholder="아이디" /></li>
-                            <li><input type="password" id="password" name="password" placeholder="비밀번호" />
-                            <span class="error-text"></span>
+                            <li>
+                                <input type="text" id="id" name="id" placeholder="아이디" />
+                                <!-- <span class="id-error"></span> -->
+                            </li>
+                            <li>
+                                <input type="password" id="password" name="password" placeholder="비밀번호" />
+                                <!-- <span class="password-error"></span> -->
+                                <span class="error-text"></span>
                             </li>
                         </ul>
-                        <div id="login_btn">
+                        <button id="login_btn" type="submit">
                             로그인
-                        </div>
+                        </button>
                     </form>
                 </div>
                 <div id="login_option">

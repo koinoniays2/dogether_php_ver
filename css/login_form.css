@@ -51,6 +51,16 @@
 /* 소셜 */
 #login_social {
     display: flex;
-    gap: 3rem;
-    margin-top: 20px;
+    gap: 2rem;
+}
+/* 에러메세지 */
+/* .id-error, .password-error {
+    display: block;
+    color: red;
+    padding-bottom: 0.5rem;
+} */
+.error-text {
+    display: block;
+    color: red;
+    padding-bottom: 0.5rem;
 }
