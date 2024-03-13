@@ -48,61 +48,18 @@
           <li id="toggleSubmenu">
             <a href="#">ETC</a>
             <ul class="sub">
-              <li><a href="detail.html?dataId=병원">동물병원&약국</a></li>
-              <li><a href="detail.html?dataId=음식점">음식점</a></li>
-              <li><a href="detail.html?dataId=미용">애견 미용샵</a></li>
-              <li><a href="detail.html?dataId=미술관">미술관</a></li>
-              <li><a href="detail.html?dataId=카페">카페</a></li>
-              <li><a href="detail.html?dataId=숙소">숙소</a></li>
+              <li><a href="detail.php?dataId=병원">동물병원&약국</a></li>
+              <li><a href="detail.php?dataId=음식점">음식점</a></li>
+              <li><a href="detail.php?dataId=미용">애견 미용샵</a></li>
+              <li><a href="detail.php?dataId=미술관">미술관</a></li>
+              <li><a href="detail.php?dataId=카페">카페</a></li>
+              <li><a href="detail.php?dataId=숙소">숙소</a></li>
             </ul>
           </li>
         </ul>
       </div>
     </div>
-    
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const toggleSubmenu = document.getElementById("toggleSubmenu");
-        const submenu = document.querySelector("#side_menu.sub");
-
-        toggleSubmenu.addEventListener("click", function (event) {
-          event.preventDefault();
-          submenu.classList.toggle("show");
-        });
-
-        document.addEventListener("click", function (event) {
-          const isClickInside =
-            toggleSubmenu.contains(event.target) ||
-            submenu.contains(event.target);
-
-          if (!isClickInside) {
-            submenu.classList.remove("show");
-          }
-        });
-      });
-    </script>
     </div>
     </div>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const toggleSubmenu = document.getElementById("toggleSubmenu");
-        const submenu = document.querySelector("#side_menu.sub");
-
-        toggleSubmenu.addEventListener("click", function (event) {
-          event.preventDefault();
-          submenu.classList.toggle("show");
-        });
-
-        document.addEventListener("click", function (event) {
-          const isClickInside =
-            toggleSubmenu.contains(event.target) 
-            || submenu.contains(event.target);
-
-          if (!isClickInside) {
-            submenu.classList.remove("show");
-          }
-        });
-      });
-    </script>
   </body>
 </html>
