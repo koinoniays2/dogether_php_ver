@@ -25,7 +25,7 @@
             <li><a href="logout.php">로그아웃</a></li>
             <?php } ?>
           </a>
-          <a href="index.php">
+          <a href="join.php">
             <li>회원가입</li>
           </a>
           <a href="index.php">
@@ -33,8 +33,8 @@
           </a>
         </ul>
       </nav>
-       <!-- 토글메뉴 -->
-       <input type="checkbox" id="check_box" />
+        <!-- 토글메뉴 -->
+        <input type="checkbox" id="check_box" />
       <label for="check_box">
         <span></span>
         <span></span>
@@ -58,6 +58,29 @@
           </li>
         </ul>
       </div>
+    </div>
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggleSubmenu = document.getElementById("toggleSubmenu");
+        const submenu = document.querySelector("#side_menu.sub");
+
+        toggleSubmenu.addEventListener("click", function (event) {
+          event.preventDefault();
+          submenu.classList.toggle("show");
+        });
+
+        document.addEventListener("click", function (event) {
+          const isClickInside =
+            toggleSubmenu.contains(event.target) ||
+            submenu.contains(event.target);
+
+          if (!isClickInside) {
+            submenu.classList.remove("show");
+          }
+        });
+      });
+    </script>
     </div>
     </div>
     <script>

@@ -22,7 +22,7 @@
         <section id="main_container">
             <div id="login_box">
                 <div id="login_title">
-                    <a href="index.php"><img src="images/logo2.png" alt="logo" /></a>
+                    <a href="index.php"><p>DOGETHER</p><span>with everyday</span></a>
                 </div>
                 <div id="login_form">
                     <form name="login_form">
