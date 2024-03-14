@@ -25,7 +25,7 @@
             <li><a href="logout.php">로그아웃</a></li>
             <?php } ?>
           </a>
-          <a href="join.php">
+          <a href="terms_form.php">
             <li>회원가입</li>
           </a>
           <a href="index.php">
@@ -43,7 +43,7 @@
       <div id="side_menu">
         <ul>
           <li><a href="login_form.php">로그인</a></li>
-          <li><a href="join.php">회원가입</a></li>
+          <li><a href="terms_form.php">회원가입</a></li>
           <li><a href="index.php">커뮤니티</a></li>
           <li id="toggleSubmenu">
             <a href="#">ETC</a>

@@ -1,40 +1,30 @@
-<!-- register.php -->
 <?php
-session_start();
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // 데이터베이스 연결 설정
-    $servername = "localhost";
-    $username = "admin";
-    $password = "admin";
-    $dbname = "dogether";
-
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-
-    // 사용자 입력 값 가져오기
-    $username = $_POST["username"];
+    $id   = $_POST["id"];
     $password = $_POST["password"];
+    $password_check = $_POST["password_check"];
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $mobile_tel = $_POST["mobile_tel"];
+    $address_postcode = $_POST["address_postcode"];
+    $address_ = $_POST["address_"];
+    $address_detail = $_POST["address_detail"];
+    // $address_option = $_POST["address_option"];
+    $address = "(".$address_postcode.")".$address_.$address_detail/*."(".$address_option.")"*/;
 
-    // 중복 사용자 확인
-    $check_duplicate = "SELECT id FROM users WHERE username='$username'";
-    $duplicate_result = $conn->query($check_duplicate);
+    
+    $regist_day = date("Y-m-d H:i"); // 현재의 '년-월-일-시-분'을 저장
 
-    if ($duplicate_result->num_rows > 0) {
-        echo "Username already exists. Please choose a different username.";
+    $con = mysqli_connect("localhost", "admin", "admin", "dogether");
+
+	$sql = "INSERT INTO users(id, password, password_check, username, email, mobile_tel, address) ";
+	$sql .= "VALUES('$id', '$password', '$password_check', '$name', '$email', '$mobile_tel', '$address')";
+
+    $result = mysqli_query($con, $sql); // $sql 에 저장된 명령 실행
+    mysqli_close($con); 
+        
+    if (!$result) {
+        echo json_encode(array('success' => false, 'message' => '회원가입에 실패했습니다.'));
     } else {
-        // 새 사용자 등록
-        $insert_user = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
-        if ($conn->query($insert_user) === TRUE) {
-            echo "Registration successful!";
-        } else {
-            echo "Error: " . $insert_user . "<br>" . $conn->error;
-        }
+        echo json_encode(array('success' => true));
     }
-
-    $conn->close();
-}
 ?>
