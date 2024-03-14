@@ -88,6 +88,8 @@
   }
   .section-2-main-text {
     width: 100%;
+    margin-bottom: 100px;
+    align-items: center;
     margin-bottom: 4rem;
   }
   .section-2-list {
