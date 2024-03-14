@@ -1,5 +1,5 @@
 // 페이지 로드 시 애니메이션을 실행
-window.addEventListener("load", () =>{
+window.addEventListener("load", () => {
   // 섹션-1 애니메이션
   // 메인 타이틀 셋타임아웃 설정
   const section1Event = document.getElementById("section1-event");
@@ -13,7 +13,7 @@ window.addEventListener("load", () =>{
   }, 500);
   // section1-event가 1초 뒤에 나타나도록 설정
   // section1-event가 나타난 후 1초 뒤에 section1-event2가 나타나도록 설정
-  
+
   // 섹션-2 타이틀 효과, 마우스오버 효과
   animateSection2Title();
   animateSection2MouseOver();
@@ -21,7 +21,6 @@ window.addEventListener("load", () =>{
   // 섹션-3 애니메이션
   animateSection3();
   // 창의 크기 변경 이벤트를 감지하여 애니메이션을 다시 실행합니다.(오류떠서 주석함)
-  // window.addEventListener("resize", gsap.utils.debounce(animateSection3, 200));
 });
 
 // 섹션-2 타이틀 효과 함수
@@ -88,22 +87,34 @@ function animateSection3() {
     duration: 1,
     ease: "power2.out",
   })
-    .from(textE1, {
-      opacity: 0,
-      x: "500px",
-      duration: 1,
-      ease: "power2.out",
-    }, "-=0.3")
-    .from(textE2, {
-      opacity: 0,
-      x: "500px",
-      duration: 1,
-      ease: "power2.out",
-    }, "-=0.5")
-    .from(textE3, {
-      opacity: 0,
-      x: "500px",
-      duration: 1,
-      ease: "power2.out",
-    }, "-=0.5");
-};
+    .from(
+      textE1,
+      {
+        opacity: 0,
+        x: "500px",
+        duration: 1,
+        ease: "power2.out",
+      },
+      "-=0.3"
+    )
+    .from(
+      textE2,
+      {
+        opacity: 0,
+        x: "500px",
+        duration: 1,
+        ease: "power2.out",
+      },
+      "-=0.5"
+    )
+    .from(
+      textE3,
+      {
+        opacity: 0,
+        x: "500px",
+        duration: 1,
+        ease: "power2.out",
+      },
+      "-=0.5"
+    );
+}
