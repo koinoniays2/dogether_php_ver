@@ -8,3 +8,7 @@ mobile_tel VARCHAR(20) NOT NULL, -- 휴대폰 번호
 address TEXT NOT NULL, -- 주소
 login_div VARCHAR(20), -- 가입 유형
 );
+
+CREATE USER 'admin'@'localhost' IDENTIFIED BY 'admin';
+GRANT ALL PRIVILEGES ON dogether.* TO 'admin'@'localhost';
+FLUSH PRIVILEGES;
