@@ -81,7 +81,7 @@
                     </li>
                     <li>
                         <div>
-                            <span>휴대 전화번호</span>
+                            <span>연락처</span>
                             <input type="text" id="mobile_tel" name="mobile_tel" >
                         </div>
                         <span class="mobile_text"></span>
@@ -159,6 +159,7 @@
     </script>
 
     <!-- JS -->
+    <script src="js/signup_login.js"></script>
     <script src="js/registerForm.js"></script>
     <script src="js/inputChange.js"></script>
 </body>
