@@ -16,7 +16,7 @@
 
     $con = mysqli_connect("localhost", "admin", "admin", "dogether");
 
-	$sql = "INSERT INTO users(id, password, password_check, username, email, mobile_tel, address) ";
+	$sql = "INSERT INTO users(id, password, password_check, name, email, mobile_tel, address) ";
 	$sql .= "VALUES('$id', '$password', '$password_check', '$name', '$email', '$mobile_tel', '$address')";
 
     $result = mysqli_query($con, $sql); // $sql 에 저장된 명령 실행

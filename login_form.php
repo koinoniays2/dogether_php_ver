@@ -51,7 +51,9 @@
                 </div>
                 <div id="login_social"> 
                     <div>
-                        <img src="images/카카오톡.png" alt="카카오톡" />
+                        <a href=<?php echo SocialLogin::socialLoginUrl("kakao") ?>>
+                            <img src="images/카카오톡.png" alt="카카오톡" />
+                        </a>
                     </div>
                     <div>
                         <a href=<?php echo SocialLogin::socialLoginUrl("google") ?>>
@@ -59,7 +61,9 @@
                         </a>
                     </div>
                     <div>
-                        <img src="images/네이버.png" alt="네이버" />
+                        <a href=<?php echo SocialLogin::socialLoginUrl("naver") ?>>
+                            <img src="images/네이버.png" alt="네이버" />
+                        </a>
                     </div>
                 </div>
         </section>
