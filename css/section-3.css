@@ -1,11 +1,11 @@
 /* 섹션-3 큰 부모 */
 #section-3 {
   width: 100%;
+  height: 100vh;
   display: flex;
   background-image: url("../images/yellowdog.png");
   background-repeat: no-repeat;
   background-position: right bottom;
-  margin-bottom: 100px;
   justify-content: center;
   overflow: hidden;
 } 

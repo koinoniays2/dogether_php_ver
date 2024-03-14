@@ -44,8 +44,8 @@
                     <li>
                         <div>
                             <span>아이디</span>
-                            <div class="btn_box">
-                                <input type="text" id="id" name="id" placeholder="아이디를 입력해주세요." />
+                            <div class="btn_box input-group">
+                                <input type="text" id="id" name="id"/>
                                 <button id="check_id" type="submit">중복확인</button>
                             </div>
                         </div>
@@ -54,43 +54,43 @@
                     <li>
                         <div>
                             <span>비밀번호</span>
-                            <input type="password" id="password" name="password" placeholder="비밀번호를 입력해주세요." />
+                            <input type="password" id="password" name="password" />
                         </div>
                         <span class="password_text"></span>
                     </li>
                     <li>
                         <div>
                             <span>비밀번호 확인</span>
-                            <input type="password" id="password_check" name="password_check" placeholder="비밀번호를 다시 확인해주세요." />
+                            <input type="password" id="password_check" name="password_check" />
                         </div>
                         <span class="password_check_text"></span>
                     </li>
                     <li>
                         <div>
                             <span>이름</span>
-                            <input type="text" id="name" name="name" placeholder="이름을 입력해주세요." />
+                            <input type="text" id="name" name="name" />
                         </div>
                         <span class="name_text"></span>
                     </li>
                     <li>
                         <div>
                             <span>이메일</span>
-                            <input type="email" id="email" name="email" placeholder="이메일 주소를 입력해주세요.">
+                            <input type="email" id="email" name="email" >
                         </div>
                         <span class="email_text"></span>
                     </li>
                     <li>
                         <div>
                             <span>휴대 전화번호</span>
-                            <input type="text" id="mobile_tel" name="mobile_tel" placeholder="휴대 전화번호를 입력해주세요.">
+                            <input type="text" id="mobile_tel" name="mobile_tel" >
                         </div>
                         <span class="mobile_text"></span>
                     </li>
                     <li>
                         <div>
-                            <span>주소</span>
                             <div class="address_search">
-                                <input type="text" id="sample6_postcode" placeholder="주소" name="address_postcode" readonly>
+                                <span>주소</span>
+                                <input type="text" id="sample6_postcode" name="address_postcode" readonly>
                                 <input type="text" id="sample6_address" name="address_" readonly>
                             </div>
                             <div class="btn_box">
