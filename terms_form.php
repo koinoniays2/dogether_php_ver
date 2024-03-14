@@ -7,12 +7,17 @@
     <script src="https://kit.fontawesome.com/96b5911d82.js" crossorigin="anonymous"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="css/index.css" type="text/css" />
+    <link rel="stylesheet" href="css/header.css" type="text/css" />
     <link rel="stylesheet" href="css/terms.css" type="text/css" />
+
     <!-- 제이쿼리 -->
     <script src="js/jquery-3.7.1.min.js"></script>
     <title>약관동의</title>
 </head>
 <body>
+    <header id="header">
+        <?php include "header.php"; ?>
+    </header>
     <main>
         <form id="terms_form" method="post">
             <h2>이용약관</h2>

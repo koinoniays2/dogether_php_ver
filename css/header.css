@@ -40,7 +40,7 @@
   display: none;
 }
 
-label {
+#toggle_label {
   display: none;
 }
 
@@ -64,12 +64,9 @@ label {
   #check_box {
     display: none;
   }
-
   #side_menu {
     display: block;
   }
-
-
   #check_box + label {
     position: relative;
     display: block;
