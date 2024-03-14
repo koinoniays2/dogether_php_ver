@@ -147,10 +147,6 @@ button {
   src: url("../fonts/NotoSansKR-Regular.ttf") format("truetype");
 }
 @font-face {
-  font-family: "SOYO Maple Regular";
-  src: url("../fonts/SOYO\ Maple\ Regular.ttf");
-}
-@font-face {
   font-family: "Maplestory Bold";
   src: url("../fonts/Maplestory\ Bold.ttf") format("truetype");
 }
