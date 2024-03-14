@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- ★ login.php, loginForm.js ★ -->
     <meta charset="UTF-8">
@@ -14,16 +15,17 @@
     <script src="js/jquery-3.7.1.min.js"></script>
     <title>로그인</title>
 </head>
+
 <body>
     <?php include "config/const.php"; ?>
     <header id="header">
-        <?php include "header.php";?>
+        <?php include "header.php"; ?>
     </header>
     <main>
         <section id="main_container">
             <div id="login_box">
                 <div id="login_title">
-                    <a href="index.php"><p>DOGETHER</p><span>with everyday</span></a>
+                    <p>DOGETHER</p><span>with everyday</span>
                 </div>
                 <div id="login_form">
                     <form name="login_form">
@@ -49,7 +51,7 @@
                     <p>비밀번호 찾기</p>
                     <p>회원가입</p>
                 </div>
-                <div id="login_social"> 
+                <div id="login_social">
                     <div>
                         <a href=<?php echo SocialLogin::socialLoginUrl("kakao") ?>>
                             <img src="images/카카오톡.png" alt="카카오톡" />
@@ -69,6 +71,8 @@
         </section>
     </main>
     <!-- JS -->
+    <script src="./js/signup_login.js"></script>
     <script type="text/javascript" src="./js/loginForm.js"></script>
 </body>
+
 </html>

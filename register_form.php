@@ -38,7 +38,7 @@
 
     <main>
         <section id="main_container">
-            <h2>회원가입</h2>
+            <!-- <h2>회원가입</h2> -->
             <form name="register_form" id="register_form">
                 <ul>
                     <li>

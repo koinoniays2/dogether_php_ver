@@ -35,7 +35,7 @@
       </nav>
         <!-- 토글메뉴 -->
         <input type="checkbox" id="check_box" />
-      <label for="check_box">
+      <label for="check_box" id="toggle_label">
         <span></span>
         <span></span>
         <span></span>

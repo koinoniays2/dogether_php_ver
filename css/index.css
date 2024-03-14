@@ -99,7 +99,7 @@ a {
   color: inherit;
 }
 body {
-  font-family: "SOYO Maple Regular";
+  font-family: "SUITE-Regular";
   background-color: #fdf6eb;
 }
 input,
@@ -147,6 +147,6 @@ button {
   src: url("../fonts/NotoSansKR-Regular.ttf") format("truetype");
 }
 @font-face {
-  font-family: "SOYO Maple Regular";
-  src: url("../fonts/SOYO\ Maple\ Regular.ttf");
+  font-family: "Maplestory Bold";
+  src: url("../fonts/Maplestory\ Bold.ttf") format("truetype");
 }

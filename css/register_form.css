@@ -1,43 +1,58 @@
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 #main_container {
-    width: 100%; max-width: 640px; height: 100vh;
-    margin: 0 auto;
-    padding: 5rem 1rem;
+    max-width: 640px; height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: auto;
+    margin: 50px 0;
 }
-#main_container h2 {
-    width: 100%; padding: 0.5rem 0;
+/* #main_container h2 {
     font-size: 1.5rem;
-}
+    margin: 50px 0;
+} */
 #register_form {
     display: flex; flex-direction: column;
     align-items: center;
-    border: 1px solid #7990A3;
-    padding-bottom: 5rem;
+    /* padding-bottom: 5rem; */
 }
 #register_form ul{
     width: 100%;
     display: flex; flex-direction: column;
     gap: 1.5rem;
-    padding: 5rem 1rem;
 }
-#register_form h3{
+/* #register_form h3{
     padding-top: 5rem;
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
-    border-bottom: 1px solid #7990A3;
-}
+    border-bottom: 1px solid #7990A3; 
+} */
 #register_form li div > span{
     display: block; font-weight: bold;
 }
 .btn_box {
     display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
+    background-color: white;
+    border-radius: 0.8rem;
+    padding: 
+}
+
+.btn_box input {
+    background-color: transparent;
+    
+}
+.btn_box #check_id {
+    font-size: small;
 }
 input {
-    padding: 0.5rem;
-    border: 1px solid #7990A3;
-    border-radius: 0.5rem;
+    padding: 1rem;
+    /* border: 1px solid #7990A3; */
+    border-radius: 0.8rem;
     width: 100%; max-width: 360px;
 }
 /* 주소 */
@@ -48,10 +63,10 @@ input {
 #sample6_postcode { width: 100px; }
 #sample6_postcode, #sample6_address {border: none;}
 /* 버튼 */
-#register_btn, .fa-search, #check_id { 
-    padding: 0.25rem 1rem;
+#register_btn, .fa-search{ 
+    padding: 0 0.25rem;
     cursor: pointer;
-    background-color: #7990A3; color: white; text-align: center; border-radius: 0.5rem;
+    background-color: #f0a646; color: white; text-align: center; border-radius: 0.5rem;
 }
 .fa-search {
     padding: 0.5rem 0.5rem;
