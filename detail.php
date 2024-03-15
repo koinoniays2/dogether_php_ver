@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/index.css" type="text/css" />
   <link rel="stylesheet" href="css/header.css" type="text/css" />
   <link rel="stylesheet" href="css/footer.css" type="text/css" />
+  <link rel="stylesheet" href="css/map.css"type="text/css" />
   <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
   <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c4bae9c95198a725f932a1e32a9cad1f&libraries=services"></script>
   <!-- 폰트어썸 -->
@@ -60,9 +61,9 @@
           <div class="option">
             <div>
               <form onsubmit="searchPlaces(); return false;">
-                키워드 :
+                <!-- 키워드 : -->
                 <input type="text" value="애견동반" id="keyword" size="15" />
-                <button type="submit">검색하기</button>
+                <button type="submit"><i class="fa-solid fa-magnifying-glass" style="color: #808080;"></i></button>
               </form>
             </div>
           </div>

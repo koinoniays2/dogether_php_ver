@@ -123,12 +123,12 @@ document.addEventListener("DOMContentLoaded", function () {
       wrapperDiv.classList.add("detailtitle");
       textDiv.classList.add("detailList");
       category.textContent = item.title;
-      address.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center;"><img src="./images/map.png" alt="" style="width: 50px; height: 50px; margin-right: 10px;" />주소</p>${item.address}`;
-      tel.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center;"><img src="./images/emergency-call.png" alt="" />전화번호</p>${item.tel}`;
-      sales.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center;"><img src="./images/open.png" alt="" />영업시간</p>${
+      address.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center;"><img src="./images/map.png" alt="" style="width: 50px; height: 50px; margin-right: 10px;" />주소</p><p style=>${item.address}</p>`;
+      tel.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center;"><img src="./images/emergency-call.png" alt="" />전화번호</p>${item.tel}`;
+      sales.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center;"><img src="./images/open.png" alt="" />영업시간</p>${
         item.operatingTime ? item.operatingTime.replace(/-/g, "~") : ""
       }`;
-      date.innerHTML = `<p style="font-size: 1.5rem;display: flex; align-items: center;"><img src="./images/collection.png" alt="" />기타정보</p>${item.information.replace(
+      date.innerHTML = `<p style="font-size: 1.1rem;display: flex; align-items: center;"><img src="./images/collection.png" alt="" />기타정보</p>${item.information.replace(
         /\|/g,
         "/"
       )}`;
@@ -246,7 +246,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const wrapperDiv = document.createElement("div");
       const textDiv = document.createElement("div");
       const name = document.createElement("h1");
-      const type = document.createElement("p");
+      // const type = document.createElement("p");
       const address = document.createElement("p");
       const facility = document.createElement("p");
       const open = document.createElement("p");
@@ -257,14 +257,14 @@ document.addEventListener("DOMContentLoaded", function () {
       textDiv.classList.add("detailList");
 
       name.textContent = item.FCLTY_NM;
-      type.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center;"><img src="./images/animal_cafe.png" alt="" />종류</p> ${item.FCLTY_INFO_DC}`;
-      address.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center;"><img src="./images/map.png" alt="" />주소</p> ${item.LNM_ADDR}`;
-      facility.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center;"><img src="./images/collection.png" alt="" />시설정보설명</p> ${item.FCLTY_INFO_DC}`;
-      open.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center;"><img src="./images/open.png" alt="" />영업시간</p> ${item.OPER_TIME}`;
-      closed.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center; "><img src="./images/closed.png" alt="" />휴무일</p> ${item.RSTDE_GUID_CN}`;
+      // type.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center;"><img src="./images/animal_cafe.png" alt="" />종류</p> ${item.FCLTY_INFO_DC}`;
+      address.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center;"><img src="./images/map.png" alt="" style="width:18px; height:18px; margin-right: 10px;"/>주소</p> ${item.LNM_ADDR}`;
+      facility.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center;"><img src="./images/collection.png" alt="" />시설정보</p> ${item.FCLTY_INFO_DC}`;
+      open.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center;"><img src="./images/open.png" alt="" />영업시간</p> ${item.OPER_TIME}`;
+      closed.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center; "><img src="./images/closed.png" alt="" />휴무일</p> ${item.RSTDE_GUID_CN}`;
 
       wrapperDiv.appendChild(name);
-      textDiv.appendChild(type);
+      // textDiv.appendChild(type);
       textDiv.appendChild(address);
       textDiv.appendChild(facility);
       textDiv.appendChild(open);
@@ -385,8 +385,8 @@ document.addEventListener("DOMContentLoaded", function () {
       textDiv.classList.add("detailList");
 
       name.textContent = item.ldgs_nm;
-      address.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center;"><img src="./images/map.png" alt="" />주소</p> ${item.ldgs_addr}`;
-      date.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center;"><img src="./images/collection.png" alt="" />기타정보</p> ${item.pet_info_cn}`;
+      address.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center;"><img src="./images/map.png" alt="" style="width:18px; height:18px; margin-right: 10px;"/>주소</p> ${item.ldgs_addr}`;
+      date.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center;"><img src="./images/collection.png" alt="" />기타정보</p> ${item.pet_info_cn}`;
       wrapperDiv.appendChild(name);
 
       textDiv.appendChild(address);
@@ -498,7 +498,7 @@ document.addEventListener("DOMContentLoaded", function () {
       let wrapperDiv = document.createElement("div");
       let textDiv = document.createElement("div");
       let name = document.createElement("h1");
-      let type = document.createElement("p");
+      // let type = document.createElement("p");
       let address = document.createElement("p");
       let facility = document.createElement("p");
       let open = document.createElement("p");
@@ -508,15 +508,15 @@ document.addEventListener("DOMContentLoaded", function () {
       wrapperDiv.classList.add("detailtitle");
       textDiv.classList.add("detailList");
       name.textContent = item.FCLTY_NM;
-      type.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center;"><img src="./images/art-gallery.png" alt="" />종류</p> ${item.FCLTY_INFO_DC}`;
-      address.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center;"><img src="./images/map.png" alt="" />주소</p> ${item.LNM_ADDR}`;
-      facility.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center;"><img src="./images/collection.png" alt="" />시설정보설명</p> ${item.FCLTY_INFO_DC}`;
-      open.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center;"><img src="./images/open.png" alt="" />영업시간</p> ${item.OPER_TIME}`;
-      closed.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center; "><img src="./images/closed.png" alt="" />휴무일</p> ${item.RSTDE_GUID_CN}`;
-      // date.textContent = `<p style="font-size: 1.5rem; ">기타정보</p> ${item.pet_info_cn}`;
+      // type.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center;"><img src="./images/art-gallery.png" alt="" />종류</p> ${item.FCLTY_INFO_DC}`;
+      address.innerHTML = `<p style="font-size: 1.1rem; color:gray; display: flex; align-items: center;"><img src="./images/map.png" alt="" style="width:18px; height:18px; margin-right: 10px;"/>주소</p> ${item.LNM_ADDR}`;
+      facility.innerHTML = `<p style="font-size: 1.1rem; color:gray; display: flex; align-items: center;"><img src="./images/collection.png" alt="" />시설정보</p> ${item.FCLTY_INFO_DC}`;
+      open.innerHTML = `<p style="font-size: 1.1rem; color:gray; display: flex; align-items: center;"><img src="./images/open.png" alt="" />영업시간</p> ${item.OPER_TIME}`;
+      closed.innerHTML = `<p style="font-size: 1.1rem; display: flex; color:gray; align-items: center; "><img src="./images/closed.png" alt="" />휴무일</p> ${item.RSTDE_GUID_CN}`;
+      // date.textContent = `<p style="font-size: 1.1rem; ">기타정보</p> ${item.pet_info_cn}`;
 
       wrapperDiv.appendChild(name);
-      textDiv.appendChild(type);
+      // textDiv.appendChild(type);
       textDiv.appendChild(address);
       textDiv.appendChild(facility);
       textDiv.appendChild(open);
@@ -528,7 +528,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   };
 
-  // 병원&약국 데이터
+  // 미용 데이터
   const hairData = () => {
     fetch("http://localhost/dogether_php_ver/json/cafe.json")
       .then((response) => response.json())
@@ -629,7 +629,7 @@ document.addEventListener("DOMContentLoaded", function () {
       let wrapperDiv = document.createElement("div");
       let textDiv = document.createElement("div");
       let name = document.createElement("h1");
-      let type = document.createElement("p");
+      // let type = document.createElement("p");
       let address = document.createElement("p");
       let facility = document.createElement("p");
       let open = document.createElement("p");
@@ -639,15 +639,15 @@ document.addEventListener("DOMContentLoaded", function () {
       wrapperDiv.classList.add("detailtitle");
       textDiv.classList.add("detailList");
       name.textContent = item.FCLTY_NM;
-      type.innerHTML = `<p class="title" style="font-size: 1.5rem; display: flex; align-items: center;">종류</p> ${item.FCLTY_INFO_DC}`;
-      address.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center;"><img src="./images/map.png" alt="" />주소</p> ${item.LNM_ADDR}`;
-      facility.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center;"><img src="./images/collection.png" alt="" />시설정보설명</p> ${item.FCLTY_INFO_DC}`;
-      open.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center; "><img src="./images/open.png" alt="" />영업시간</p> ${item.OPER_TIME}`;
-      closed.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center; "><img src="./images/closed.png" alt="" />휴무일</p> ${item.RSTDE_GUID_CN}`;
-      // date.textContent = `<p style="font-size: 1.5rem; ">기타정보</p> ${item.pet_info_cn}`;
+      // type.innerHTML = `<p class="title" style="font-size: 1.1rem; display: flex; align-items: center;">종류</p> ${item.FCLTY_INFO_DC}`;
+      address.innerHTML = `<p style="color:gray; font-size: 1.1rem; display: flex; align-items: center;"><i class="fa-solid fa-location-dot" style="color: #808080; margin-right: 10px;"></i>주소</p> <p style="font-size:1.3rem;">${item.LNM_ADDR}</p>`;
+      facility.innerHTML = `<p style="color:gray; font-size: 1.1rem; display: flex; align-items: center;"><img src="./images/collection.png" alt="" />시설정보</p> <p style="font-size:1.3rem;">${item.FCLTY_INFO_DC}</p>`;
+      open.innerHTML = `<p style="color:gray; font-size: 1.1rem; display: flex; align-items: center; "><img src="./images/open.png" alt="" />영업시간</p> <p style="font-size:1.3rem;">${item.OPER_TIME}</p>`;
+      closed.innerHTML = `<p style="color:gray; font-size: 1.1rem; display: flex; align-items: center; "><img src="./images/closed.png" alt="" />휴무일</p> <p style="font-size:1.3rem;">${item.RSTDE_GUID_CN}</p>`;
+      // date.textContent = `<p style="font-size: 1.1rem; ">기타정보</p> ${item.pet_info_cn}`;
 
       wrapperDiv.appendChild(name);
-      textDiv.appendChild(type);
+      // textDiv.appendChild(type);
       textDiv.appendChild(address);
       textDiv.appendChild(facility);
       textDiv.appendChild(open);
@@ -760,7 +760,7 @@ document.addEventListener("DOMContentLoaded", function () {
       let wrapperDiv = document.createElement("div");
       let textDiv = document.createElement("div");
       let name = document.createElement("h1");
-      let type = document.createElement("p");
+      // let type = document.createElement("p");
       let address = document.createElement("p");
       let facility = document.createElement("p");
       let open = document.createElement("p");
@@ -770,15 +770,15 @@ document.addEventListener("DOMContentLoaded", function () {
       wrapperDiv.classList.add("detailtitle");
       textDiv.classList.add("detailList");
       name.textContent = item.FCLTY_NM;
-      type.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center;"><img src="./images/veterinary.png" alt="" />종류</p> ${item.FCLTY_INFO_DC}`;
-      address.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center;"><img src="./images/map.png" alt="" />주소</p> ${item.LNM_ADDR}`;
-      facility.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center;"><img src="./images/collection.png" alt="" />시설정보설명</p> ${item.FCLTY_INFO_DC}`;
-      open.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center; "><img src="./images/open.png" alt="" />영업시간</p> ${item.OPER_TIME}`;
-      closed.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center; "><img src="./images/closed.png" alt="" />휴무일</p> ${item.RSTDE_GUID_CN}`;
-      // date.textContent = `<p style="font-size: 1.5rem; ">기타정보</p> ${item.pet_info_cn}`;
+      // type.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center;"><img src="./images/veterinary.png" alt="" />종류</p> ${item.FCLTY_INFO_DC}`;
+      address.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center;"><img src="./images/map.png" alt="" style="width:18px; height:18px; margin-right: 10px;"/>주소</p> ${item.LNM_ADDR}`;
+      facility.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center;"><img src="./images/collection.png" alt="" />시설정보</p> ${item.FCLTY_INFO_DC}`;
+      open.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center; "><img src="./images/open.png" alt="" />영업시간</p> ${item.OPER_TIME}`;
+      closed.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center; "><img src="./images/closed.png" alt="" />휴무일</p> ${item.RSTDE_GUID_CN}`;
+      // date.textContent = `<p style="font-size: 1.1rem; ">기타정보</p> ${item.pet_info_cn}`;
 
       wrapperDiv.appendChild(name);
-      textDiv.appendChild(type);
+      // textDiv.appendChild(type);
       textDiv.appendChild(address);
       textDiv.appendChild(facility);
       textDiv.appendChild(open);

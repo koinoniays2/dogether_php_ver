@@ -45,7 +45,7 @@
                         <div>
                             <span>아이디</span>
                             <div class="btn_box input-group">
-                                <input type="text" id="id" name="id"/>
+                                <input type="text" id="id" name="id" placeholder=""/>
                                 <button id="check_id" type="submit">중복확인</button>
                             </div>
                         </div>

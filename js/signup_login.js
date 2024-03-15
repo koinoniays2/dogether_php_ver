@@ -14,11 +14,11 @@ passwordInput.addEventListener("focus", function () {
 });
 // 포커스가 입력란에서 빠져나갈 때 플레이스홀더를 다시 보이게 하는 함수를 호출
 idInput.addEventListener("blur", function () {
-  idInput.setAttribute("placeholder", "아이디");
+  idInput.setAttribute("placeholder", " ");
 });
 // 포커스가 입력란에서 빠져나갈 때 플레이스홀더를 다시 보이게 하는 함수를 호출
 passwordInput.addEventListener("blur", function () {
-  passwordInput.setAttribute("placeholder", "비밀번호");
+  passwordInput.setAttribute("placeholder", " ");
 });
 
 // 회원가입 페이지------------------------
