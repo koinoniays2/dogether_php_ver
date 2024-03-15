@@ -59,7 +59,7 @@
                     </div>
                     <div>
                         <a href=<?php echo SocialLogin::socialLoginUrl("google") ?>>
-                            <img src="images/구글.png" alt="구글" />
+                            <img src="images/googlelogo_bgwhite.png" alt="구글" />
                         </a>
                     </div>
                     <div>
