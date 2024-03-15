@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
       wrapperDiv.classList.add("detailtitle");
       textDiv.classList.add("detailList");
       category.textContent = item.title;
-      address.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center;"><img src="./images/map.png" alt="" />주소</p>${item.address}`;
+      address.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center;"><img src="./images/map.png" alt="" style="width: 50px; height: 50px; margin-right: 10px;" />주소</p>${item.address}`;
       tel.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center;"><img src="./images/emergency-call.png" alt="" />전화번호</p>${item.tel}`;
       sales.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center;"><img src="./images/open.png" alt="" />영업시간</p>${
         item.operatingTime ? item.operatingTime.replace(/-/g, "~") : ""
@@ -639,7 +639,7 @@ document.addEventListener("DOMContentLoaded", function () {
       wrapperDiv.classList.add("detailtitle");
       textDiv.classList.add("detailList");
       name.textContent = item.FCLTY_NM;
-      type.innerHTML = `<p class="title" style="font-size: 1.5rem; display: flex; align-items: center;"><img src="./images/grooming.png" alt="" />종류</p> ${item.FCLTY_INFO_DC}`;
+      type.innerHTML = `<p class="title" style="font-size: 1.5rem; display: flex; align-items: center;">종류</p> ${item.FCLTY_INFO_DC}`;
       address.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center;"><img src="./images/map.png" alt="" />주소</p> ${item.LNM_ADDR}`;
       facility.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center;"><img src="./images/collection.png" alt="" />시설정보설명</p> ${item.FCLTY_INFO_DC}`;
       open.innerHTML = `<p style="font-size: 1.5rem; display: flex; align-items: center; "><img src="./images/open.png" alt="" />영업시간</p> ${item.OPER_TIME}`;
