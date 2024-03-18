@@ -44,10 +44,15 @@
             반려동물과 <b>함께</b>하는 일상<br />
             내 주변 반려동물을 위한 시설을 찾아보세요!
           </p>
-          <p>DOGETHER는 반려동물 시설 및 동반 시설 리스트 제공 플랫폼입니다.</p>
+          <p>#DOGETHER는 반려동물 시설 및 동반 시설 리스트 제공 플랫폼입니다.</p>
         </div>
         <div id="section1-event2" class="section-2-move">
           <a href="#section-2">알아보기</a>
+          <div id="arrow">
+            <span><img src="./images/arr.png" alt=""></span>
+            <span><img src="./images/arr.png" alt=""></span>
+            <span><img src="./images/arr.png" alt=""></span>
+          </div>
         </div>
       </div>
     </section>

@@ -1,5 +1,7 @@
 #header {
   width: 100%;
+  position: fixed;
+  background-color: rgba(255, 255, 255); opacity: 0.8;
 }
 
 .header-container {
@@ -24,6 +26,7 @@
 
 #menu ul {
   display: flex;
+  font-family: 'yg-jalnan';
 }
 
 #menu ul li {

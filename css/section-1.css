@@ -7,11 +7,11 @@
 /* 섹션1 배경 */
 #section-1 {
   width: 100%;
-  height: calc(100vh - 100px);
+  height: calc(110vh - 90px);
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: right bottom;
-  background-image: url("../images/main-img.svg");
+  background-size: cover;
+  background-position: center;
+  background-image: url("../images/main_img.png");
 }
 /* 메인 컨테이너 */
 .section-1-container {
@@ -24,50 +24,71 @@
   flex-direction: column;
   justify-content: center;
   word-break: keep-all;
+  padding-top: 150px;
 }
 /* 메인 설명 */
 .section-1-container .sectiion-1-main-text {
   width: 100%;
   z-index: 99;
+  line-height: 1;
   font-size: 1.5rem;
-  text-align: start;
+  text-align: center;
 }
+
 /* LET'S DOGETHER */
 .section-1-container p:nth-child(1) {
-  font-size: 6rem;
+  font-size: 9rem;
   transition: var(--font-transition);
-  font-weight: bold;
   color: #14471e;
-  margin-bottom: 20px;
-  font-family: "yg-jalnan";
+  font-family: "LOTTERIACHAB";
 }
 .section-1-container p:nth-child(2) {
   font-size: 1.5rem;
   line-height: 1.2;
   margin-bottom: 10px;
 }
+.section-1-container P:nth-child(2) {
+  font-family: 'yg-jalnan';
+  font-size: 2.5rem;
+  margin-top: 10px;
+}
 .section-1-container P:nth-child(2) b {
-  font-size: 2rem;
+  font-weight: bold;
   transition: var(--font-transition);
   color: #f0a646;
 }
 .section-1-container p:nth-child(3) {
-  font-size: 0.9rem;
-  color: gray;
+  font-family: 'yg-jalnan';
+  font-size: 1.2rem;
+  color: #f0a646;
   transition: var(--font-transition);
 }
 /* 버튼 */
 .section-2-move {
   margin: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 .section-2-move a {
+  font-family: 'yg-jalnan';
   display: block;
-  padding: 1rem 1.5rem;
+  padding: 0.5rem 1.4rem;
   width: fit-content;
-  background-color: #14471e;
+  background-color: #185C00;
   color: #fff;
-  border-radius: 1rem;
-  font-size: 1rem;
+  border-radius: 2rem;
+  font-size: 1.2rem;
+  margin-top: 70px;
+}
+
+#arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
 }
 
 @media screen and (max-width: 768px) {
@@ -77,14 +98,15 @@
 }
 @media screen and (max-width: 640px) {
   #section-1 {
-    background-size: 640px;
+    background-size: cover;
+    background-position: center;
   }
   .section-1-container .sectiion-1-main-text {
     font-size: 1.25rem;
-    /* display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: center; */
+    text-align: center;
   }
   .section-1-container P:nth-child(1) {
     font-size: 3rem;
