@@ -1,9 +1,9 @@
 // 아이디 입력 필드
-const idInput = document.querySelector('input[name="id"]');
+const idInputChange = document.querySelector('input[name="id"]');
 const idText = document.querySelector(".id_text");
 
 // 비밀번호 입력 필드
-const passwordInput = document.querySelector('input[name="password"]');
+const passwordInputChange = document.querySelector('input[name="password"]');
 const passwordText = document.querySelector(".password_text");
 
 // 비밀번호 확인 입력 필드
@@ -28,8 +28,8 @@ const addressText = document.querySelector(".address_text");
 
 
 // 아이디 입력 필드의 실시간 변화 이벤트 추가
-idInput.addEventListener("input", () => {
-    const id = idInput.value;
+idInputChange.addEventListener("input", () => {
+    const id = idInputChange.value;
     if (!id) {
         idText.textContent = "아이디를 입력해주세요.";
         idText.style.color = "red";
@@ -39,8 +39,8 @@ idInput.addEventListener("input", () => {
 });
 
 // 비밀번호 입력 필드의 실시간 변화 이벤트 추가
-passwordInput.addEventListener("input", () => {
-    const password = passwordInput.value;
+passwordInputChange.addEventListener("input", () => {
+    const password = passwordInputChange.value;
     if (!password) {
         passwordText.textContent = "비밀번호를 입력해주세요.";
         passwordText.style.color = "red";
