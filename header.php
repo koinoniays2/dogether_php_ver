@@ -42,20 +42,17 @@
       </label>
       <div id="side_menu">
         <ul>
+        <li>USER</li>
           <li><a href="login_form.php">로그인</a></li>
           <li><a href="terms_form.php">회원가입</a></li>
           <li><a href="index.php">커뮤니티</a></li>
-          <li id="toggleSubmenu">
-            <a href="#">ETC</a>
-            <ul class="sub">
+          <li>MENU</li>
               <li><a href="detail.php?dataId=병원">동물병원&약국</a></li>
               <li><a href="detail.php?dataId=음식점">음식점</a></li>
               <li><a href="detail.php?dataId=미용">애견 미용샵</a></li>
               <li><a href="detail.php?dataId=미술관">미술관</a></li>
               <li><a href="detail.php?dataId=카페">카페</a></li>
               <li><a href="detail.php?dataId=숙소">숙소</a></li>
-            </ul>
-          </li>
         </ul>
       </div>
     </div>

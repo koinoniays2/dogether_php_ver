@@ -8,7 +8,7 @@
   background-position: right bottom;
   justify-content: center;
   overflow: hidden;
-} 
+}
 /* max-width 1024px 설정 */
 
 .maxsection-3 {
@@ -59,7 +59,7 @@
   align-items: center;
 }
 .subtitle3 {
-  font-family: 'Dovemayo_gothic';
+  font-family: "Dovemayo_gothic";
   font-size: 1.8rem;
   font-weight: bold;
   margin-bottom: 15px;
