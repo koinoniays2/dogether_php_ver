@@ -60,10 +60,10 @@
         <div id="menu_wrap" class="bg_white">
           <div class="option">
             <div>
-              <form onsubmit="searchPlaces(); return false;">
+              <form id="search_form" onsubmit="searchPlaces(); return false;">
                 <!-- 키워드 : -->
                 <input type="text" value="애견동반" id="keyword" size="15" />
-                <button type="submit"><i class="fa-solid fa-magnifying-glass" style="color: #808080;"></i></button>
+                <button type="button"><i class="fa-solid fa-magnifying-glass" style="color: #808080;"></i></button>
               </form>
             </div>
           </div>
@@ -93,7 +93,7 @@
   </footer>
 </body>
 <script src="./js/detail.js"></script>
-<script src="./js/api.js"></script>
-<script src="./js/map.js"></script>
+<script type="module" src="./js/api.js"></script>
+<script type="module" src="./js/map.js"></script>
 
 </html>

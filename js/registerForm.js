@@ -14,7 +14,7 @@ checkId.addEventListener("click", (e) => {
         idText.style.color = "red";
     } else {
         $.ajax({
-            url: "http://localhost/dogether/register_id_check.php",
+            url: "http://localhost/dogether_php_ver/register_id_check.php",
             type: "POST",
             data: {id: id},
             dataType: "json",

@@ -1,3 +1,4 @@
+import { searchPlaces } from "./map.js";
 let addressArray = [];
 const serviceKey = "b26f3923-0250-4ed3-8329-54b04f6af8a2";
 document.addEventListener("DOMContentLoaded", function () {
@@ -5,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const clickedDataId = params.get("dataId");
   console.log(clickedDataId); // param 확인
   const PAGE_SIZE = 10; // 한 페이지에 표시할 항목 수
-  var input = document.getElementById("keyword");
 
   // 세계음식 데이터 불러오기
   const foodData = async () => {
@@ -380,13 +380,23 @@ document.addEventListener("DOMContentLoaded", function () {
       let address = document.createElement("p");
       let date = document.createElement("p");
 
+      const regex = /'([^']+)'/g;
+      const matches = [];
+      let match;
+      while ((match = regex.exec(item.pet_info_cn)) !== null) {
+        matches.push(match[1]);
+      }
+      // console.log(matches);
+
       flexDiv.classList.add("detailflex");
       wrapperDiv.classList.add("detailtitle");
       textDiv.classList.add("detailList");
 
       name.textContent = item.ldgs_nm;
       address.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center;"><img src="./images/map.png" alt="" style="width:18px; height:18px; margin-right: 10px;"/>주소</p> ${item.ldgs_addr}`;
-      date.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center;"><img src="./images/collection.png" alt="" />기타정보</p> ${item.pet_info_cn}`;
+      date.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center;"><img src="./images/collection.png" alt="" />기타정보</p>
+              ${matches.map((match) => `<li>${match}</li>`).join("")} `;
+      //  추출된 데이터를 리스트로 삽입
       wrapperDiv.appendChild(name);
 
       textDiv.appendChild(address);
@@ -789,6 +799,9 @@ document.addEventListener("DOMContentLoaded", function () {
       content.appendChild(flexDiv);
     });
   };
+
+  var input = document.getElementById("keyword");
+
   switch (clickedDataId) {
     case "음식점":
       foodData();
@@ -799,7 +812,7 @@ document.addEventListener("DOMContentLoaded", function () {
       hotelData();
       break;
     case "미술관":
-      input.value = "애견동반 미술관";
+      input.value = "애견동반";
       galleryData();
       break;
     case "카페":
@@ -817,4 +830,12 @@ document.addEventListener("DOMContentLoaded", function () {
     default:
       console.log("");
   }
+  searchPlaces();
 });
+document
+  .getElementById("search_form")
+  .addEventListener("submit", function (event) {
+    event.preventDefault(); // 폼 제출 방지
+    var keyword = document.getElementById("keyword").value;
+    searchPlaces(keyword); // 검색어를 전달하여 api.js의 searchPlaces 함수 호출
+  });
