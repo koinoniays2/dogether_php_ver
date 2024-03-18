@@ -1,4 +1,4 @@
-import { searchPlaces } from './map.js';
+import { searchPlaces } from "./map.js";
 let addressArray = [];
 const serviceKey = "b26f3923-0250-4ed3-8329-54b04f6af8a2";
 document.addEventListener("DOMContentLoaded", function () {
@@ -379,12 +379,12 @@ document.addEventListener("DOMContentLoaded", function () {
       let name = document.createElement("h1");
       let address = document.createElement("p");
       let date = document.createElement("p");
-      
+
       const regex = /'([^']+)'/g;
       const matches = [];
       let match;
       while ((match = regex.exec(item.pet_info_cn)) !== null) {
-          matches.push(match[1]);
+        matches.push(match[1]);
       }
       // console.log(matches);
 
@@ -394,14 +394,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
       name.textContent = item.ldgs_nm;
       address.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center;"><img src="./images/map.png" alt="" style="width:18px; height:18px; margin-right: 10px;"/>주소</p> ${item.ldgs_addr}`;
-      data.innerHTML = `
-      <p style="font-size: 1.1rem; display: flex; align-items: center;">
-          <img src="./images/collection.png" alt="" />기타정보
-      </p>
-      <ul>
-          ${matches.map(match => `<li>${match}</li>`).join('')} <!-- 추출된 데이터를 리스트로 삽입 -->
-      </ul>
-  `;
+      date.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center;"><img src="./images/collection.png" alt="" />기타정보</p>
+              ${matches.map((match) => `<li>${match}</li>`).join("")} `;
+      //  추출된 데이터를 리스트로 삽입
       wrapperDiv.appendChild(name);
 
       textDiv.appendChild(address);
@@ -834,11 +829,13 @@ document.addEventListener("DOMContentLoaded", function () {
       break;
     default:
       console.log("");
-    }
-    searchPlaces();
+  }
+  searchPlaces();
 });
-document.getElementById("search_form").addEventListener("submit", function(event) {
-  event.preventDefault(); // 폼 제출 방지
-  var keyword = document.getElementById("keyword").value;
-  searchPlaces(keyword); // 검색어를 전달하여 api.js의 searchPlaces 함수 호출
-});
+document
+  .getElementById("search_form")
+  .addEventListener("submit", function (event) {
+    event.preventDefault(); // 폼 제출 방지
+    var keyword = document.getElementById("keyword").value;
+    searchPlaces(keyword); // 검색어를 전달하여 api.js의 searchPlaces 함수 호출
+  });
