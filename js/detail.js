@@ -33,5 +33,5 @@ document.addEventListener("DOMContentLoaded", function () {
       introBox2.style.transition = "opacity 1s ease-in-out";
       introBox2.style.opacity = "1";
     }, 1000);
-  }, 3000);
+  }, 1000);
 });
