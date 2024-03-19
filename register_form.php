@@ -38,6 +38,7 @@
     ?>
 
     <main>
+        <div class="background-overlay"></div>
         <section id="main_container">
             <!-- <h2>회원가입</h2> -->
             <form name="register_form" id="register_form">
