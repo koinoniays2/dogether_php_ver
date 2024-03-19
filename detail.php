@@ -96,5 +96,7 @@
 <!-- <script type="module" src="./js/api.js"></script>
 <script type="module" src="./js/map.js"></script> -->
 <script src="./js/foodData.js"></script>
+<script type="module" src="./js/cafeData.js"></script>
+<script type="module" src="./js/map.js"></script>
 
 </html>
