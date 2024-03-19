@@ -29,7 +29,7 @@
 /* 메인 설명 */
 .section-1-container .sectiion-1-main-text {
   width: 100%;
-  z-index: 99;
+  z-index: 50;
   line-height: 1;
   font-size: 1.5rem;
   text-align: center;
@@ -76,7 +76,7 @@
   display: block;
   padding: 0.5rem 1.4rem;
   width: fit-content;
-  background-color: #185C00;
+  background-color: #14471E;
   color: #fff;
   border-radius: 2rem;
   font-size: 1.2rem;
@@ -96,10 +96,11 @@
     font-size: 4rem;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1024px) {
   #section-1 {
-    background-size: cover;
-    background-position: center;
+    background-image: url(../images/mobile-mainImg.png);
+    background-size: 45vh;
+    background-position: right bottom;
   }
   .section-1-container .sectiion-1-main-text {
     font-size: 1.25rem;
@@ -119,6 +120,7 @@
     font-size: 1.5rem;
   }
   .section-1-container p:nth-child(3) {
+    line-height: 17px;
     font-size: 0.9rem;
   }
   .section-1-container {

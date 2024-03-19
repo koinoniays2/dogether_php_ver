@@ -1,5 +1,17 @@
+body {background-image: url(../images/checkbg.png);}
 main {
-  background-image: url(../images/login-bg.png);
+  position: relative;
+}
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../images/dogfan.png) no-repeat;
+  background-position: bottom;
+  opacity: 0.5; /* 배경에만 투명도를 적용 */
+  z-index: -1; /* 배경을 content의 뒤로 이동시킴 */
 }
 #main_container {
   width: 100%;
@@ -17,6 +29,7 @@ main {
   flex-direction: column;
   align-items: center;
 }
+
 /* 타이틀 */
 #login_title {
   padding: 1rem 0;

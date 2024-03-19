@@ -18,14 +18,14 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  z-index: 100;
+  z-index: 90;
 }
 .main-text3 {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   width: 50%;
-  font-family: yg-jalnan;
+  font-family: 'yg-jalnan';
 }
 .title-list3 {
   text-align: center;
@@ -61,13 +61,14 @@
 .subtitle3 {
   font-family: "Dovemayo_gothic";
   font-size: 1.8rem;
+  color: #EE9B01;
   font-weight: bold;
   margin-bottom: 15px;
 }
 .subtext3 {
   font-family: Ownglyph_meetme-Rg;
   margin-bottom: 70px;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   word-break: keep-all;
 }
 
@@ -92,7 +93,8 @@
 
 @media screen and (max-width: 1024px) {
   #section-3 {
-    background-size: 200px;
+    background-image: none;
+    height: 100%;
   }
   .maxsection-3 {
     flex-direction: column;

@@ -22,6 +22,7 @@
         <?php include "header.php"; ?>
     </header>
     <main>
+        <div class="background-overlay"></div>
         <section id="main_container">
             <div id="login_box">
                 <!-- <div id="login_title">

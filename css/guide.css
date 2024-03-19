@@ -81,10 +81,25 @@ ol img {
   margin-bottom: 20px;
 }
 
+/* pc버전에서 이미지 제거 */
+.guide_container ul div {
+  display: none;
+}
+
 /* 480px 까지 ul부분 패딩 삭제코드 */
 @media screen and (max-width: 480px) {
   .guide_container ul {
     padding: 0px;
   }
+
+  /* 모바일버전에서 이미지 보이게 */
+  .guide_container ul li:nth-child(2) {
+    display: block;
+  }
+
+  .guide_container ul {
+    margin: 0 auto;
+  }
+
   
 }
