@@ -19,7 +19,7 @@ var infowindow = new kakao.maps.InfoWindow({ zIndex: 1 });
 // searchPlaces();
 
 // 키워드 검색을 요청하는 함수입니다
-export function searchPlaces(keyword) {
+export default function searchPlaces(keyword) {
   keyword = document.getElementById("keyword").value;
 
   if (!keyword.replace(/^\s+|\s+$/g, "")) {

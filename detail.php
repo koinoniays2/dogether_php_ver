@@ -93,7 +93,8 @@
   </footer>
 </body>
 <script src="./js/detail.js"></script>
-<script type="module" src="./js/api.js"></script>
-<script type="module" src="./js/map.js"></script>
+<!-- <script type="module" src="./js/api.js"></script>
+<script type="module" src="./js/map.js"></script> -->
+<script src="./js/foodData.js"></script>
 
 </html>
