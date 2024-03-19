@@ -16,6 +16,7 @@
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
     <title>회원가입</title>
 </head>
+
 <body>
     <header id="header">
         <?php include "header.php"; ?>
@@ -37,6 +38,7 @@
     ?>
 
     <main>
+        <div class="background-overlay"></div>
         <section id="main_container">
             <!-- <h2>회원가입</h2> -->
             <form name="register_form" id="register_form">
@@ -45,7 +47,7 @@
                         <div>
                             <span>아이디</span>
                             <div class="btn_box input-group">
-                                <input type="text" id="id" name="id" placeholder=""/>
+                                <input type="text" id="id" name="id" placeholder="" />
                                 <button id="check_id" type="submit">중복확인</button>
                             </div>
                         </div>
@@ -75,14 +77,14 @@
                     <li>
                         <div>
                             <span>이메일</span>
-                            <input type="email" id="email" name="email" >
+                            <input type="email" id="email" name="email">
                         </div>
                         <span class="email_text"></span>
                     </li>
                     <li>
                         <div>
                             <span>연락처</span>
-                            <input type="text" id="mobile_tel" name="mobile_tel" >
+                            <input type="text" id="mobile_tel" name="mobile_tel">
                         </div>
                         <span class="mobile_text"></span>
                     </li>
@@ -159,8 +161,9 @@
     </script>
 
     <!-- JS -->
-    <script src="js/signup_login.js"></script>
+    <script src="js/signup.js"></script>
     <script src="js/registerForm.js"></script>
     <script src="js/inputChange.js"></script>
 </body>
+
 </html>

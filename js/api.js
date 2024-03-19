@@ -1,7 +1,6 @@
-import { searchPlaces } from "./map.js";
-let addressArray = [];
+import searchPlaces from "./map.js";
 const serviceKey = "b26f3923-0250-4ed3-8329-54b04f6af8a2";
-document.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("load", function () {
   const params = new URLSearchParams(window.location.search);
   const clickedDataId = params.get("dataId");
   console.log(clickedDataId); // param 확인

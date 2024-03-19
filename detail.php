@@ -48,6 +48,7 @@
     <div class="detail-container">
       <div class="detail-title"></div>
       <div class="detail-text"></div>
+      <div class="content"></div>
       <!-- map -->
       <div class="map_wrap">
         <div id="map" style="
@@ -75,7 +76,6 @@
       </div>
       <!-- js 렌더링 -->
       <div class="category"></div>
-      <div class="content"></div>
       <!-- 페이지네이션 -->
       <div class="page-container"></div>
     </div>
@@ -93,7 +93,10 @@
   </footer>
 </body>
 <script src="./js/detail.js"></script>
-<script type="module" src="./js/api.js"></script>
+<!-- <script type="module" src="./js/api.js"></script>
+<script type="module" src="./js/map.js"></script> -->
+<script src="./js/foodData.js"></script>
+<script type="module" src="./js/cafeData.js"></script>
 <script type="module" src="./js/map.js"></script>
 
 </html>

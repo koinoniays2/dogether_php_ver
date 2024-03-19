@@ -1,3 +1,18 @@
+body {background-image: url(../images/login-bg.png);}
+main {
+  position: relative;
+}
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../images/dogfan.png) no-repeat;
+  background-position: bottom;
+  opacity: 0.5; /* 배경에만 투명도를 적용 */
+  z-index: -1; /* 배경을 content의 뒤로 이동시킴 */
+}
 #main_container {
   width: 100%;
   max-width: 1280px;
@@ -6,6 +21,7 @@
   padding: 5rem 1rem;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 #login_box {
   width: 100%;
@@ -13,6 +29,7 @@
   flex-direction: column;
   align-items: center;
 }
+
 /* 타이틀 */
 #login_title {
   padding: 1rem 0;
@@ -36,18 +53,19 @@
 #login_form input {
   width: 100%;
   padding: 0.9rem;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1.5rem;
   border-radius: 20px;
+  background: #f5f5f5;
 }
 /* 버튼 */
 #login_btn {
   width: 100%;
-  padding: 0.5rem 1rem;
+  padding: 0.8rem 1rem;
   cursor: pointer;
-  background-color: #f0a646;
+  background-color: #14471e;
   color: white;
   text-align: center;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   margin-top: 20px;
   transition-duration: 0.5s;
 }
@@ -81,4 +99,28 @@
 #login_social img {
   width: 48px;
   border-radius: 100%;
+}
+ul {
+  gap: 2px;
+}
+
+li {
+  position: relative;
+  
+}
+li p {
+  position: absolute;
+  left: 15px;
+  top: 10px;
+  color: gray;
+  background-color: #f5f5f5;
+  padding: 5px;
+  transition: top 0.3s ease, font-size 0.3s ease;
+  border-radius: 0.8rem;
+}
+input {
+  border: 3px solid transparent;
+}
+input:focus-within {
+  border: 3px solid #14471e
 }

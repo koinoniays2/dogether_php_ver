@@ -22,21 +22,24 @@
         <?php include "header.php"; ?>
     </header>
     <main>
+        <div class="background-overlay"></div>
         <section id="main_container">
             <div id="login_box">
-                <div id="login_title">
+                <!-- <div id="login_title">
                     <p>DOGETHER</p><span>with everyday</span>
-                </div>
+                </div> -->
                 <div id="login_form">
                     <form name="login_form">
                         <!-- name=폼 제출시 요소의 값 식별, action=데이터를 전송 할 URL -->
                         <ul>
                             <li>
-                                <input type="text" id="id" name="id" placeholder="아이디" />
+                                <p>아이디</p>
+                                <input type="text" id="id" name="id"/>
                                 <!-- <span class="id-error"></span> -->
                             </li>
                             <li>
-                                <input type="password" id="password" name="password" placeholder="비밀번호" />
+                                <p>비밀번호</p>
+                                <input type="password" id="password" name="password"/>
                                 <!-- <span class="password-error"></span> -->
                                 <span class="error-text"></span>
                             </li>
@@ -71,7 +74,7 @@
         </section>
     </main>
     <!-- JS -->
-    <script src="./js/signup_login.js"></script>
+    <script src="./js/login_form.js"></script>
     <script type="text/javascript" src="./js/loginForm.js"></script>
 </body>
 
