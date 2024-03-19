@@ -48,6 +48,7 @@
     <div class="detail-container">
       <div class="detail-title"></div>
       <div class="detail-text"></div>
+      <div class="content"></div>
       <!-- map -->
       <div class="map_wrap">
         <div id="map" style="
@@ -75,7 +76,6 @@
       </div>
       <!-- js 렌더링 -->
       <div class="category"></div>
-      <div class="content"></div>
       <!-- 페이지네이션 -->
       <div class="page-container"></div>
     </div>

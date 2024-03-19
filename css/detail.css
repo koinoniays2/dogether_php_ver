@@ -6,10 +6,10 @@
   flex-direction: column; */
   position: relative;
 }
-.bg-sticky, 
-.bg-wrapper { 
+.bg-sticky,
+.bg-wrapper {
   height: 0;
-  padding-bottom: 90vh; 
+  padding-bottom: 90vh;
 }
 .bg-wrapper {
   position: fixed;
@@ -83,11 +83,8 @@
 }
 .content {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: space-between;
   width: 100%;
-  margin-top: 60px;
-  word-break: keep-all;
 }
 .detailflex {
   display: flex;
@@ -173,8 +170,7 @@
   height: 100%;
   position: relative;
 }
-.option > div > form
-{
+.option > div > form {
   height: 100%;
   border-radius: 15px;
   position: absolute;
@@ -335,14 +331,13 @@
 /* 푸터 배경색 지정 */
 footer {
   background-color: #fdf6eb;
-  
 }
 @media screen and (min-width: 375px) and (max-width: 768px) {
   #intro-box1 {
     flex-direction: column;
   }
   #intro-box2 {
-    flex-direction: column-reverse
+    flex-direction: column-reverse;
   }
   .img-box {
     width: 90%;
