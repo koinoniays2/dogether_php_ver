@@ -98,7 +98,7 @@ class SocialLoginController {
         // curl 종료
         curl_close($ch);
         $decoded_data = json_decode($response,true);
-        // print_r($decoded_data);
+        //print_r($decoded_data);
 
         // 변하지 않는 고유의 값
         // password
@@ -106,20 +106,20 @@ class SocialLoginController {
         $nickname = '';
         $email = '';
 
-        if($this->state == 'google'){
-            $uid = $decoded_data['sub'];
-            $nickname = $decoded_data['name'];
-            $email = $decoded_data['email'];
-        }else if($this->state == 'kakao'){
+        if($this->state == 'kakao'){
             $uid = $decoded_data['id'];
             $kakaoAccount = $decoded_data['kakao_account'];
             $nickname = $kakaoAccount['profile']['nickname'];
             $email = $kakaoAccount['email'];
-        }else {
+        }else if($this->state == 'naver'){
             $responseData = $decoded_data['response'];
             $uid = $responseData['id'];
             $nickname = $responseData['nickname'];
             $email =$responseData['email'];
+        }else{
+            $uid = $decoded_data['sub'];
+            $nickname = $decoded_data['name'];
+            $email = $decoded_data['email'];
         }
 
         $profileModel = new ProfileModel($nickname, $email, $uid);
@@ -128,9 +128,16 @@ class SocialLoginController {
     }
     function login() {
         $data = $this->socialLoginRepository->findUserByEmail($this->profileModel->email);
+        print_r($data);
         if($data === null) {
-            print_r($data);
             $this->socialLoginRepository->signup($this->profileModel, $this->state);
+            session_start();
+            $_SESSION["userid"] = $this->profileModel->email;
+            $_SESSION["name"] = $this->profileModel->nickname;
+            $_SESSION["id"] = $this->profileModel->uid;
+            $_SESSION["accessToken"] = $this->tokenModel->getAccessToken();
+            $_SESSION["state"] = $this->state;
+            header("Location: http://" . $_SERVER['HTTP_HOST'] . '/dogether_php_ver2/index.php');
         } 
         // 구글의 이메일과 카카오 or 네이버의 이메일이 같을경우
         // 어떤 플랫폼에서 회원가입 됐는지 확인 alert창을 띄워 가입된 플랫폼 보여줌
@@ -151,15 +158,17 @@ class SocialLoginController {
             </script>
             ");
             // header("Location: http://" . $_SERVER['HTTP_HOST'] . '/cms/index.php'); // -> alert무시돼서 location.href로 바꿈
+        }else {
+            session_start();
+            $_SESSION["userid"] = $this->profileModel->email;
+            $_SESSION["name"] = $this->profileModel->nickname;
+            $_SESSION["id"] = $this->profileModel->uid;
+            $_SESSION["accessToken"] = $this->tokenModel->getAccessToken();
+            $_SESSION["state"] = $this->state;
+            header("Location: http://" . $_SERVER['HTTP_HOST'] . '/dogether_php_ver2/index.php');
         }
         // session : 서버에서 데이터를 저장
         // cookie : 클라이언트에서 데이터를 저장
-        session_start();
-        $_SESSION["userid"] = $this->profileModel->email;
-        $_SESSION["username"] = $this->profileModel->nickname;
-        $_SESSION["id"] = $this->profileModel->uid;
-        $_SESSION["accessToken"] = $this->tokenModel->getAccessToken();
-        $_SESSION["state"] = $this->state;
 
         // 카카오 토큰 바뀜 확인
         // echo ("
@@ -169,7 +178,6 @@ class SocialLoginController {
         //     </script>
         // ");
 
-        header("Location: http://" . $_SERVER['HTTP_HOST'] . '/dogether_php_ver/index.php');
     }
 }
 ?>
