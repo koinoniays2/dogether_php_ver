@@ -92,6 +92,10 @@
   }
 }
 
+#check_box:checked + label > span {
+  background: white;
+}
+
 #check_box:checked + label > span:nth-child(1) {
   top: 50%;
   transform: translate(0, -50%);
@@ -117,16 +121,19 @@
   transform: rotate(-45deg);
 }
 
+#header {
+  opacity: 0.97;
+}
+
 #side_menu {
   position: fixed;
   width: 50%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: #14471e;
   right: -500px;
   transition: all 300ms;
   z-index: 1;
   top: 0px;
-
   padding: 60px 20px 0px 20px;
 }
 #side_menu ul {
@@ -136,7 +143,9 @@
   text-align: end;
 }
 #side_menu ul li {
+  font-family: 'yg-jalnan';
   margin-top: 10px;
+  color: white;
 }
 
 #check_box:checked + label + #side_menu {
@@ -145,7 +154,7 @@
 }
 
 #side_menu {
-  font-size: 20px;
+  font-size: 17px;
 }
 
 .sub {

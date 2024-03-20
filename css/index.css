@@ -100,6 +100,8 @@ a {
 }
 body {
   font-family: "SUITE-Regular";
+  background: url(../images/body_background.png); opacity: 500000;
+
 }
 input,
 textarea {
@@ -161,21 +163,6 @@ button {
 @font-face {
   font-family: "Maplestory Bold";
   src: url("../fonts/Maplestory\ Bold.ttf") format("truetype");
-}
-/* 기호1번(이사만루) */
-@font-face {
-  font-family: 'GongGothicMedium';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-/* 기호2번 (어그로체) */
-@font-face {
-  font-family: 'SBAggroB';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
 }
 
 /* 롯데리아 촵땡겨체 */

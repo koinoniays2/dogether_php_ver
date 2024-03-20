@@ -32,6 +32,8 @@
 }
 
 .guide_container ul li {
+  font-weight: normal;
+  font-family: 'SUIT-Regular';
   width: 100%;
   padding: 1rem;
 }
@@ -89,8 +91,8 @@ ol img {
   display: none;
 }
 
-/* 680px 까지 ul부분 패딩 삭제코드 */
-@media screen and (max-width: 680px) {
+/* 768px 까지 ul부분 패딩 삭제코드 */
+@media screen and (max-width: 768px) {
   .guide_container ul {
     padding: 0px;
     margin-top: 3rem;

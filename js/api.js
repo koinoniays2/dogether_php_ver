@@ -1,6 +1,5 @@
 import searchPlaces from "./map.js";
 
-
 window.addEventListener("load", function () {
   const params = new URLSearchParams(window.location.search);
   const clickedDataId = params.get("dataId");
@@ -118,7 +117,7 @@ window.addEventListener("load", function () {
             button.addEventListener("click", () => {
               console.log(keys[0], value);
               // ★ 지도 value 설정 ★
-              switch(clickedDataId) {
+              switch (clickedDataId) {
                 case "병원":
                   searchInput.value = `${keys[0]} 동물병원`;
                   searchPlaces(searchInput.value);
@@ -221,30 +220,40 @@ window.addEventListener("load", function () {
     let flexDiv = document.createElement("div");
     let titleDiv = document.createElement("div");
     let textDiv = document.createElement("div");
-    let name = document.createElement("p");
-    let address = document.createElement("p");
-    let open = document.createElement("p");
-    let closed = document.createElement("p");
-
+    
     flexDiv.classList.add("detailflex");
     titleDiv.classList.add("detailtitle");
     textDiv.classList.add("detailList");
 
-    name.textContent = item.FCLTY_NM || item.ldgs_nm;
-    address.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center; color: gray"><i class="fa-solid fa-location-dot" style="color: #14471e; margin-right: 10px;"></i>주소</p> ${item.LNM_ADDR || item.ldgs_addr}`;
-    open.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center; color: gray"><i class="fa-solid fa-store" style="color: #14471e; margin-right: 5px;"></i>영업시간</p> ${item.OPER_TIME || item.WORKDAY_OPER_TIME_DC}`;
-    closed.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center; color: gray"><i class="fa-solid fa-store-slash" style="color: #14471e; margin-right: 5px;"></i>휴무일</p> ${item.RSTDE_GUID_CN || item.WKEND_OPER_TIME_DC}`;
+    if (item.FCLTY_NM || item.ldgs_nm) {
+        let name = document.createElement("p");
+        name.textContent = item.FCLTY_NM || item.ldgs_nm;
+        titleDiv.appendChild(name);
+    }
 
-    titleDiv.appendChild(name);
-    textDiv.appendChild(address);
-    textDiv.appendChild(open);
-    textDiv.appendChild(closed);
+    if (item.LNM_ADDR || item.ldgs_addr) {
+        let address = document.createElement("p");
+        address.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center; color: gray"><i class="fa-solid fa-location-dot" style="color: #14471e; margin-right: 10px;"></i>주소</p> ${item.LNM_ADDR || item.ldgs_addr}`;
+        textDiv.appendChild(address);
+    }
+
+    if (item.OPER_TIME || item.WORKDAY_OPER_TIME_DC) {
+        let open = document.createElement("p");
+        open.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center; color: gray"><i class="fa-solid fa-store" style="color: #14471e; margin-right: 5px;"></i>영업시간</p> ${item.OPER_TIME || item.WORKDAY_OPER_TIME_DC}`;
+        textDiv.appendChild(open);
+    }
+
+    if (item.RSTDE_GUID_CN || item.WKEND_OPER_TIME_DC) {
+        let closed = document.createElement("p");
+        closed.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center; color: gray"><i class="fa-solid fa-store-slash" style="color: #14471e; margin-right: 5px;"></i>휴무일</p> ${item.RSTDE_GUID_CN || item.WKEND_OPER_TIME_DC}`;
+        textDiv.appendChild(closed);
+    }
     flexDiv.appendChild(titleDiv);
     flexDiv.appendChild(textDiv);
-
+    
     return flexDiv;
 }
-  // ★ 지역별 데이터 함수 ★ 
+  // ★ 지역별 데이터 함수 ★
   const cityData = (data, addressName, areaName, ...rest) => {
     if (rest.length > 0) {
       const result = [];
@@ -285,9 +294,11 @@ window.addEventListener("load", function () {
       console.log("");
   }
   // 지도 이벤트 버블링 방지
-  document.getElementById("search_form").addEventListener("submit", function (event) {
-    event.preventDefault(); // 폼 제출 방지
-    // var keyword = document.getElementById("keyword").value;
-    searchPlaces(keyword);
-  });
+  document
+    .getElementById("search_form")
+    .addEventListener("submit", function (event) {
+      event.preventDefault(); // 폼 제출 방지
+      // var keyword = document.getElementById("keyword").value;
+      searchPlaces(keyword);
+    });
 });
