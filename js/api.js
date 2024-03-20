@@ -20,7 +20,7 @@ window.addEventListener("load", function () {
       if (apiType === "음식점") {
         consoleName = "음식점";
         data = json?.filter((item) => {
-          return item?.PET_POSBL_AT?.includes("Y")
+          return item?.PET_POSBL_AT?.includes("Y");
         });
         // console.log(data); // 480
       } else if (apiType === "호텔") {
@@ -136,11 +136,12 @@ window.addEventListener("load", function () {
           { 경기도: gyeonggi },
           { 전라도: jeolla },
         ];
-        
-        // ★ 카테고리 버튼 이벤트 ★ 
+
+        // ★ 카테고리 버튼 이벤트 ★
         let fristRend = false;
         const categoryContainer = document.querySelector(".category");
         const content = document.querySelector(".content");
+
         for (let i = 0; i < array.length; i++) {
           let obj = array[i];
           let keys = Object.keys(obj); // 키 추출
@@ -152,15 +153,45 @@ window.addEventListener("load", function () {
             categoryContainer.appendChild(button);
             // 카테고리 클릭 시 실행될 함수
             button.addEventListener("click", () => {
-                console.log(keys[0], value);
-                // content.textContent = "";
-                content.textContent = keys[0];
-                isFirstButtonClick = true;
+              console.log(keys[0], value);
+              content.textContent = "";
+              content.textContent = keys[0];
+              value.forEach((item) => {
+                let flexDiv = document.createElement("div");
+                let titleDiv = document.createElement("div");
+                let textDiv = document.createElement("div");
+                let name = document.createElement("h1");
+                let address = document.createElement("p");
+                let open = document.createElement("p");
+                let closed = document.createElement("P");
+                flexDiv.classList.add("detailflex");
+                titleDiv.classList.add("detailtitle");
+                textDiv.classList.add("detailList");
+                name.textContent = item.FCLTY_NM || item.ldgs_nm;
+                address.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center;"><i class="fa-solid fa-location-dot" style="color: #808080; margin-right: 10px;"></i>주소</p> ${
+                  item.LNM_ADDR || item.ldgs_addr
+                }`;
+
+                open.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center; "><img src="./images/open.png" alt="" />영업시간</p> ${
+                  item.OPER_TIME || item.WORKDAY_OPER_TIME_DC
+                }`;
+                closed.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center; "><img src="./images/closed.png" alt="" />휴무일</p> ${
+                  item.RSTDE_GUID_CN || item.WKEND_OPER_TIME_DC
+                }`;
+                titleDiv.appendChild(name);
+                textDiv.appendChild(address);
+                textDiv.appendChild(open);
+                textDiv.appendChild(closed);
+                flexDiv.appendChild(titleDiv);
+                flexDiv.appendChild(textDiv);
+                content.appendChild(flexDiv);
+              });
             });
+            isFirstButtonClick = true;
             // ★ 맨처음 렌더링 ★
             if (!fristRend) {
-                content.textContent = keys[0];
-                fristRend = true;
+              content.textContent = keys[0];
+              fristRend = true;
             }
           }
         }
@@ -170,7 +201,7 @@ window.addEventListener("load", function () {
       if (error?.message.includes("Unexpected token")) data(food, "address");
     }
   };
-  // ★ 지역별 데이터 함수
+  // ★ 지역별 데이터 함수 ★ 
   const cityData = (data, addressName, areaName, ...rest) => {
     if (rest.length > 0) {
       const result = [];
@@ -209,5 +240,5 @@ window.addEventListener("load", function () {
       break;
     default:
       console.log("");
-  } 
+  }
 });
