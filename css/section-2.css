@@ -62,12 +62,11 @@
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 15px;
-  font-family: sans-serif;
-  text-shadow: 1px 1px gray;
+  font-family: 'SUIT-Regular';
 }
 .sub-text {
   font-weight: bold;
-  font-family: sans-serif;
+  font-family: 'SUIT-Regular';
   font-size: 1.2rem;
 }
 

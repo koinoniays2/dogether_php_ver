@@ -101,7 +101,7 @@
               <p class="sub-title">
                 <i class="fa-solid fa-angle-right"></i>&nbsp;미용
               </p>
-              <p class="sub-text">반려동물 미용 및 케어 등 반려동물 전문 미용샵</p>
+              <p class="sub-text">반려동물 미용 및 케어 등<br /> 반려동물 전문 미용샵</p>
             </a>
           </div>
 
