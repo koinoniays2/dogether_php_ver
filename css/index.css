@@ -100,6 +100,8 @@ a {
 }
 body {
   font-family: "SUITE-Regular";
+  background: url(../images/body_background.png); opacity: 500000;
+
 }
 input,
 textarea {
@@ -162,34 +164,11 @@ button {
   font-family: "Maplestory Bold";
   src: url("../fonts/Maplestory\ Bold.ttf") format("truetype");
 }
-/* 기호1번(이사만루) */
-@font-face {
-  font-family: 'GongGothicMedium';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-/* 기호2번 (어그로체) */
-@font-face {
-  font-family: 'SBAggroB';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
 
 /* 롯데리아 촵땡겨체 */
 @font-face {
   font-family: 'LOTTERIACHAB';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/LOTTERIACHAB.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
-
-/* 수트체 */
-@font-face {
-  font-family: 'SUIT-Regular';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }

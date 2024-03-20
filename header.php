@@ -63,17 +63,19 @@
   let lastScrollTop = 0;
   const header = document.getElementById("header");
 
+  // 화면 너비가 768px 이상일 때만 스크롤 이벤트 리스너를 활성화합니다.
+if (window.innerWidth > 768) {
   window.addEventListener("scroll", function() {
     let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
+    
     if (currentScroll > lastScrollTop) {
-      header.style.top = "-100px"; // Adjust this value to hide your header completely
+      header.style.top = "-100px"; 
     } else {
       header.style.top = "0";
     }
-
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
   });
+}
 </script>
   </body>
 </html>
