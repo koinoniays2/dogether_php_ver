@@ -3,7 +3,7 @@ window.addEventListener("load", function () {
   const params = new URLSearchParams(window.location.search);
   const clickedDataId = params.get("dataId");
   // console.log(clickedDataId); // param 확인
-  let food = `http://api.kcisa.kr/openapi/API_TOU_052/request?serviceKey=${serviceKey}`;
+  let food = "http://localhost/dogether_php_ver/json/food.json";
   let hotel = "http://localhost/dogether_php_ver/json/hotel.json";
   let etc = "http://localhost/dogether_php_ver/json/cafe.json";
   const data = async (api, apiType, addressName) => {
@@ -19,9 +19,9 @@ window.addEventListener("load", function () {
       let consoleName; // 콘솔 출력 구분하기위해(별 의미없는 데이터임!)
       if (apiType === "음식점") {
         consoleName = "음식점";
-        data = json?.response?.body?.items?.item?.filter((item) =>
-          item?.information?.includes("동반 입장가능")
-        );
+        data = json?.filter((item) => {
+          return item?.PET_POSBL_AT?.includes("Y")
+        });
         // console.log(data); // 480
       } else if (apiType === "호텔") {
         consoleName = "호텔";
@@ -136,22 +136,33 @@ window.addEventListener("load", function () {
           { 경기도: gyeonggi },
           { 전라도: jeolla },
         ];
-        let button;
+        
+        // ★ 카테고리 버튼 이벤트 ★ 
+        let fristRend = false;
         const categoryContainer = document.querySelector(".category");
+        const content = document.querySelector(".content");
         for (let i = 0; i < array.length; i++) {
           let obj = array[i];
           let keys = Object.keys(obj); // 키 추출
           let value = obj[keys[0]]; // 값 추출
           if (Array.isArray(value) && value.length > 0) {
             // 값이 배열이고 길이가 0보다 큰 경우 키 출력
-            button = document.createElement("button");
+            let button = document.createElement("button");
             button.textContent = keys[0];
             categoryContainer.appendChild(button);
+            // 카테고리 클릭 시 실행될 함수
+            button.addEventListener("click", () => {
+                console.log(keys[0], value);
+                // content.textContent = "";
+                content.textContent = keys[0];
+                isFirstButtonClick = true;
+            });
+            // ★ 맨처음 렌더링 ★
+            if (!fristRend) {
+                content.textContent = keys[0];
+                fristRend = true;
+            }
           }
-        // 카테고리 클릭 시 실행될 함수
-        button.addEventListener("click", () => {
-            console.log(keys[0], value);
-        });
         }
       }
     } catch (error) {
@@ -179,7 +190,7 @@ window.addEventListener("load", function () {
   };
   switch (clickedDataId) {
     case "음식점":
-      data(food, "음식점", "address");
+      data(food, "음식점", "CTPRVN_NM");
       break;
     case "카페":
       data(etc, "카페", "RDNMADR_NM");
