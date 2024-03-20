@@ -84,6 +84,18 @@ const data = async (api, apiType, addressName) => {
             //  ★ 전라도(전남, 전북, 광주) ★ 
             let jeolla = cityData(data, addressName, "전라남도", "전라북도", "광주광역시", "전남", "전북", "광주");
             console.log(consoleName, "전라도", jeolla);
+            
+            // 배열에 값이 존재하는 경우에만 카테고리 뿌리기
+            let array = [{"서울" : seoul}, {"대전" : daejeon}, {"대구" : daegu}, {"부산" : busan},
+            {"경상도" : gyeongsang}, {"충청도" : chungcheong}, {"제주도" : Jeju}, {"강원도" : gangwon},
+            {"경기도" : gyeonggi}, {"전라도" : jeolla}];
+            for (let i = 0; i < array.length; i++) {
+                let obj = array[i];
+                let keys = Object.keys(obj); // 키 추출
+                let value = obj[keys[0]]; // 값 추출
+                if (Array.isArray(value) && value.length > 0) { // 값이 배열이고 길이가 0보다 큰 경우 키 출력
+                    console.log(keys[0]);
+                }}
             }
         } catch (error) {
             console.error("데이터를 불러오는 도중 에러가 발생했습니다:", error);
