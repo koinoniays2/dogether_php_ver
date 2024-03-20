@@ -63,16 +63,16 @@ window.addEventListener("load", function () {
       if (data) {
         // ★ 서울 ★
         seoul = cityData(data, addressName, "서울");
-        console.log(consoleName, "서울", seoul);
+        // console.log(consoleName, "서울", seoul);
         //  ★ 대전 ★
         daejeon = cityData(data, addressName, "대전광역시", "대전");
-        console.log(consoleName, "대전", daejeon);
+        // console.log(consoleName, "대전", daejeon);
         //  ★ 대구 ★
         daegu = cityData(data, addressName, "대구광역시", "대구");
-        console.log(consoleName, "대구", daegu);
+        // console.log(consoleName, "대구", daegu);
         //  ★ 부산 ★
         busan = cityData(data, addressName, "부산광역시", "부산");
-        console.log(consoleName, "부산", busan);
+        // console.log(consoleName, "부산", busan);
         //  ★ 경상도(경남,경북,울산) ★
         gyeongsang = cityData(
           data,
@@ -84,7 +84,7 @@ window.addEventListener("load", function () {
           "경북",
           "울산"
         );
-        console.log(consoleName, "경상도", gyeongsang);
+        // console.log(consoleName, "경상도", gyeongsang);
         //  ★ 충청도(충남,충북) ★
         chungcheong = cityData(
           data,
@@ -94,13 +94,13 @@ window.addEventListener("load", function () {
           "충남",
           "충북"
         );
-        console.log(consoleName, "충청도", chungcheong);
+        // console.log(consoleName, "충청도", chungcheong);
         //  ★ 제주도 ★
         Jeju = cityData(data, addressName, "제주");
-        console.log(consoleName, "제주도", Jeju);
+        // console.log(consoleName, "제주도", Jeju);
         //  ★ 강원도 ★
         gangwon = cityData(data, addressName, "강원");
-        console.log(consoleName, "강원도", gangwon);
+        // console.log(consoleName, "강원도", gangwon);
         //  ★ 경기도(경기도, 인천, 세종) ★
         gyeonggi = cityData(
           data,
@@ -110,7 +110,7 @@ window.addEventListener("load", function () {
           "세종",
           "경기"
         );
-        console.log(consoleName, "경기도", gyeonggi);
+        // console.log(consoleName, "경기도", gyeonggi);
         //  ★ 전라도(전남, 전북, 광주) ★
         jeolla = cityData(
           data,
@@ -122,7 +122,7 @@ window.addEventListener("load", function () {
           "전북",
           "광주"
         );
-        console.log(consoleName, "전라도", jeolla);
+        // console.log(consoleName, "전라도", jeolla);
         // 배열에 값이 존재하는 경우에만 카테고리 뿌리기
         let array = [
           { 서울: seoul },
@@ -137,26 +137,21 @@ window.addEventListener("load", function () {
           { 전라도: jeolla },
         ];
         let button;
+        const categoryContainer = document.querySelector(".category");
         for (let i = 0; i < array.length; i++) {
           let obj = array[i];
           let keys = Object.keys(obj); // 키 추출
           let value = obj[keys[0]]; // 값 추출
           if (Array.isArray(value) && value.length > 0) {
             // 값이 배열이고 길이가 0보다 큰 경우 키 출력
-            console.log(keys[0]);
-            console.log(value);
-            const categoryContainer = document.querySelector(".category");
-            const categories = [keys[0]];
-            categories.forEach((item) => {
-              button = document.createElement("button");
-              button.textContent = item;
-              // 카테고리 클릭 시 실행될 함수
-              button.addEventListener("click", () =>
-                handleCategoryClick(keys[0], value)
-              );
-              categoryContainer.appendChild(button);
-            });
+            button = document.createElement("button");
+            button.textContent = keys[0];
+            categoryContainer.appendChild(button);
           }
+        // 카테고리 클릭 시 실행될 함수
+        button.addEventListener("click", () => {
+            console.log(keys[0], value);
+        });
         }
       }
     } catch (error) {
@@ -181,15 +176,6 @@ window.addEventListener("load", function () {
         return item?.[addressName]?.includes(areaName);
       });
     }
-  };
-  const handleCategoryClick = (areaName, data) => {
-    // 해당 지역 데이터만 필터링
-    const filteredData = data.filter((item) => {
-      return item.addressName?.includes(areaName);
-    });
-
-    // 필터링된 데이터를 출력 또는 활용
-    console.log(`${areaName} 데이터:`, filteredData);
   };
   switch (clickedDataId) {
     case "음식점":
