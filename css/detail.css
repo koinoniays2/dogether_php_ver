@@ -64,7 +64,8 @@
   flex-direction: column;
   align-items: center;
   padding-bottom: 5rem;
-  background-color: #fdf6eb;
+  /* background-color: white; */
+  background: url(../images/doggoot.png);
 }
 
 .detail-title div:nth-child(1) {
@@ -83,17 +84,22 @@
 }
 .content {
   display: grid;
+  grid-template-columns: 1fr 1fr;
   justify-items: center;
+  width: 100%;
+  max-width: 1280px;
+  height: auto;
 }
 .detailflex {
+  width: 80%;
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
-  margin-bottom: 10px;
-  width: 50%;
-  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  margin: 20px auto;
+  padding: 1.5rem;
   border-radius: 20px;
   word-break: keep-all;
+  background-color: white;
 }
 
 .detailtitle {
@@ -102,14 +108,21 @@
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
   font-weight: bold;
+  
 }
 .detailList {
   width: 100%;
   height: auto;
+  font-size: 1.2rem;
 }
 .detailList > p {
-  margin-bottom: 10px;
+<<<<<<< HEAD
+  margin-bottom: 20px;
+} */
+=======
+  margin-bottom: 1rem;
 }
+>>>>>>> c2d4c781c08eff3a25023347b6ff4178421680bf
 
 /* map */
 .map_wrap,
@@ -129,7 +142,7 @@
   position: relative;
   width: 100%;
   height: 500px;
-  margin-top: 50px;
+  margin: 100px auto;
 }
 #menu_wrap {
   position: absolute;
@@ -286,8 +299,16 @@
   background-color: transparent;
   cursor: pointer;
   font-size: 1.25rem;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
-
+.category button:hover,
+.category button:active,
+.category button:focus
+ {
+  background-color: #14471e;
+  color: #fff;
+}
 .page-btn {
   padding: 0.5rem;
   cursor: pointer;
@@ -351,13 +372,17 @@ footer {
     width: 80%;
     margin-top: -30px;
   }
+
+  /* 컨텐츠박스 */
+  .content {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media screen and (max-width: 600px) {
   .detailflex {
     flex-direction: column;
     align-items: center;
-    /* text-align: center; */
   }
   .detailtitle {
     justify-content: center;

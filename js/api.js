@@ -1,7 +1,10 @@
-const serviceKey = "b26f3923-0250-4ed3-8329-54b04f6af8a2";
+import searchPlaces from "./map.js";
+
+
 window.addEventListener("load", function () {
   const params = new URLSearchParams(window.location.search);
   const clickedDataId = params.get("dataId");
+  const searchInput = document.querySelector("#keyword");
   // console.log(clickedDataId); // param 확인
   let food = "http://localhost/dogether_php_ver/json/food.json";
   let hotel = "http://localhost/dogether_php_ver/json/hotel.json";
@@ -141,7 +144,6 @@ window.addEventListener("load", function () {
         let fristRend = false;
         const categoryContainer = document.querySelector(".category");
         const content = document.querySelector(".content");
-
         for (let i = 0; i < array.length; i++) {
           let obj = array[i];
           let keys = Object.keys(obj); // 키 추출
@@ -154,43 +156,50 @@ window.addEventListener("load", function () {
             // 카테고리 클릭 시 실행될 함수
             button.addEventListener("click", () => {
               console.log(keys[0], value);
-              content.textContent = "";
-              content.textContent = keys[0];
-              value.forEach((item) => {
-                let flexDiv = document.createElement("div");
-                let titleDiv = document.createElement("div");
-                let textDiv = document.createElement("div");
-                let name = document.createElement("p");
-                let address = document.createElement("p");
-                let open = document.createElement("p");
-                let closed = document.createElement("P");
-                flexDiv.classList.add("detailflex");
-                titleDiv.classList.add("detailtitle");
-                textDiv.classList.add("detailList");
-                name.textContent = item.FCLTY_NM || item.ldgs_nm;
-                address.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center; color: gray"><i class="fa-solid fa-location-dot" style="color: #14471e; margin-right: 10px;"></i>주소</p> ${
-                  item.LNM_ADDR || item.ldgs_addr
-                }`;
 
-                open.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center; color: gray"><i class="fa-solid fa-store" style="color: #14471e; margin-right: 5px;"></i>영업시간</p> ${
-                  item.OPER_TIME || item.WORKDAY_OPER_TIME_DC
-                }`;
-                closed.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center; color: gray"><i class="fa-solid fa-store-slash" style="color: #14471e; margin-right: 5px;"></i>휴무일</p> ${
-                  item.RSTDE_GUID_CN || item.WKEND_OPER_TIME_DC
-                }`;
-                titleDiv.appendChild(name);
-                textDiv.appendChild(address);
-                textDiv.appendChild(open);
-                textDiv.appendChild(closed);
-                flexDiv.appendChild(titleDiv);
-                flexDiv.appendChild(textDiv);
-                content.appendChild(flexDiv);
+              // ★ 지도 value 설정 ★
+              switch(clickedDataId) {
+                case "병원":
+                  searchInput.value = `${keys[0]} 동물병원`;
+                  searchPlaces(searchInput.value);
+                  break;
+                case "미용":
+                  searchInput.value = `${keys[0]} 애견미용`;
+                  searchPlaces(searchInput.value);
+                  break;
+                case "음식점":
+                  searchInput.value = `${keys[0]} 애견동반 음식점`;
+                  searchPlaces(searchInput.value);
+                  break;
+                case "카페":
+                  searchInput.value = `${keys[0]} 애견동반 카페`;
+                  searchPlaces(searchInput.value);
+                  break;
+                case "숙소":
+                  searchInput.value = `${keys[0]} 애견동반 숙소`;
+                  searchPlaces(searchInput.value);
+                  break;
+                default:
+                  searchInput.value = `${keys[0]} 애견동반`;
+                  searchPlaces(searchInput.value);
+                  break;
+              }
+
+              // ★ 렌더링 부분 ★
+              // 렌더링 초기화
+              content.textContent = "";
+              // 렌더링
+              value.forEach((item) => {
+                let detailElement = createDetailElement(item);
+                content.appendChild(detailElement);
               });
             });
-            isFirstButtonClick = true;
-            // ★ 맨처음 렌더링 ★
+            // 맨처음 렌더링
             if (!fristRend) {
-              content.textContent = keys[0];
+              value.forEach((item) => {
+                let detailElement = createDetailElement(item);
+                content.appendChild(detailElement);
+              });
               fristRend = true;
             }
           }
@@ -201,6 +210,34 @@ window.addEventListener("load", function () {
       if (error?.message.includes("Unexpected token")) data(food, "address");
     }
   };
+  // ★ 렌더링 함수 ★
+  function createDetailElement(item) {
+    let flexDiv = document.createElement("div");
+    let titleDiv = document.createElement("div");
+    let textDiv = document.createElement("div");
+    let name = document.createElement("p");
+    let address = document.createElement("p");
+    let open = document.createElement("p");
+    let closed = document.createElement("p");
+
+    flexDiv.classList.add("detailflex");
+    titleDiv.classList.add("detailtitle");
+    textDiv.classList.add("detailList");
+
+    name.textContent = item.FCLTY_NM || item.ldgs_nm;
+    address.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center; color: gray"><i class="fa-solid fa-location-dot" style="color: #14471e; margin-right: 10px;"></i>주소</p> ${item.LNM_ADDR || item.ldgs_addr}`;
+    open.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center; color: gray"><i class="fa-solid fa-store" style="color: #14471e; margin-right: 5px;"></i>영업시간</p> ${item.OPER_TIME || item.WORKDAY_OPER_TIME_DC}`;
+    closed.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center; color: gray"><i class="fa-solid fa-store-slash" style="color: #14471e; margin-right: 5px;"></i>휴무일</p> ${item.RSTDE_GUID_CN || item.WKEND_OPER_TIME_DC}`;
+
+    titleDiv.appendChild(name);
+    textDiv.appendChild(address);
+    textDiv.appendChild(open);
+    textDiv.appendChild(closed);
+    flexDiv.appendChild(titleDiv);
+    flexDiv.appendChild(textDiv);
+
+    return flexDiv;
+}
   // ★ 지역별 데이터 함수 ★ 
   const cityData = (data, addressName, areaName, ...rest) => {
     if (rest.length > 0) {
@@ -241,4 +278,10 @@ window.addEventListener("load", function () {
     default:
       console.log("");
   }
+  // 지도 이벤트 버블링 방지
+  document.getElementById("search_form").addEventListener("submit", function (event) {
+    event.preventDefault(); // 폼 제출 방지
+    // var keyword = document.getElementById("keyword").value;
+    searchPlaces(keyword);
+  });
 });
