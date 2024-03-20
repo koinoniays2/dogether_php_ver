@@ -170,7 +170,7 @@ window.addEventListener("load", function () {
       if (error?.message.includes("Unexpected token")) data(food, "address");
     }
   };
-  // ★ 지역별 데이터 함수
+  // ★ 지역별 데이터 함수 ★ 
   const cityData = (data, addressName, areaName, ...rest) => {
     if (rest.length > 0) {
       const result = [];

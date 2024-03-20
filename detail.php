@@ -10,10 +10,8 @@
   <link rel="stylesheet" href="css/footer.css" type="text/css" />
   <link rel="stylesheet" href="css/map.css"type="text/css" />
   <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
-  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c4bae9c95198a725f932a1e32a9cad1f&libraries=services"></script>
   <!-- 폰트어썸 -->
   <script src="https://kit.fontawesome.com/96b5911d82.js" crossorigin="anonymous"></script>
-
   <title>DOGETHER</title>
 </head>
 
@@ -52,29 +50,22 @@
       <div class="category"></div>
       <!-- map -->
       <div class="map_wrap">
-        <div id="map" style="
-              width: 100%;
-              height: 100%;
-              position: relative;
-              overflow: hidden;
-            "></div>
-
-        <div id="menu_wrap" class="bg_white">
-          <div class="option">
-            <div>
-              <form id="search_form" onsubmit="searchPlaces(); return false;">
-                <!-- 키워드 : -->
-                <input type="text" value="애견동반" id="keyword" size="15" />
-                <button type="button"><i class="fa-solid fa-magnifying-glass" style="color: #808080;"></i></button>
-              </form>
-            </div>
+          <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>
+          <div id="menu_wrap" class="bg_white">
+              <div class="option">
+                  <div>
+                      <form onsubmit="searchPlaces(); return false;">
+                          키워드 : <input type="text" value="이태원 맛집" id="keyword" size="15"> 
+                          <button type="submit">검색하기</button> 
+                      </form>
+                  </div>
+              </div>
+              <hr>
+              <ul id="placesList"></ul>
+              <div id="pagination"></div>
           </div>
-          <hr />
-          <ul id="placesList"></ul>
-          <div id="pagination"></div>
-
-        </div>
       </div>
+      <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c4bae9c95198a725f932a1e32a9cad1f&libraries=services"></script>
       <!-- js 렌더링 -->
       <div class="content"></div>
       <!-- 페이지네이션 -->
@@ -82,7 +73,6 @@
     </div>
     <img src="./images/dogfan.png" alt="dogs_img"/>
   </section>
-
   <footer>
     <script>
       fetch("footer.html")
