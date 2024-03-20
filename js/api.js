@@ -160,7 +160,7 @@ window.addEventListener("load", function () {
                 let flexDiv = document.createElement("div");
                 let titleDiv = document.createElement("div");
                 let textDiv = document.createElement("div");
-                let name = document.createElement("h1");
+                let name = document.createElement("p");
                 let address = document.createElement("p");
                 let open = document.createElement("p");
                 let closed = document.createElement("P");
@@ -168,14 +168,14 @@ window.addEventListener("load", function () {
                 titleDiv.classList.add("detailtitle");
                 textDiv.classList.add("detailList");
                 name.textContent = item.FCLTY_NM || item.ldgs_nm;
-                address.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center;"><i class="fa-solid fa-location-dot" style="color: #808080; margin-right: 10px;"></i>주소</p> ${
+                address.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center; color: gray"><i class="fa-solid fa-location-dot" style="color: #14471e; margin-right: 10px;"></i>주소</p> ${
                   item.LNM_ADDR || item.ldgs_addr
                 }`;
 
-                open.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center; "><img src="./images/open.png" alt="" />영업시간</p> ${
+                open.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center; color: gray"><i class="fa-solid fa-store" style="color: #14471e; margin-right: 5px;"></i>영업시간</p> ${
                   item.OPER_TIME || item.WORKDAY_OPER_TIME_DC
                 }`;
-                closed.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center; "><img src="./images/closed.png" alt="" />휴무일</p> ${
+                closed.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center; color: gray"><i class="fa-solid fa-store-slash" style="color: #14471e; margin-right: 5px;"></i>휴무일</p> ${
                   item.RSTDE_GUID_CN || item.WKEND_OPER_TIME_DC
                 }`;
                 titleDiv.appendChild(name);
