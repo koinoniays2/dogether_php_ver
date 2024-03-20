@@ -83,10 +83,18 @@
   align-items: center;
 }
 .content {
+<<<<<<< HEAD
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+=======
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
+>>>>>>> c2d4c781c08eff3a25023347b6ff4178421680bf
   width: 100%;
+  max-width: 1280px;
+  height: auto;
 }
 .detailflex {
   width: 80%;
@@ -106,6 +114,7 @@
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
   font-weight: bold;
+  
 }
 .detailList {
   width: 100%;
@@ -113,8 +122,13 @@
   font-size: 1.2rem;
 }
 .detailList > p {
+<<<<<<< HEAD
+  margin-bottom: 20px;
+} */
+=======
   margin-bottom: 1rem;
 }
+>>>>>>> c2d4c781c08eff3a25023347b6ff4178421680bf
 
 /* map */
 .map_wrap,
