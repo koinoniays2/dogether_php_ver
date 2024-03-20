@@ -62,92 +62,53 @@ window.addEventListener("load", function () {
         gangwon,
         gyeonggi,
         jeolla;
-      // 지역(서울,대전,대구,부산,경상도,충청도,제주도,강원도,경기도,전라도)
+
+      // ★ 데이터 불러오기(서울,대전,대구,부산,경상도,충청도,제주도,강원도,경기도,전라도) ★
       if (data) {
         // ★ 서울 ★
         seoul = cityData(data, addressName, "서울");
-        // console.log(consoleName, "서울", seoul);
         //  ★ 대전 ★
         daejeon = cityData(data, addressName, "대전광역시", "대전");
-        // console.log(consoleName, "대전", daejeon);
         //  ★ 대구 ★
         daegu = cityData(data, addressName, "대구광역시", "대구");
-        // console.log(consoleName, "대구", daegu);
         //  ★ 부산 ★
         busan = cityData(data, addressName, "부산광역시", "부산");
-        // console.log(consoleName, "부산", busan);
         //  ★ 경상도(경남,경북,울산) ★
-        gyeongsang = cityData(
-          data,
-          addressName,
-          "경상남도",
-          "경상북도",
-          "울산광역시",
-          "경남",
-          "경북",
-          "울산"
-        );
-        // console.log(consoleName, "경상도", gyeongsang);
+        gyeongsang = cityData(data, addressName, "경상남도", "경상북도", "울산광역시", "경남", "경북", "울산");
         //  ★ 충청도(충남,충북) ★
-        chungcheong = cityData(
-          data,
-          addressName,
-          "충청남도",
-          "충청북도",
-          "충남",
-          "충북"
-        );
-        // console.log(consoleName, "충청도", chungcheong);
+        chungcheong = cityData(data, addressName, "충청남도", "충청북도", "충남", "충북");
         //  ★ 제주도 ★
         Jeju = cityData(data, addressName, "제주");
-        // console.log(consoleName, "제주도", Jeju);
         //  ★ 강원도 ★
         gangwon = cityData(data, addressName, "강원");
-        // console.log(consoleName, "강원도", gangwon);
         //  ★ 경기도(경기도, 인천, 세종) ★
-        gyeonggi = cityData(
-          data,
-          addressName,
-          "경기도",
-          "인천",
-          "세종",
-          "경기"
-        );
-        // console.log(consoleName, "경기도", gyeonggi);
+        gyeonggi = cityData(data, addressName, "경기도", "인천", "세종", "경기");
         //  ★ 전라도(전남, 전북, 광주) ★
-        jeolla = cityData(
-          data,
-          addressName,
-          "전라남도",
-          "전라북도",
-          "광주광역시",
-          "전남",
-          "전북",
-          "광주"
-        );
-        // console.log(consoleName, "전라도", jeolla);
-        // 배열에 값이 존재하는 경우에만 카테고리 뿌리기
-        let array = [
-          { 서울: seoul },
-          { 대전: daejeon },
-          { 대구: daegu },
-          { 부산: busan },
-          { 경상도: gyeongsang },
-          { 충청도: chungcheong },
-          { 제주도: Jeju },
-          { 강원도: gangwon },
-          { 경기도: gyeonggi },
-          { 전라도: jeolla },
-        ];
+        jeolla = cityData(data, addressName, "전라남도", "전라북도", "광주광역시", "전남", "전북","광주");
 
-        // ★ 카테고리 버튼 이벤트 ★
+        // ★★★★★ 카테고리 버튼 이벤트 및 렌더링 ★★★★★
+        // 배열에 값이 존재하는 경우에만 카테고리 뿌리기
+        let array = [{ 서울: seoul }, { 대전: daejeon }, { 대구: daegu }, { 부산: busan }, { 경상도: gyeongsang },
+          { 충청도: chungcheong }, { 제주도: Jeju }, { 강원도: gangwon }, { 경기도: gyeonggi }, { 전라도: jeolla }];
+        // 초기 랜더링 변수
         let fristRend = false;
         const categoryContainer = document.querySelector(".category");
         const content = document.querySelector(".content");
+
+        // 페이지네이션 버튼
+        const pageContainer = document.querySelector(".page_container");
+        const prevButton = document.getElementById("prev_button");
+        const nextButton = document.getElementById("next_button");
         for (let i = 0; i < array.length; i++) {
           let obj = array[i];
           let keys = Object.keys(obj); // 키 추출
           let value = obj[keys[0]]; // 값 추출
+          // ★ 페이지 랜더링
+          const itemsPage = 10; // 페이지당 표시 할 데이터 수
+          let currentPage = 1; // 현재 페이지 번호
+          // 총 페이지 수 계산
+          const totalPages = Math.ceil(value.length / itemsPage);
+          // 데이터 값이 있는 배열만 랜더링
           if (Array.isArray(value) && value.length > 0) {
             // 값이 배열이고 길이가 0보다 큰 경우 키 출력
             let button = document.createElement("button");
@@ -156,7 +117,6 @@ window.addEventListener("load", function () {
             // 카테고리 클릭 시 실행될 함수
             button.addEventListener("click", () => {
               console.log(keys[0], value);
-
               // ★ 지도 value 설정 ★
               switch(clickedDataId) {
                 case "병원":
@@ -188,20 +148,66 @@ window.addEventListener("load", function () {
               // ★ 렌더링 부분 ★
               // 렌더링 초기화
               content.textContent = "";
+              // 페이지를 렌더링하는 함수
+              function renderPage() {
+                const startIndex = (currentPage - 1) * itemsPage;
+                const endIndex = startIndex + itemsPage;
+                const currentData = value.slice(startIndex, endIndex);
+                
+                // 현재 페이지의 데이터출력
+                content.innerHTML = "";
+                currentData.forEach(item => {
+                  let detailElement = createDetailElement(item);
+                  content.appendChild(detailElement);
+                });
+                // 페이지 버튼 업데이트
+                renderPageButtons();
+              }
+              // 페이지 버튼 생성 함수
+              function createPageButton(pageNumber) {
+                const button = document.createElement("button");
+                button.textContent = pageNumber;
+                button.addEventListener("click", () => {
+                  currentPage = pageNumber; // 버튼에 리스너 걸어주기(현재페이지와 버튼숫자 동기화)
+                  renderPage();
+                });
+                return button;
+              }
+              // 페이지 버튼 렌더링
+              function renderPageButtons() {
+                pageContainer.innerHTML = ""; // 버튼 초기화(페이지마다 버튼 수가 다르기 때문에)
+                // 전체 페이지수만큼 createPageButton함수로 버튼 생성
+                for (let i = 1; i <= totalPages; i++) {
+                  const button = createPageButton(i);
+                  pageContainer.appendChild(button);
+                }
+              }
+              // 이전 페이지로 이동하는 함수
+              function goToPrevPage() {
+                if (currentPage > 1) {
+                  currentPage--;
+                  renderPage();
+                }
+              }
+              // 다음 페이지로 이동하는 함수
+              function goToNextPage() {
+                if (currentPage < totalPages) {
+                  currentPage++;
+                  renderPage();
+                }
+              }
+              // 이전 페이지 버튼에 이벤트 리스너 추가
+              prevButton.addEventListener("click", goToPrevPage);
+              // 다음 페이지 버튼에 이벤트 리스너 추가
+              nextButton.addEventListener("click", goToNextPage);
+              renderPage();
               // 렌더링
-              value.forEach((item) => {
-                let detailElement = createDetailElement(item);
-                content.appendChild(detailElement);
-              });
+              // value.forEach((item) => {
+              //   let detailElement = createDetailElement(item);
+              //   content.appendChild(detailElement);
+              // });
+              // 맨처음 렌더링
             });
-            // 맨처음 렌더링
-            if (!fristRend) {
-              value.forEach((item) => {
-                let detailElement = createDetailElement(item);
-                content.appendChild(detailElement);
-              });
-              fristRend = true;
-            }
           }
         }
       }
