@@ -209,5 +209,5 @@ window.addEventListener("load", function () {
       break;
     default:
       console.log("");
-  }
+  } 
 });
