@@ -76,6 +76,7 @@
         </div>
       </div>
       <!-- js 렌더링 -->
+      <div class="content"></div>
       <!-- 페이지네이션 -->
       <div class="page-container"></div>
     </div>
