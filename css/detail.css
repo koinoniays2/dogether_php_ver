@@ -66,7 +66,6 @@
   padding-bottom: 5rem;
   /* background-color: white; */
   background: url(../images/doggoot.png);
-
 }
 
 .detail-title div:nth-child(1) {
@@ -93,7 +92,7 @@
   width: 80%;
   display: flex;
   flex-direction: column;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   margin: 20px auto;
   padding: 1.5rem;
   border-radius: 20px;
@@ -107,7 +106,6 @@
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
   font-weight: bold;
-  
 }
 .detailList {
   width: 100%;
@@ -293,8 +291,16 @@
   background-color: transparent;
   cursor: pointer;
   font-size: 1.25rem;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
-
+.category button:hover,
+.category button:active,
+.category button:focus
+ {
+  background-color: #14471e;
+  color: #fff;
+}
 .page-btn {
   padding: 0.5rem;
   cursor: pointer;
