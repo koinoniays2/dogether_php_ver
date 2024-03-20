@@ -122,6 +122,10 @@
     width: 100%;
   }
 
+  .listbox {
+    width: 100%;
+  }
+
   .section-2-main-text p {
     font-size: 3rem;
   }
@@ -131,7 +135,7 @@
     height: 160px
   }
   .sub-title {
-    font-size: 1.8rem;
+    font-size: 1.75rem;
   }
 }
 
