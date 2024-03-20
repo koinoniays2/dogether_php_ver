@@ -52,7 +52,6 @@ const data = async (api, apiType, addressName) => {
                 return item.CTGRY_THREE_NM?.includes("미술관");
             });
         }
-
         // 지역(서울,대전,대구,부산,경상도,충청도,제주도,강원도,경기도,전라도)
         if(data) {
             // ★ 서울 ★ 
