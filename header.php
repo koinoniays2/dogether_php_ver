@@ -83,7 +83,7 @@ else $username = "";
   </script>
 </body>
 
-// 화면 너비가 768px 이상일 때만 스크롤 이벤트 리스너를 활성화합니다.
+<!-- // 화면 너비가 768px 이상일 때만 스크롤 이벤트 리스너를 활성화합니다.
 if (window.innerWidth > 768) {
 window.addEventListener("scroll", function() {
 let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
@@ -94,6 +94,6 @@ header.style.top = "-100px";
 header.style.top = "0";
 }
 lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; }); } </script>
-  </body>
+  </body> -->
 
 </html>
