@@ -53,12 +53,12 @@
         <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>
         <div id="menu_wrap" class="bg_white">
           <div class="option">
-            <div>
-              <form id="search_form" onsubmit="searchPlaces(); return false;">
-                키워드 : <input type="text" value="애견동반" id="keyword" size="15">
-                <button type="submit">검색하기</button>
-              </form>
-            </div>
+
+            <form id="search_form" onsubmit="searchPlaces(); return false;">
+              <input type="text" value="애견동반" id="keyword" size="15">
+              <button type="submit"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></button>
+            </form>
+
           </div>
           <hr>
           <ul id="placesList"></ul>

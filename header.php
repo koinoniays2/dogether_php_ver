@@ -44,10 +44,12 @@ else $username = "";
     </label>
     <div id="side_menu">
       <ul>
-        <li><a href="login_form.php">로그인</a></li>
+        <li style="font-size: 20px; margin-top: 30px; margin-bottom: 10px; color: #ee9b01;">USER</li>
         <li><a href="login_form.php">로그인</a></li>
         <li><a href="terms_form.php">회원가입</a></li>
         <li><a href="index.php">커뮤니티</a></li>
+        <div style="width: 100%; border-radius: 1rem; height: 5px; background: #808080; margin-top: 30px;"></div>
+        <li style="font-size: 20px; margin-top: 30px; margin-bottom: 10px; color: #ee9b01;">MENU</li>
         <li><a href="detail.php?dataId=병원">동물병원&약국</a></li>
         <li><a href="detail.php?dataId=음식점">음식점</a></li>
         <li><a href="detail.php?dataId=미용">애견 미용샵</a></li>
@@ -60,22 +62,8 @@ else $username = "";
   </div>
   </div>
   <script>
-    // let lastScrollTop = 0;
-    // const header = document.getElementById("header");
-
-    // window.addEventListener("scroll", function() {
-    //   let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
-    //   if (currentScroll > lastScrollTop) {
-    //     header.style.top = "-100px"; // Adjust this value to hide your header completely
-    //   } else {
-    //     header.style.top = "0";
-    //   }
-
-    //   lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-    // });
     let lastScrollTop = 0;
-    const header = document.querySelector("header");
+    const header = document.getElementById("header");
 
     window.addEventListener("scroll", function() {
       let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
@@ -94,5 +82,18 @@ else $username = "";
     });
   </script>
 </body>
+
+// 화면 너비가 768px 이상일 때만 스크롤 이벤트 리스너를 활성화합니다.
+if (window.innerWidth > 768) {
+window.addEventListener("scroll", function() {
+let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+if (currentScroll > lastScrollTop) {
+header.style.top = "-100px";
+} else {
+header.style.top = "0";
+}
+lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; }); } </script>
+  </body>
 
 </html>
