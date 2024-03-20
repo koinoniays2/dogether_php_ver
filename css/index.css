@@ -100,6 +100,8 @@ a {
 }
 body {
   font-family: "SUITE-Regular";
+  background: url(../images/body_background.png); opacity: 500000;
+
 }
 input,
 textarea {
