@@ -2,34 +2,29 @@
   word-break: keep-all;
 }
 body {
-  background: url(../images/checkbg.png)no-repeat;
+  background: url(../images/checkbg.png) no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-main {  
+main {
   display: flex;
+  height: 100vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0 1rem;
 }
-
-#terms_form {
+.service {
   max-width: 1280px;
   width: 100%;
-  height: 100%;
   padding: 0 1rem;
-  margin: 0 auto;
+}
+#terms_form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-#terms_form h2 {
-  margin-bottom: 30px;
-  font-size: 1.5rem;
-  width: 100%;
-  text-align: left;
 }
 #terms_form textarea {
   width: 100%;
@@ -38,6 +33,28 @@ main {
   border-radius: 20px;
   margin-bottom: 20px;
 }
+
+/* 개인정보 수집 및 이용동의 박스 */
+.service_agree {
+  max-width: 1280px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1rem;
+}
+.service h2,
+.service_agree h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+}
+.service_agree h4 {
+  margin-bottom: 1rem;
+}
+
 .agree_box {
   width: 100%;
   margin-bottom: 50px;
@@ -57,21 +74,17 @@ td {
   text-align: left;
   border-bottom: 1px solid #7990a3;
 }
-h4 {
-  width: 100%;
-  text-align: left;
-}
 
 #next_btn {
-  margin: 2rem 0;
+  margin: 1rem 0;
   cursor: pointer;
   padding: 0.5rem 1.2rem;
-  background-color: #f0a646;
+  background-color: #006400;
   color: white;
   text-align: center;
   border-radius: 0.5rem;
   transition-duration: 0.5s;
 }
 #next_btn:hover {
-  background-color: #ee9b01;
+  background-color: #14471E;
 }
