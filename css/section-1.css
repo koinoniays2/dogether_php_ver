@@ -7,7 +7,7 @@
 /* 섹션1 배경 */
 #section-1 {
   width: 100%;
-  height: calc(110vh - 90px);
+  height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
