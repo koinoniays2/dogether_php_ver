@@ -8,6 +8,8 @@
   background-position: right bottom;
   justify-content: center;
   overflow: hidden;
+  padding: 1rem;
+  word-break: keep-all;
 }
 /* max-width 1024px 설정 */
 
