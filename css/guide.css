@@ -89,25 +89,21 @@ ol img {
   display: none;
 }
 
-/* 480px 까지 ul부분 패딩 삭제코드 */
-@media screen and (max-width: 480px) {
+/* 680px 까지 ul부분 패딩 삭제코드 */
+@media screen and (max-width: 680px) {
   .guide_container ul {
     padding: 0px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;  
   }
 
   .guide_container ul li:nth-child(1) {
-    padding-bottom: 20px;
+    padding-bottom: 70px;
   }
 
   /* 모바일버전에서 이미지 보이게 */
-  .guide_container ul li:nth-child(2) {
+  .guide_container ul li img {
     display: block;
   }
-
-  /* 흰색배경부분 조정 */
-  .guide_container ul {
-    margin: 0 auto;
-    margin-top: 2rem; margin-bottom: 2rem;
-  }
-  
+ 
 }

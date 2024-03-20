@@ -162,24 +162,18 @@ button {
   font-family: "Maplestory Bold";
   src: url("../fonts/Maplestory\ Bold.ttf") format("truetype");
 }
-/* 기호1번 */
+/* 기호1번(이사만루) */
 @font-face {
-  font-family: 'Ownglyph_meetme-Rg';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_1@1.0/Ownglyph_meetme-Rg.woff2') format('woff2');
+  font-family: 'GongGothicMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
-/* 기호 2번 */
+
+/* 기호2번 (어그로체) */
 @font-face {
-  font-family: 'Dovemayo_gothic';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
-/* 기호3번 */
-@font-face {
-  font-family: 'KOTRAHOPE';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/KOTRAHOPE.woff2') format('woff2');
+  font-family: 'SBAggroB';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }

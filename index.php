@@ -101,7 +101,7 @@
               <p class="sub-title">
                 <i class="fa-solid fa-angle-right"></i>&nbsp;미용
               </p>
-              <p class="sub-text">반려동물 미용 및 케어 등 반려동문 전문 미용샵</p>
+              <p class="sub-text">반려동물 미용 및 케어 등 반려동물 전문 미용샵</p>
             </a>
           </div>
 
@@ -141,7 +141,7 @@
             <div id="section3-textE1">
               <p class="subtitle3">외출시 배변봉투는 필수</p>
               <p class="subtext3">
-                공공장소에서 반려견의 배설물을 청결하게 처리하여 환경을
+                공공장소에서 반려견의 배설물을 청결하게 처리하여 <br />환경을
                 보호하고,<br />
                 다른 사람들에게 불쾌한 경험을 주지 않기 위해 필수입니다.
               </p>
@@ -190,36 +190,4 @@
   <script src="js/api.js"></script>
   <script src="js/jquery.scrollTo.min.js"></script>
 </body>
-
 </html> 
-
-<!-- <footer>
-      <div class="footer-container">
-        <ul id="service_center">
-          <li style="display:flex; align-items:center; gap:20px; margin-bottom: 30px"><img style="width: 50px; height: 50px;" src="images/logo2.png" alt="">㈜DOGETHER</li>
-          <li>고객센터</li>
-        </ul>
-        <div id="information">
-          <ol style="margin-right: 50px">
-            <li style="display: flex; align-items: center; gap: 10px">
-              <img src="./images/call.png" alt="" />050-000-0000
-            </li>
-            <li>평일: 10:00 - 18:00</li>
-            <li>토요일: 10:00 - 13:00</li>
-          </ol>
-          <ol>
-            <li style="display: flex; align-items: center; gap: 10px">
-              <img src="images/kakao.png" alt="" /> DOGETHER
-            </li>
-            <li>평일: 09:00 - 18:00</li>
-            <li>토요일: 10:00 - 16:00</li>
-          </ol>
-        </div>
-        <p>
-          ㈜ DOGETHER는 대표 최재식과 구성원들이 반려동물과 함께하는 건강한
-          일상을 위해 만든 사이트입니다.
-        </p>
-
-        <p>벤치마킹: 갈수있어 강아지도</p> -->
-      </div> 
-    </footer>
