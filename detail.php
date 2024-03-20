@@ -54,8 +54,8 @@
           <div id="menu_wrap" class="bg_white">
               <div class="option">
                   <div>
-                      <form onsubmit="searchPlaces(); return false;">
-                          키워드 : <input type="text" value="이태원 맛집" id="keyword" size="15"> 
+                      <form id="search_form" onsubmit="searchPlaces(); return false;">
+                          키워드 : <input type="text" value="애견동반" id="keyword" size="15"> 
                           <button type="submit">검색하기</button> 
                       </form>
                   </div>
@@ -84,8 +84,6 @@
   </footer>
 </body>
 <script src="./js/detail.js"></script>
-<script src="./js/api.js"></script>
-<!-- <script type="module" src="./js/cafeData.js"></script> -->
+<script type="module" src="./js/api.js"></script>
 <script type="module" src="./js/map.js"></script>
-
 </html>
