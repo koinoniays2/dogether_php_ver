@@ -5,11 +5,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/index.css" type="text/css" />
-  <link rel="stylesheet" href="css/detail.css" type="text/css" />
   <link rel="stylesheet" href="css/header.css" type="text/css" />
   <link rel="stylesheet" href="css/footer.css" type="text/css" />
+  <link rel="stylesheet" href="css/guide.css" type="text/css" />
   <link rel="stylesheet" href="css/map.css" type="text/css" />
+  <link rel="stylesheet" href="css/detail.css" type="text/css" />
   <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+
   <!-- 폰트어썸 -->
   <script src="https://kit.fontawesome.com/96b5911d82.js" crossorigin="anonymous"></script>
   <title>DOGETHER</title>
@@ -78,13 +80,9 @@
     <img src="./images/dogfan.png" alt="dogs_img" />
   </section>
   <footer>
-    <script>
-      fetch("footer.html")
-        .then((response) => response.text())
-        .then((html) => {
-          document.querySelector("footer").innerHTML = html;
-        });
-    </script>
+
+    <?php include "footer.php"; ?>
+
   </footer>
 </body>
 <script src="./js/detail.js"></script>
