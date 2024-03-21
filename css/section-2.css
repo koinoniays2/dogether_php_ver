@@ -59,11 +59,14 @@
 }
 
 .sub-title {
+  font-family: "SUITE-Regular";
   font-size: 1.8rem;
   font-weight: bold;
   margin-bottom: 15px;
 }
 .sub-text {
+  font-weight: bold;
+  font-family: "SUITE-Regular";
   font-size: 1.2rem;
 }
 
