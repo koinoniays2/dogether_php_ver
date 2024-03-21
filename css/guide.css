@@ -64,6 +64,8 @@
 @media screen and (max-width: 768px) {
   .guide_container ul {
     padding: 0px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;  
     margin-top: 3rem;
     margin-bottom: 3rem;
   }
