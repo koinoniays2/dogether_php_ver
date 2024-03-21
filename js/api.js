@@ -4,6 +4,13 @@ window.addEventListener("load", function () {
   const params = new URLSearchParams(window.location.search);
   const clickedDataId = params.get("dataId");
   const searchInput = document.querySelector("#keyword");
+  // 카테고리
+  const categoryContainer = document.querySelector(".category");
+  const content = document.querySelector(".content");
+  // 페이지네이션 버튼
+  const pageContainer = document.querySelector(".page_container");
+  const prevButton = document.getElementById("prev_button");
+  const nextButton = document.getElementById("next_button");
   // console.log(clickedDataId); // param 확인
   let food = "http://localhost/dogether_php_ver/json/food.json";
   let hotel = "http://localhost/dogether_php_ver/json/hotel.json";
@@ -51,53 +58,24 @@ window.addEventListener("load", function () {
           return item.CTGRY_THREE_NM?.includes("미술관");
         });
       }
-      let seoul,
-        daejeon,
-        daegu,
-        busan,
-        gyeongsang,
-        chungcheong,
-        Jeju,
-        gangwon,
-        gyeonggi,
-        jeolla;
-
+      let seoul, daejeon, daegu, busan, gyeongsang, chungcheong, Jeju, gangwon, gyeonggi, jeolla;
       // ★ 데이터 불러오기(서울,대전,대구,부산,경상도,충청도,제주도,강원도,경기도,전라도) ★
       if (data) {
-        // ★ 서울 ★
-        seoul = cityData(data, addressName, "서울");
-        //  ★ 대전 ★
-        daejeon = cityData(data, addressName, "대전광역시", "대전");
-        //  ★ 대구 ★
-        daegu = cityData(data, addressName, "대구광역시", "대구");
-        //  ★ 부산 ★
-        busan = cityData(data, addressName, "부산광역시", "부산");
-        //  ★ 경상도(경남,경북,울산) ★
-        gyeongsang = cityData(data, addressName, "경상남도", "경상북도", "울산광역시", "경남", "경북", "울산");
-        //  ★ 충청도(충남,충북) ★
-        chungcheong = cityData(data, addressName, "충청남도", "충청북도", "충남", "충북");
-        //  ★ 제주도 ★
-        Jeju = cityData(data, addressName, "제주");
-        //  ★ 강원도 ★
-        gangwon = cityData(data, addressName, "강원");
-        //  ★ 경기도(경기도, 인천, 세종) ★
-        gyeonggi = cityData(data, addressName, "경기도", "인천", "세종", "경기");
-        //  ★ 전라도(전남, 전북, 광주) ★
-        jeolla = cityData(data, addressName, "전라남도", "전라북도", "광주광역시", "전남", "전북","광주");
+        seoul = cityData(data, addressName, "서울"); // ★ 서울 ★
+        daejeon = cityData(data, addressName, "대전광역시", "대전"); //  ★ 대전 ★
+        daegu = cityData(data, addressName, "대구광역시", "대구"); //  ★ 대구 ★
+        busan = cityData(data, addressName, "부산광역시", "부산"); //  ★ 부산 ★
+        gyeongsang = cityData(data, addressName, "경상남도", "경상북도", "울산광역시", "경남", "경북", "울산"); //  ★ 경상도(경남,경북,울산) ★
+        chungcheong = cityData(data, addressName, "충청남도", "충청북도", "충남", "충북"); //  ★ 충청도(충남,충북) ★
+        Jeju = cityData(data, addressName, "제주"); //  ★ 제주도 ★
+        gangwon = cityData(data, addressName, "강원"); //  ★ 강원도 ★
+        gyeonggi = cityData(data, addressName, "경기도", "인천", "세종", "경기"); //  ★ 경기도(경기도, 인천, 세종) ★
+        jeolla = cityData(data, addressName, "전라남도", "전라북도", "광주광역시", "전남", "전북","광주"); //  ★ 전라도(전남, 전북, 광주) ★
 
         // ★★★★★ 카테고리 버튼 이벤트 및 렌더링 ★★★★★
         // 배열에 값이 존재하는 경우에만 카테고리 뿌리기
-        let array = [{ 서울: seoul }, { 대전: daejeon }, { 대구: daegu }, { 부산: busan }, { 경상도: gyeongsang },
-          { 충청도: chungcheong }, { 제주도: Jeju }, { 강원도: gangwon }, { 경기도: gyeonggi }, { 전라도: jeolla }];
-        // 초기 랜더링 변수
-        let fristRend = false;
-        const categoryContainer = document.querySelector(".category");
-        const content = document.querySelector(".content");
-
-        // 페이지네이션 버튼
-        const pageContainer = document.querySelector(".page_container");
-        const prevButton = document.getElementById("prev_button");
-        const nextButton = document.getElementById("next_button");
+        let array = [{ "서울": seoul }, { "대전": daejeon }, { "대구": daegu }, { "부산": busan }, { "경상도": gyeongsang },
+          { "충청도": chungcheong }, { "제주도": Jeju }, { "강원도": gangwon }, { "경기도": gyeonggi }, { "전라도": jeolla }];
         for (let i = 0; i < array.length; i++) {
           let obj = array[i];
           let keys = Object.keys(obj); // 키 추출
@@ -105,11 +83,9 @@ window.addEventListener("load", function () {
           // ★ 페이지 랜더링
           const itemsPage = 10; // 페이지당 표시 할 데이터 수
           let currentPage = 1; // 현재 페이지 번호
-          // 총 페이지 수 계산
-          const totalPages = Math.ceil(value.length / itemsPage);
-          // 데이터 값이 있는 배열만 랜더링
+          const totalPages = Math.ceil(value.length / itemsPage); // 총 페이지 수 계산
+          // 데이터 값이 있는 배열만 랜더링(값이 배열이고 길이가 0보다 큰 경우 키 출력)
           if (Array.isArray(value) && value.length > 0) {
-            // 값이 배열이고 길이가 0보다 큰 경우 키 출력
             let button = document.createElement("button");
             button.textContent = keys[0];
             categoryContainer.appendChild(button);
@@ -143,7 +119,6 @@ window.addEventListener("load", function () {
                   searchPlaces(searchInput.value);
                   break;
               }
-
               // ★ 렌더링 부분 ★
               // 렌더링 초기화
               content.textContent = "";
@@ -200,12 +175,6 @@ window.addEventListener("load", function () {
               // 다음 페이지 버튼에 이벤트 리스너 추가
               nextButton.addEventListener("click", goToNextPage);
               renderPage();
-              // 렌더링
-              // value.forEach((item) => {
-              //   let detailElement = createDetailElement(item);
-              //   content.appendChild(detailElement);
-              // });
-              // 맨처음 렌더링
             });
           }
         }
