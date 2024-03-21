@@ -1,4 +1,3 @@
-
 /* 디테일 설명 섹션 */
 #detail-intro {
   width: 100%;
@@ -310,9 +309,7 @@
   border-radius: 50px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-.category button:hover,
-.category button:active,
-.category button:focus {
+.category button:hover {
   background-color: #14471e;
   color: #fff;
 }
@@ -330,9 +327,9 @@
   background-color: transparent;
 }
 .page_container > button:hover {
-  background-color: #f0a646;
+  background-color: #14471e;
   color: white;
-  border-radius: 15%;
+  border-radius: 15px;
 }
 .btn-on {
   color: #f0a646;
@@ -341,17 +338,19 @@
 
 #prev_button,
 #next_button {
-  padding: 0.5rem;
+  padding: 0.7rem;
   margin: 1rem;
   background-color: transparent;
-  color: #f0a646;
-  border-radius: 10px;
+  color: #14471e;
+  border-radius: 15px;
   cursor: pointer;
 }
+
 #prev_button:hover,
 #next_button:hover {
-  background-color: #f0a646;
+  background-color: #14471e;
   color: white;
+  font-weight: bold;
 }
 .selected {
   font-weight: bold;

@@ -58,24 +58,75 @@ window.addEventListener("load", function () {
           return item.CTGRY_THREE_NM?.includes("미술관");
         });
       }
-      let seoul, daejeon, daegu, busan, gyeongsang, chungcheong, Jeju, gangwon, gyeonggi, jeolla;
+      let seoul,
+        daejeon,
+        daegu,
+        busan,
+        gyeongsang,
+        chungcheong,
+        Jeju,
+        gangwon,
+        gyeonggi,
+        jeolla;
       // ★ 데이터 불러오기(서울,대전,대구,부산,경상도,충청도,제주도,강원도,경기도,전라도) ★
       if (data) {
         seoul = cityData(data, addressName, "서울"); // ★ 서울 ★
         daejeon = cityData(data, addressName, "대전광역시", "대전"); //  ★ 대전 ★
         daegu = cityData(data, addressName, "대구광역시", "대구"); //  ★ 대구 ★
         busan = cityData(data, addressName, "부산광역시", "부산"); //  ★ 부산 ★
-        gyeongsang = cityData(data, addressName, "경상남도", "경상북도", "울산광역시", "경남", "경북", "울산"); //  ★ 경상도(경남,경북,울산) ★
-        chungcheong = cityData(data, addressName, "충청남도", "충청북도", "충남", "충북"); //  ★ 충청도(충남,충북) ★
+        gyeongsang = cityData(
+          data,
+          addressName,
+          "경상남도",
+          "경상북도",
+          "울산광역시",
+          "경남",
+          "경북",
+          "울산"
+        ); //  ★ 경상도(경남,경북,울산) ★
+        chungcheong = cityData(
+          data,
+          addressName,
+          "충청남도",
+          "충청북도",
+          "충남",
+          "충북"
+        ); //  ★ 충청도(충남,충북) ★
         Jeju = cityData(data, addressName, "제주"); //  ★ 제주도 ★
         gangwon = cityData(data, addressName, "강원"); //  ★ 강원도 ★
-        gyeonggi = cityData(data, addressName, "경기도", "인천", "세종", "경기"); //  ★ 경기도(경기도, 인천, 세종) ★
-        jeolla = cityData(data, addressName, "전라남도", "전라북도", "광주광역시", "전남", "전북","광주"); //  ★ 전라도(전남, 전북, 광주) ★
+        gyeonggi = cityData(
+          data,
+          addressName,
+          "경기도",
+          "인천",
+          "세종",
+          "경기"
+        ); //  ★ 경기도(경기도, 인천, 세종) ★
+        jeolla = cityData(
+          data,
+          addressName,
+          "전라남도",
+          "전라북도",
+          "광주광역시",
+          "전남",
+          "전북",
+          "광주"
+        ); //  ★ 전라도(전남, 전북, 광주) ★
 
         // ★★★★★ 카테고리 버튼 이벤트 및 렌더링 ★★★★★
         // 배열에 값이 존재하는 경우에만 카테고리 뿌리기
-        let array = [{ "서울": seoul }, { "대전": daejeon }, { "대구": daegu }, { "부산": busan }, { "경상도": gyeongsang },
-          { "충청도": chungcheong }, { "제주도": Jeju }, { "강원도": gangwon }, { "경기도": gyeonggi }, { "전라도": jeolla }];
+        let array = [
+          { 서울: seoul },
+          { 대전: daejeon },
+          { 대구: daegu },
+          { 부산: busan },
+          { 경상도: gyeongsang },
+          { 충청도: chungcheong },
+          { 제주도: Jeju },
+          { 강원도: gangwon },
+          { 경기도: gyeonggi },
+          { 전라도: jeolla },
+        ];
         for (let i = 0; i < array.length; i++) {
           let obj = array[i];
           let keys = Object.keys(obj); // 키 추출
@@ -86,12 +137,17 @@ window.addEventListener("load", function () {
             let button = document.createElement("button");
             button.textContent = keys[0];
             categoryContainer.appendChild(button);
-            for(let j = i; j < 1; j++){
+            for (let j = i; j < 1; j++) {
               render(value);
             }
+            
+            // 테스트 함수
+            
             // 카테고리 클릭 시 실행될 함수
             button.addEventListener("click", () => {
               console.log(keys[0], value);
+              // 모든 카테고리 버튼에 대해 활성 클래스를 추가
+
               // ★ 지도 value 설정 ★
               switch (clickedDataId) {
                 case "병원":
@@ -125,7 +181,7 @@ window.addEventListener("load", function () {
             });
           }
         }
-      } 
+      }
     } catch (error) {
       console.error("데이터를 불러오는 도중 에러가 발생했습니다:", error);
       if (error?.message.includes("Unexpected token")) data(food, "address");
@@ -143,10 +199,10 @@ window.addEventListener("load", function () {
       const startIndex = (currentPage - 1) * itemsPage;
       const endIndex = startIndex + itemsPage;
       const currentData = value.slice(startIndex, endIndex);
-      
+
       // 현재 페이지의 데이터출력
       content.innerHTML = "";
-      currentData.forEach(item => {
+      currentData.forEach((item) => {
         let detailElement = createDetailElement(item);
         content.appendChild(detailElement);
       });
@@ -170,8 +226,15 @@ window.addEventListener("load", function () {
       const startPage = Math.max(currentPage - 5, 1);
       const endPage = Math.min(startPage + 9, totalPages);
       for (let i = startPage; i <= endPage; i++) {
-      const button = createPageButton(i);
-      pageContainer.appendChild(button);
+        const button = createPageButton(i);
+        pageContainer.appendChild(button);
+        //  버튼활성화 함수
+        if (i === currentPage) {
+          button.style.backgroundColor = "#14471e";
+          button.style.color = "white";
+          button.style.fontWeight = "bold";
+          button.style.borderRadius = "15px";
+        }
       }
     }
     // 이전 페이지로 이동하는 함수
@@ -199,39 +262,45 @@ window.addEventListener("load", function () {
     let flexDiv = document.createElement("div");
     let titleDiv = document.createElement("div");
     let textDiv = document.createElement("div");
-    
+
     flexDiv.classList.add("detailflex");
     titleDiv.classList.add("detailtitle");
     textDiv.classList.add("detailList");
 
     if (item.FCLTY_NM || item.ldgs_nm) {
-        let name = document.createElement("p");
-        name.textContent = item.FCLTY_NM || item.ldgs_nm;
-        titleDiv.appendChild(name);
+      let name = document.createElement("p");
+      name.textContent = item.FCLTY_NM || item.ldgs_nm;
+      titleDiv.appendChild(name);
     }
 
     if (item.LNM_ADDR || item.ldgs_addr) {
-        let address = document.createElement("p");
-        address.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center; color: gray"><i class="fa-solid fa-location-dot" style="color: #14471e; margin-right: 10px;"></i>주소</p> ${item.LNM_ADDR || item.ldgs_addr}`;
-        textDiv.appendChild(address);
+      let address = document.createElement("p");
+      address.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center; color: gray"><i class="fa-solid fa-location-dot" style="color: #14471e; margin-right: 10px;"></i>주소</p> ${
+        item.LNM_ADDR || item.ldgs_addr
+      }`;
+      textDiv.appendChild(address);
     }
 
     if (item.OPER_TIME || item.WORKDAY_OPER_TIME_DC) {
-        let open = document.createElement("p");
-        open.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center; color: gray"><i class="fa-solid fa-store" style="color: #14471e; margin-right: 5px;"></i>영업시간</p> ${item.OPER_TIME || item.WORKDAY_OPER_TIME_DC}`;
-        textDiv.appendChild(open);
+      let open = document.createElement("p");
+      open.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center; color: gray"><i class="fa-solid fa-store" style="color: #14471e; margin-right: 5px;"></i>영업시간</p> ${
+        item.OPER_TIME || item.WORKDAY_OPER_TIME_DC
+      }`;
+      textDiv.appendChild(open);
     }
 
     if (item.RSTDE_GUID_CN || item.WKEND_OPER_TIME_DC) {
-        let closed = document.createElement("p");
-        closed.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center; color: gray"><i class="fa-solid fa-store-slash" style="color: #14471e; margin-right: 5px;"></i>휴무일</p> ${item.RSTDE_GUID_CN || item.WKEND_OPER_TIME_DC}`;
-        textDiv.appendChild(closed);
+      let closed = document.createElement("p");
+      closed.innerHTML = `<p style="font-size: 1.1rem; display: flex; align-items: center; color: gray"><i class="fa-solid fa-store-slash" style="color: #14471e; margin-right: 5px;"></i>휴무일</p> ${
+        item.RSTDE_GUID_CN || item.WKEND_OPER_TIME_DC
+      }`;
+      textDiv.appendChild(closed);
     }
     flexDiv.appendChild(titleDiv);
     flexDiv.appendChild(textDiv);
-    
+
     return flexDiv;
-}
+  }
   // ★ 지역별 데이터 함수 ★
   const cityData = (data, addressName, areaName, ...rest) => {
     if (rest.length > 0) {
