@@ -94,6 +94,26 @@
     word-break: keep-all;
     font-weight: bold;
   }
+
+  #section-3 {
+    background-image: none;
+    height: 100%;
+    padding: 0rem;
+  }
+  .maxsection-3 {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .main-text3 {
+    width: 100%;
+    margin: 100px auto;
+  }
+
+  .listflex3 {
+    width: 100%;
+    margin-bottom: 100px;
+  }
 }
 
 
@@ -101,6 +121,7 @@
   #section-3 {
     background-image: none;
     height: 100%;
+    padding: 0rem;
   }
   .maxsection-3 {
     flex-direction: column;
