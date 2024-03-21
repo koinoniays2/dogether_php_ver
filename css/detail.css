@@ -237,7 +237,7 @@
   width: 36px;
   height: 37px;
   margin: 10px 0 0 10px;
-  background: url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_number_blue.png)
+  background: url("../images/marker_number.svg")
     no-repeat;
 }
 #placesList .item .marker_1 {
