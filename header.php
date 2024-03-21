@@ -6,8 +6,8 @@
 session_start(); // 세션에서 변수가 설정되었는지 확인
 if (isset($_SESSION["userid"])) $userid = $_SESSION["userid"];
 else $userid = "";
-if (isset($_SESSION["username"])) $username = $_SESSION["username"];
-else $username = "";
+if (isset($_SESSION["name"])) $name = $_SESSION["name"];
+else $name = "";
 
 ?>
 
