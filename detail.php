@@ -69,7 +69,11 @@
       <!-- js 렌더링 -->
       <div class="content"></div>
       <!-- 페이지네이션 -->
-      <div class="page-container"></div>
+      <div id="page_btn_container">
+        <button id="prev_button">이전</button>
+        <div class="page_container"></div>
+        <button id="next_button">다음</button>
+      </div>
     </div>
     <img src="./images/dogfan.png" alt="dogs_img" />
   </section>

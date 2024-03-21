@@ -316,24 +316,30 @@
   background-color: #14471e;
   color: #fff;
 }
-.page-btn {
+
+#page_btn_container {
+  width: 100%;
+  display: flex;
+  justify-content: center; align-items: center;
+}
+
+.page_container > button {
   padding: 0.5rem;
   cursor: pointer;
   background-color: transparent;
 }
-.page-btn:hover {
+.page_container > button:hover {
   background-color: #f0a646;
   color: white;
   border-radius: 15%;
 }
-
 .btn-on {
   color: #f0a646;
   font-weight: bold;
 }
 
-.prev-btn,
-.next-btn {
+#prev_button,
+#next_button {
   padding: 0.5rem;
   margin: 1rem;
   background-color: transparent;
@@ -341,8 +347,8 @@
   border-radius: 10px;
   cursor: pointer;
 }
-.prev-btn:hover,
-.next-btn:hover {
+#prev_button:hover,
+#next_button:hover {
   background-color: #f0a646;
   color: white;
 }
