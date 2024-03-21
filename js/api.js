@@ -80,15 +80,15 @@ window.addEventListener("load", function () {
           let obj = array[i];
           let keys = Object.keys(obj); // 키 추출
           let value = obj[keys[0]]; // 값 추출
-          // ★ 페이지 랜더링
-          const itemsPage = 10; // 페이지당 표시 할 데이터 수
-          let currentPage = 1; // 현재 페이지 번호
-          const totalPages = Math.ceil(value.length / itemsPage); // 총 페이지 수 계산
+
           // 데이터 값이 있는 배열만 랜더링(값이 배열이고 길이가 0보다 큰 경우 키 출력)
           if (Array.isArray(value) && value.length > 0) {
             let button = document.createElement("button");
             button.textContent = keys[0];
             categoryContainer.appendChild(button);
+            for(let j = i; j < 1; j++){
+              render(value);
+            }
             // 카테고리 클릭 시 실행될 함수
             button.addEventListener("click", () => {
               console.log(keys[0], value);
@@ -121,69 +121,79 @@ window.addEventListener("load", function () {
               }
               // ★ 렌더링 부분 ★
               // 렌더링 초기화
-              content.textContent = "";
-              // 페이지를 렌더링하는 함수
-              function renderPage() {
-                const startIndex = (currentPage - 1) * itemsPage;
-                const endIndex = startIndex + itemsPage;
-                const currentData = value.slice(startIndex, endIndex);
-                
-                // 현재 페이지의 데이터출력
-                content.innerHTML = "";
-                currentData.forEach(item => {
-                  let detailElement = createDetailElement(item);
-                  content.appendChild(detailElement);
-                });
-                // 페이지 버튼 업데이트
-                renderPageButtons();
-              }
-              // 페이지 버튼 생성 함수
-              function createPageButton(pageNumber) {
-                const button = document.createElement("button");
-                button.textContent = pageNumber;
-                button.addEventListener("click", () => {
-                  currentPage = pageNumber; // 버튼에 리스너 걸어주기(현재페이지와 버튼숫자 동기화)
-                  renderPage();
-                });
-                return button;
-              }
-              // 페이지 버튼 렌더링
-              function renderPageButtons() {
-                pageContainer.innerHTML = ""; // 버튼 초기화(페이지마다 버튼 수가 다르기 때문에)
-                // 전체 페이지수만큼 createPageButton함수로 버튼 생성
-                for (let i = 1; i <= totalPages; i++) {
-                  const button = createPageButton(i);
-                  pageContainer.appendChild(button);
-                }
-              }
-              // 이전 페이지로 이동하는 함수
-              function goToPrevPage() {
-                if (currentPage > 1) {
-                  currentPage--;
-                  renderPage();
-                }
-              }
-              // 다음 페이지로 이동하는 함수
-              function goToNextPage() {
-                if (currentPage < totalPages) {
-                  currentPage++;
-                  renderPage();
-                }
-              }
-              // 이전 페이지 버튼에 이벤트 리스너 추가
-              prevButton.addEventListener("click", goToPrevPage);
-              // 다음 페이지 버튼에 이벤트 리스너 추가
-              nextButton.addEventListener("click", goToNextPage);
-              renderPage();
+              render(value);
             });
           }
         }
-      }
+      } 
     } catch (error) {
       console.error("데이터를 불러오는 도중 에러가 발생했습니다:", error);
       if (error?.message.includes("Unexpected token")) data(food, "address");
     }
   };
+  // 페이지네이션+렌더링
+  function render(value) {
+    // ★ 페이지 랜더링
+    const itemsPage = 10; // 페이지당 표시 할 데이터 수
+    let currentPage = 1; // 현재 페이지 번호
+    const totalPages = Math.ceil(value.length / itemsPage); // 총 페이지 수 계산
+    content.textContent = "";
+    // 페이지를 렌더링하는 함수
+    function renderPage() {
+      const startIndex = (currentPage - 1) * itemsPage;
+      const endIndex = startIndex + itemsPage;
+      const currentData = value.slice(startIndex, endIndex);
+      
+      // 현재 페이지의 데이터출력
+      content.innerHTML = "";
+      currentData.forEach(item => {
+        let detailElement = createDetailElement(item);
+        content.appendChild(detailElement);
+      });
+      // 페이지 버튼 업데이트
+      renderPageButtons();
+    }
+    // 페이지 버튼 생성 함수
+    function createPageButton(pageNumber) {
+      const button = document.createElement("button");
+      button.textContent = pageNumber;
+      button.addEventListener("click", () => {
+        currentPage = pageNumber; // 버튼에 리스너 걸어주기(현재페이지와 버튼숫자 동기화)
+        renderPage();
+      });
+      return button;
+    }
+    // 페이지 버튼 렌더링
+    function renderPageButtons() {
+      pageContainer.innerHTML = ""; // 버튼 초기화(페이지마다 버튼 수가 다르기 때문에)
+      // 버튼 수 조절
+      const startPage = Math.max(currentPage - 5, 1);
+      const endPage = Math.min(startPage + 9, totalPages);
+      for (let i = startPage; i <= endPage; i++) {
+      const button = createPageButton(i);
+      pageContainer.appendChild(button);
+      }
+    }
+    // 이전 페이지로 이동하는 함수
+    function goToPrevPage() {
+      if (currentPage > 1) {
+        currentPage--;
+        renderPage();
+      }
+    }
+    // 다음 페이지로 이동하는 함수
+    function goToNextPage() {
+      if (currentPage < totalPages) {
+        currentPage++;
+        renderPage();
+      }
+    }
+    // 이전 페이지 버튼에 이벤트 리스너 추가
+    prevButton.addEventListener("click", goToPrevPage);
+    // 다음 페이지 버튼에 이벤트 리스너 추가
+    nextButton.addEventListener("click", goToNextPage);
+    renderPage();
+  }
   // ★ 렌더링 함수 ★
   function createDetailElement(item) {
     let flexDiv = document.createElement("div");
