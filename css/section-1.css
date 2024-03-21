@@ -98,6 +98,7 @@
 
 @media screen and (max-width: 1024px) {
   #section-1 {
+    height: 100vh;
     background-image: url("../images/section-1-m-t-img.svg");
     background-size: 900px;
     background-position: right bottom;
