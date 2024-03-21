@@ -55,10 +55,16 @@
   padding-bottom: 80px;
 }
 
-/* pc버전에서 이미지 제거 */
-.guide_container ul li img {
-  display: none;
+.guide_container ul li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
+
+/* pc버전에서 이미지 제거 */
+/* .guide_container ul li img {
+  display: none;
+} */
 
 /* 768px 까지 ul부분 패딩 삭제코드 */
 @media screen and (max-width: 768px) {
@@ -76,8 +82,8 @@
 
   .guide_container ul li {
     display: flex;
-    justify-content: center;
     align-items: center;
+    gap: 0.2rem;
   }
 
   /* 모바일버전에서 이미지 보이게 */

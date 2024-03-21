@@ -131,7 +131,7 @@
       <div id="section3-event" class="main-text3">
         <p class="title-list3">
           반려동물과 함께하는<br />
-          공공장소 에티켓 <br />꼭 지켜주세요.
+          공공장소 에티켓 <br />꼭 지켜주세요
         </p>
       </div>
       <div class="listflex3">
