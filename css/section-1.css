@@ -84,7 +84,7 @@
   color: #fff;
   border-radius: 2rem;
   font-size: 1.2rem;
-  margin-top: 135px;
+  margin-top: 70px;
 }
 
 #arrow {
@@ -100,8 +100,9 @@
 @media screen and (max-width: 768px) {
   #section-1 {
     background-image: url("../images/mobile-mainImg.png");
-    background-size: 45vh;
-    background-position: right bottom;
+    background-size: 15rem;
+    background-position: right bottom -2rem;
+    padding-bottom: 4rem;
   }
   .section-1-container .sectiion-1-main-text {
     font-size: 1.25rem;
