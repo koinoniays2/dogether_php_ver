@@ -94,8 +94,8 @@ ol img {
 @media screen and (max-width: 768px) {
   .guide_container ul {
     padding: 0px;
-    margin-top: 3rem;
-    margin-bottom: 3rem;  
+    margin-top: 1rem;
+    margin-bottom: 1rem;  
   }
 
   .guide_container ul li:nth-child(1) {

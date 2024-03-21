@@ -29,6 +29,7 @@
   align-items: flex-start;
   width: 50%;
   font-family: 'yg-jalnan';
+  
 }
 .title-list3 {
   text-align: center;
@@ -75,24 +76,13 @@
   word-break: keep-all;
 }
 
-@media screen and (max-width: 500px) {
-  .main-bg-img3::after {
-    width: 100%;
-    height: 50%;
-    top: 50%;
-    left: 0;
-  }
-  .section-3-container {
-    width: 100%;
-    height: 80%;
-    align-items: end;
-    padding-bottom: 1rem;
-  }
+@media screen and (min-width: 0px) and (max-width: 350px) {
   .title-list3 {
     font-size: 2rem;
-    word-break: keep-all;
+    margin-top: 130px;
   }
 }
+
 
 @media screen and (max-width: 1024px) {
   #section-3 {
@@ -113,4 +103,16 @@
     width: 100%;
     margin-bottom: 100px;
   }
+
+  .main-text3 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .section-3-container {
+    width: 100%;
+    padding-bottom: 1rem;
+  }
+
 }
