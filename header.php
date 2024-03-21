@@ -13,11 +13,11 @@ else $name = "";
 
 <body>
   <div class="header-container">
-    <div id="logo">
-      <a href="index.php">
-        <img src="images/logo2.png" alt="logo" />
-      </a>
-    </div>
+      <div id="logo">
+        <a href="index.php">
+          <img src="images/logo2.png" alt="logo" />
+        </a>
+      </div>
     <nav id="menu">
       <ul>
         <a href="login_form.php">
