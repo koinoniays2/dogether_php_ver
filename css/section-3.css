@@ -1,14 +1,13 @@
 /* 섹션-3 큰 부모 */
 #section-3 {
   width: 100%;
-  height: 100vh;
   display: flex;
   background-image: url("../images/pc_right_bottom.png");
   background-repeat: no-repeat;
   background-position: right bottom;
   justify-content: center;
   overflow: hidden;
-  padding: 1rem;
+  padding: 10rem;
   word-break: keep-all;
 }
 /* max-width 1024px 설정 */
