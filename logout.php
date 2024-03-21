@@ -9,7 +9,7 @@ if($state == 'kakao') {
   $controller->logout();
 }
 unset($_SESSION["userid"]);
-unset($_SESSION["username"]);
+unset($_SESSION["name"]);
 unset($_SESSION["accessToken"]);
 unset($_SESSION["state"]);
 header("Location: http://" . $_SERVER['HTTP_HOST']. '/dogether_php_ver/index.php');

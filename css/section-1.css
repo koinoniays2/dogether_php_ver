@@ -96,82 +96,12 @@
 }
 
 
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   #section-1 {
-    background-image: url("../images/mobile-mainImg.png");
-    background-size: 15rem;
-    background-position: right bottom -2rem;
-    padding-bottom: 4rem;
-  }
-  .section-1-container .sectiion-1-main-text {
-    font-size: 1.25rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-  }
-  .section-1-container P:nth-child(1) {
-    font-size: 3.2rem;
-  }
-  .section-1-container p:nth-child(2) {
-    font-size: 1.2rem;
-  }
-  /* 주황글씨 부분 */
-  .section-1-container P:nth-child(2) b {
-    font-size: 1.5rem;
-  }
-  .section-1-container p:nth-child(3) {
-    line-height: 17px;
-    font-size: 0.9rem;
-  }
-  .section-1-container {
-    height: 70%;
-  }
-  .section-1-container {
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
-  }
-  /* PC 알아보기 버튼 숨기기 */
-  .section-2-move a:nth-child(1) {
-    display: none;
-  }
-  /* pc버전 화살표 숨기기 */
-  #arrow {
-    display: none;
-  }
-
-  .section-2-move a {
-    margin-top: 0px;
-  }
-  /* 모바일 알아보기 보이게 */
-  .section-2-move a:nth-child(2) {
-    border-radius: 1.5rem;
-    padding: 10px 15px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background-color: #14471e;
-  }
-  /* 모바일 p태그 3번째 색상변경 */
-  .section-1-container p:nth-child(3) {
-    font-size: 1rem;
-    color: #808080;
-    line-height: 20px;
-    transition: var(--font-transition);
-  }
-
-  .section-1-container {
-    padding-bottom: 120px;
-  }
-}
-
-@media screen and (min-width:769px) and (max-width: 1024px) {
-  #section-1 {
-    background-image: url("../images/mobile-mainImg.png");
-    background-size: 45vh;
+    background-image: url("../images/section-1-m-t-img.svg");
+    background-size: 900px;
     background-position: right bottom;
+    transition: background-size 0.3s ease;
   }
   .section-1-container .sectiion-1-main-text {
     font-size: 1.25rem;
@@ -210,18 +140,18 @@
   #arrow {
     display: none;
   }
-
   .section-2-move a {
     margin-top: 0px;
   }
   /* 모바일 알아보기 보이게 */
   .section-2-move a:nth-child(2) {
     border-radius: 1.5rem;
-    padding: 10px 15px;
+    padding: 0.5rem 1.4rem;
     display: flex;
     align-items: center;
     gap: 10px;
     background-color: #14471e;
+    font-size: 1rem;
   }
   /* 모바일 p태그 3번째 색상변경 */
   .section-1-container p:nth-child(3) {
@@ -234,7 +164,74 @@
   .section-1-container {
     padding-bottom: 120px;
   }
+}
 
-  .guide_container ul li img {
+@media screen and (max-width: 768px) {
+  .section-1-container .sectiion-1-main-text {
+    font-size: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .section-1-container P:nth-child(1) {
+    font-size: 4rem;
+  }
+  .section-1-container p:nth-child(2) {
+    font-size: 1.2rem;
+  }
+  /* 주황글씨 부분 */
+  .section-1-container P:nth-child(2) b {
+    font-size: 1.5rem;
+  }
+  .section-1-container p:nth-child(3) {
+    line-height: 17px;
+    font-size: 0.9rem;
+  }
+  .section-1-container {
+    height: 70%;
+  }
+  .section-1-container {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+  }
+  /* PC 알아보기 버튼 숨기기 */
+  .section-2-move a:nth-child(1) {
+    display: none;
+  }
+  /* pc버전 화살표 숨기기 */
+  #arrow {
+    display: none;
+  }
+
+  .section-2-move a {
+    margin-top: 0px;
+  }
+  /* 모바일 p태그 3번째 색상변경 */
+  .section-1-container p:nth-child(3) {
+    font-size: 1rem;
+    color: #808080;
+    line-height: 20px;
+    transition: var(--font-transition);
+  }
+
+  .section-1-container {
+    padding-bottom: 120px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  #section-1 {
+    background-size: 700px;
+  }
+  .section-1-container p:nth-child(1) {
+    font-size: 3rem;
+  }
+  .section-1-container p:nth-child(2) {
+    font-size: 1rem;
+  }
+  .section-1-container p:nth-child(3){
+    font-size: 0.875rem;
   }
 }
