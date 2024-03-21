@@ -29,12 +29,11 @@
   align-items: flex-start;
   width: 50%;
   font-family: 'yg-jalnan';
-  
 }
 .title-list3 {
   text-align: center;
   font-size: 3rem;
-  font-weight: bold;
+  text-shadow: 3px 3px gray;
 }
 .text-center {
   display: flex;
@@ -66,13 +65,17 @@
   font-family: "yg-jalnan";
   font-size: 1.9rem;
   color: #EE9B01;
+  text-shadow: 2px 2px gray;
   font-weight: bold;
   margin-bottom: 15px;
+  
 }
 .subtext3 {
   margin-bottom: 70px;
   font-size: 1.4rem;
   word-break: keep-all;
+  font-weight: bold;
+
 }
 
 @media screen and (min-width: 0px) and (max-width: 350px) {
