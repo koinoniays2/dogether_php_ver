@@ -88,21 +88,6 @@
   height: 160px;
 }
 
-@media screen and (max-width: 768px) {
-  .section-2-main-text p:nth-child(1) {
-    font-size: 3rem;
-  }
-  .section-2-main-text p:nth-child(2) {
-    font-size: 1.8rem;
-    color: #ee9b01;
-  }
-  .sub-title {
-    font-size: 1.5rem;
-  }
-  .sub-text {
-    font-size: 1rem;
-  }
-}
 
 @media screen and (max-width: 1024px) {
   /* 모바일 섹션2 */
@@ -139,4 +124,6 @@
     margin-bottom: 30px;
     height: 160px;
   }
+
+  
 }
