@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/detail.css" type="text/css" />
   <link rel="stylesheet" href="css/index.css" type="text/css" />
+  <link rel="stylesheet" href="css/detail.css" type="text/css" />
   <link rel="stylesheet" href="css/header.css" type="text/css" />
   <link rel="stylesheet" href="css/footer.css" type="text/css" />
   <link rel="stylesheet" href="css/map.css" type="text/css" />
