@@ -1,5 +1,7 @@
 /* 전체 요소 변화시 부드러움 주는 효과 */
-
+* {
+  transition: var(--font-transition);
+}
 /* 섹션2 이벤트 코드 */
 #section2-event {
   transition: opacity 1s ease-in-out;
@@ -8,7 +10,6 @@
 /* 섹션-2*/
 #section-2 {
   width: 100%;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   background-image: url("../images/PC_left_bottom.png");
@@ -27,14 +28,13 @@
 }
 .section-2-main-text {
   flex-direction: column;
-  font-size: 4.5rem;
   font-family: "LOTTERIACHAB";
   text-align: center;
   transition: opacity 1s ease;
-  margin-bottom: 80px;
+  margin: 100px;
 }
 .listbox {
-  /* width: 60%; */
+  width: 80%;
   display: flex;
   justify-content: center;
   word-break: keep-all;
@@ -44,7 +44,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 100%;
 }
 .section-2-list div {
   width: 100%;
@@ -73,14 +73,11 @@
 }
 
 .section-2-main-text p:nth-child(1) {
-  font-size: 4rem;
+  font-size: 4.5rem;
 }
 .section-2-main-text p:nth-child(2) {
   font-size: 2.5rem;
   color: #ee9b01;
-}
-.section-2-list {
-  width: 100%;
 }
 
 .section-2-list div {
@@ -100,7 +97,9 @@
     background-image: none;
     margin-top: 100px;
   }
-
+  .listbox {
+    width: 100%;
+  }
 
   .section-2-main-text p:nth-child(1) {
     font-size: 3rem;
@@ -122,6 +121,9 @@
   #section-2 {
     background-image: none;
   }
+  .listbox {
+    width: 100%;
+  }
   .section-2-container {
     flex-direction: column;
     background-image: none;
@@ -133,14 +135,11 @@
     width: 100%;
     margin-bottom: 100px;
     align-items: center;
-    margin-bottom: 4rem;
   }
   .section-2-list {
     width: 100%;
   }
-  .listbox {
-    width: 100%;
-  }
+
   .section-2-main-text p {
     font-size: 3rem;
   }
@@ -149,6 +148,4 @@
     margin-bottom: 30px;
     height: 160px;
   }
-
-  
 }
