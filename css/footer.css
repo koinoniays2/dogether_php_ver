@@ -1,41 +1,42 @@
-footer { width: 100%; }
-.footer-container {
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 1rem 1rem;
-}
-footer {
-  display: flex;
-  justify-content: center;
-}
-#service_center {
+.footer_box {
+  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 1rem; 
-  margin-top: 20px;
 }
-#information {
+
+/* 푸터 컨1 ------------------------------------ */
+.footer_con1 {
+  max-width: 768px;
   display: flex;
+  margin: 50px 0;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 1rem;
+}
+.footer_service {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  gap: 20px;
 }
-ol {
-  padding: 20px;
-}
-ol img {
-  width: 25px;
-  height: 25px;
+.service_info p:nth-child(1) {
+  margin-bottom: 5px;
 }
 
-#information ol li:nth-child(1) {
+/* 푸터 컨2 ------------------------------------ */
+.footer_con2 {
+  max-width: 1280px;
   margin-bottom: 20px;
+  padding: 1rem;
 }
-footer p {text-align: center;}
 
-@media screen and (min-width: 375px) and (max-width: 768px) {
-  footer {
-    font-size: 0.9rem;
+/* 미디어쿼리 적용 */
+@media screen and(max-width: 768px) {
+  .footer_con2 .footer_text {
+    font-size: 14px;
+    word-break: keep-all;
   }
 }

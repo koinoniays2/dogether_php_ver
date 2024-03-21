@@ -1,3 +1,4 @@
+
 /* 디테일 설명 섹션 */
 #detail-intro {
   width: 100%;
@@ -126,7 +127,7 @@
   color: black;
   padding: 0.6rem;
   width: 90%;
-  position:absolute;
+  position: absolute;
   border-radius: 20px;
 }
 
@@ -188,10 +189,9 @@
   background: #14471e;
   position: absolute;
   right: 20px;
-  top:23px;
+  top: 23px;
   padding: 5px 10px;
   border-radius: 15px;
-  
 }
 .option > div {
   height: 100%;
@@ -320,7 +320,8 @@
 #page_btn_container {
   width: 100%;
   display: flex;
-  justify-content: center; align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .page_container > button {
@@ -362,10 +363,7 @@
   width: 50%;
   margin-top: -35px;
 }
-/* 푸터 배경색 지정 */
-footer {
-  background-color: #fdf6eb;
-}
+
 @media screen and (min-width: 375px) and (max-width: 768px) {
   #intro-box1 {
     flex-direction: column;

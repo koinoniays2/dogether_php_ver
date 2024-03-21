@@ -1,62 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/index.css" type="text/css" />
-    <link rel="stylesheet" href="css/header.css" type="text/css" />
-    <link rel="stylesheet" href="css/footer.css" type="text/css" />
-    <link rel="stylesheet" href="css/section-1.css" type="text/css" />
-    <link rel="stylesheet" href="css/section-2.css" type="text/css" />
-    <link rel="stylesheet" href="css/section-3.css" type="text/css" />
-    <link rel="stylesheet" href="css/guide.css" type="text/css" />
-    <!-- JS -->
-    <script src="./js/jquery-3.7.1.min.js"></script>
-    <!-- gsap -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"></script>
-    <!-- 폰트어썸 -->
-    <script
-      src="https://kit.fontawesome.com/96b5911d82.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>DOGETHER</title>
-    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
-  </head>
-  <style>
-    <?php $cursorImage = "images/cursor.png";
-    $hoverCursorImage = "images/hoverCursor.png";
-    echo "html { cursor: url($cursorImage), auto; }";
-    echo "a { cursor: url($hoverCursorImage), auto; }"; ?>
-  </style>
-  <body>
-    <!-- 헤더 -->
-    <header id="header">
-        <?php include "header.php";?>
-    </header>
-    <!-- 섹션-1 -->
-    <section id="section-1">
-      <div class="section-1-container">
-        <div id="section1-event" class="sectiion-1-main-text">
-          <p>LET'S<br/> DOGETHER!</p>
-          <p>
-            반려동물과 <b>함께</b>하는 일상<br />
-            내 주변 반려동물을 위한 시설을 찾아보세요!
-          </p>
-          <p>#DOGETHER는 반려동물 시설 및 동반 시설 리스트 제공 플랫폼입니다.</p>
-        </div>
-        <div id="section1-event2" class="section-2-move">
-          <a href="#section-2">알아보기</a>
-          <a href="#section-2">알아보기<img src="images/mo_arr.png" alt=""></a>
-          <div id="arrow">
-            <span><img src="./images/arr.png" alt=""></span>
-            <span><img src="./images/arr.png" alt=""></span>
-            <span><img src="./images/arr.png" alt=""></span>
-          </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/index.css" type="text/css" />
+  <link rel="stylesheet" href="css/header.css" type="text/css" />
+  <link rel="stylesheet" href="css/footer.css" type="text/css" />
+  <link rel="stylesheet" href="css/section-1.css" type="text/css" />
+  <link rel="stylesheet" href="css/section-2.css" type="text/css" />
+  <link rel="stylesheet" href="css/section-3.css" type="text/css" />
+  <link rel="stylesheet" href="css/guide.css" type="text/css" />
+  <!-- JS -->
+  <script src="./js/jquery-3.7.1.min.js"></script>
+  <!-- gsap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"></script>
+  <!-- 폰트어썸 -->
+  <script src="https://kit.fontawesome.com/96b5911d82.js" crossorigin="anonymous"></script>
+  <title>DOGETHER</title>
+  <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+</head>
+<style>
+  <?php $cursorImage = "images/cursor.png";
+  $hoverCursorImage = "images/hoverCursor.png";
+  echo "html { cursor: url($cursorImage), auto; }";
+  echo "a { cursor: url($hoverCursorImage), auto; }"; ?>
+</style>
+
+<body>
+  <!-- 헤더 -->
+  <header id="header">
+    <?php include "header.php"; ?>
+  </header>
+  <!-- 섹션-1 -->
+  <section id="section-1">
+    <div class="section-1-container">
+      <div id="section1-event" class="sectiion-1-main-text">
+        <p>LET'S<br /> DOGETHER!</p>
+        <p>
+          반려동물과 <b>함께</b>하는 일상<br />
+          내 주변 반려동물을 위한 시설을 찾아보세요!
+        </p>
+        <p>#DOGETHER는 반려동물 시설 및 동반 시설 리스트 제공 플랫폼입니다.</p>
+      </div>
+      <div id="section1-event2" class="section-2-move">
+        <a href="#section-2">알아보기</a>
+        <a href="#section-2">알아보기<img src="images/mo_arr.png" alt=""></a>
+        <div id="arrow">
+          <span><img src="./images/arr.png" alt=""></span>
+          <span><img src="./images/arr.png" alt=""></span>
+          <span><img src="./images/arr.png" alt=""></span>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
   <!-- 섹션-2 컨텐츠 목록 -->
   <section id="section-2">
@@ -132,7 +131,7 @@
       <div id="section3-event" class="main-text3">
         <p class="title-list3">
           반려동물과 함께하는<br />
-          공공장소 에티켓 <br />꼭 지켜주세요.
+          공공장소 에티켓 <br />꼭 지켜주세요
         </p>
       </div>
       <div class="listflex3">
@@ -177,17 +176,12 @@
   </guide>
   <!-- footer -->
   <footer>
-    <script>
-      fetch("footer.php")
-        .then((response) => response.text())
-        .then((html) => {
-          document.querySelector("footer").innerHTML = html;
-        });
-    </script>
+    <?php include "footer.php"; ?>
   </footer>
   <!-- js -->
   <script src="./js/index.js"></script>
   <script src="js/api.js"></script>
   <script src="js/jquery.scrollTo.min.js"></script>
 </body>
-</html> 
+
+</html>
