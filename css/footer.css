@@ -34,7 +34,8 @@
 }
 
 /* 미디어쿼리 적용 */
-@media screen and(max-width: 768px) {
+@media screen and (max-width: 768px) {
+  
   .footer_con2 .footer_text {
     font-size: 14px;
     word-break: keep-all;
