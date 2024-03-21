@@ -17,7 +17,7 @@ loginBtn.addEventListener("click", (e) => {
 
     // AJAX 요청 보내기
     $.ajax({
-        url: "http://localhost/dogether/login.php",
+        url: "http://localhost/dogether_php_ver/login.php",
         type: "POST",
         data: {id: id, password: password},
         dataType: "json",

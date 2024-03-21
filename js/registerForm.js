@@ -111,7 +111,7 @@ registBtn.addEventListener("click", (e) => {
 
     if(id && password && passwordCheck && name && email && mobileTel && sample6Postcode && checkOk) {
         $.ajax({
-            url: "http://localhost/dogether/register.php",
+            url: "http://localhost/dogether_php_ver/register.php",
             type: "POST",
             data: formData,
             dataType: "json",

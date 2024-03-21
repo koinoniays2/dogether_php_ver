@@ -22,7 +22,7 @@ if (!$num_match) {
     } else {
         session_start();
         $_SESSION["userid"] = $row["id"];
-        $_SESSION["username"] = $row["username"];
+        $_SESSION["name"] = $row["name"];
         echo json_encode(array('success' => true, 'redirect' => 'index.php'));
     }
 }
