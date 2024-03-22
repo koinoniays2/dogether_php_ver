@@ -59,7 +59,7 @@
 }
 .section-1-container p:nth-child(3) {
   font-family: 'yg-jalnan';
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   color: #f0a646;
   transition: var(--font-transition);
 }
@@ -83,7 +83,7 @@
   background-color: #14471E;
   color: #fff;
   border-radius: 2rem;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   margin-top: 145px;
 }
 
@@ -119,7 +119,7 @@
   }
   /* 주황글씨 부분 */
   .section-1-container P:nth-child(2) b {
-    font-size: 2.1rem;
+    font-size: 2.25rem;
   }
   .section-1-container p:nth-child(3) {
     line-height: 17px;
@@ -179,7 +179,7 @@
     font-size: 4rem;
   }
   .section-1-container p:nth-child(2) {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
   }
   /* 주황글씨 부분 */
   .section-1-container P:nth-child(2) b {
