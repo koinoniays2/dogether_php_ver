@@ -92,11 +92,10 @@
                         <div>
                             <div class="address_search">
                                 <span>주소</span>
-                                <input type="text" id="sample6_postcode" name="address_postcode" readonly>
-                                <input type="text" id="sample6_address" name="address_" readonly>
+                                <input type="text" class="sample6_postcode sample6_address" name="address_" readonly>
                             </div>
                             <div class="btn_box">
-                                <input type="text" id="sample6_detailAddress" placeholder="상세주소" name="address_detail">
+                                <input type="text" id="sample6_detailAddress" name="address_detail" value=" " placeholder="상세주소" />
                                 <button type="button" onclick="sample6_execDaumPostcode()"><i class="fas fa-search"></i></button>
                             </div>
                             <!-- <input type="text" id="sample6_extraAddress" placeholder="참고항목" name="address_option" readonly> -->
@@ -151,8 +150,8 @@
                     }
 
                     // 우편번호와 주소 정보를 해당 필드에 넣는다.
-                    document.getElementById('sample6_postcode').value = data.zonecode;
-                    document.getElementById("sample6_address").value = addr;
+                    document.querySelector('.sample6_postcode').value = data.zonecode;
+                    document.querySelector(".sample6_address").value = addr;
                     // 커서를 상세주소 필드로 이동한다.
                     document.getElementById("sample6_detailAddress").focus();
                 }

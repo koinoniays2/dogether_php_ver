@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head> </head>
+<head> 
+  <script src="https://kit.fontawesome.com/96b5911d82.js" crossorigin="anonymous"></script>
+</head>
 
 <body>
   <div class="footer_box">

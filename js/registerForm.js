@@ -47,7 +47,6 @@ registBtn.addEventListener("click", (e) => {
     const name = document.querySelector('input[name="name"]').value;
     const email = document.querySelector('input[name="email"]').value;
     const mobileTel = document.querySelector('input[name="mobile_tel"]').value;
-    const sample6Postcode = document.querySelector('input[name="address_postcode"]').value;
     const sample6Address = document.querySelector('input[name="address_"]').value;
     const sample6DetailAddress = document.querySelector('input[name="address_detail"]').value;
 
@@ -95,6 +94,11 @@ registBtn.addEventListener("click", (e) => {
         mobileText.textContent = "휴대 전화번호를 입력해주세요.";
         mobileText.style.color = "red";
     }
+    if(!sample6DetailAddress || sample6DetailAddress == " ") {
+        addressText.textContent = "";
+        addressText.textContent = "상세주소를 입력해주세요.";
+        addressText.style.color = "red";
+    }
     if(!sample6Address) {
         addressText.textContent = "";
         addressText.textContent = "주소를 입력해주세요.";
@@ -107,9 +111,9 @@ registBtn.addEventListener("click", (e) => {
     }
 
     const formData = {id: id, password: password, password_check: passwordCheck, name: name, email: email, mobile_tel: mobileTel,
-        address_postcode: sample6Postcode, address_: sample6Address, address_detail: sample6DetailAddress};
+        address_: sample6Address, address_detail: sample6DetailAddress};
 
-    if(id && password && passwordCheck && name && email && mobileTel && sample6Postcode && checkOk) {
+    if(id && password && passwordCheck && name && email && mobileTel && sample6DetailAddress && sample6Address && checkOk) {
         $.ajax({
             url: "http://localhost/dogether_php_ver/register.php",
             type: "POST",

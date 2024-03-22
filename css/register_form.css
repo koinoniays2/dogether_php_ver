@@ -12,7 +12,6 @@ main {
   align-items: center;
   box-sizing: border-box;
 }
-
 main::after {
   content: ""; /* 가상 요소에 내용 추가 */
   position: absolute; /* 절대 위치로 설정 */
@@ -33,7 +32,6 @@ main::after {
   justify-content: center;
   align-items: center;
 }
-
 #register_form {
   display: flex;
   flex-direction: column;
@@ -54,11 +52,8 @@ main::after {
 .btn_box:focus-within {
   border-color: #14471e;
 }
-
-.btn_box input {
-  width: 75%;
-}
 .btn_box #check_id {
+  width: 100px;
   font-size: small;
   margin: 0.5rem 0 0.5rem 1.8rem;
   padding: 0.5rem 0.5rem;

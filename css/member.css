@@ -1,0 +1,25 @@
+/* 메인 콘텐트 */
+#main_content { width: 100%; padding-bottom: 3rem;}
+/* 가입 양식 폼 */
+#join_box { width: 100%; max-width: 360px; margin: 0 auto; padding: 0 1rem;}
+#join_box form {display: flex; flex-direction: column; gap: 1rem;}
+#join_box h2 { border-bottom: solid 1px #dddddd; padding-top: 4rem;
+    font-size: 1.5rem; font-weight: bold;}
+#join_box .form {display: flex; align-items: center; max-width: 320px;}
+#join_box .form .col1 { width: 6rem; flex-shrink: 0;}
+#join_box .form .col2 { flex-grow: 1; }
+#join_box .id {	margin-top: 20px; }
+
+
+#join_box input, .read_only{
+    padding: 0.75rem 0.5rem;
+    /* border: 1px solid #7990A3; */
+    border-radius: 1.5rem;
+    width: 100%;
+    background-color: #f5f5f5;}
+.read_only {
+    background-color: lightgray;}
+
+#join_box .buttons {width: 100%; display: flex; justify-content: flex-end;}
+.buttons div {background-color: #14471e; color: white; padding: 0.5rem 1rem;
+cursor: pointer; border-radius: 2rem;}
