@@ -1,29 +1,31 @@
 .footer_box {
-  background-color: white;
+  background-image: url("../images/body_background.png");
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+.logo_img{ width: 5rem; height: 5rem; }
+
 /* 푸터 컨1 ------------------------------------ */
 .footer_con1 {
-  max-width: 768px;
+  max-width: 1024px;
   display: flex;
-  margin: 50px 0;
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
   padding: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
 }
 .footer_service {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 20px;
+  align-items: center;
 }
-.service_info p:nth-child(1) {
-  margin-bottom: 5px;
+.footer_service p {
+  padding: 0.5rem 0;
 }
 
 /* 푸터 컨2 ------------------------------------ */
