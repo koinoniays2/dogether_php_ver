@@ -35,8 +35,7 @@
   justify-content: center;
   align-items: center;
   font-size: 1.125rem;
-  margin-top: 10rem;
-  margin-bottom: 5rem;
+  margin: 5rem 0;
   padding: 5rem;
 }
 
@@ -60,7 +59,10 @@
   align-items: center;
   gap: 1rem;
 }
-
+.guide_container li i {
+  color: #14471E;
+  transform: rotate(45deg);
+}
 /* pc버전에서 이미지 제거 */
 /* .guide_container ul li img {
   display: none;
