@@ -69,7 +69,7 @@
           <div id="section2-event">
             <a href="detail.php?dataId=병원">
               <p class="sub-title">
-                <i class="fa-solid fa-angle-right"></i>&nbsp;동물병원&약국
+                <i class="fa-solid fa-angle-right"></i>&nbsp;동물병원
               </p>
               <p class="sub-text">
                 <!-- 반려동물 예방접종, 검진, 수술, 응급처치 가능 병원 및 반려동물 -->
@@ -100,7 +100,7 @@
               <p class="sub-title">
                 <i class="fa-solid fa-angle-right"></i>&nbsp;미용
               </p>
-              <p class="sub-text">반려동물 미용 및 케어 등<br /> 반려동물 전문 미용샵</p>
+              <p class="sub-text">반려동물 케어 및 미용샵</p>
             </a>
           </div>
 
