@@ -20,19 +20,15 @@ else $name = "";
       </div>
     <nav id="menu">
       <ul>
-        <a href="login_form.php">
-          <?php if (!$userid) { ?>
-            <li>로그인</li>
-          <?php } else { ?>
-            <li><a href="logout.php">로그아웃</a></li>
-          <?php } ?>
-        </a>
-        <a href="terms_form.php">
-          <li>회원가입</li>
-        </a>
-        <a href="index.php">
-          <li>커뮤니티</li>
-        </a>
+        <?php if (!$userid) { ?>
+        <li><a href="login_form.php">로그인</a></li>
+        <li><a href="terms_form.php">회원가입</a></li>
+        <li><a href="login_form.php" onclick="alert('로그인 후 이용해주세요.');">커뮤니티</a></li>
+        <?php } else { $logged = $name."님";?>
+          <li><a><?= $logged ?></a></li>
+          <li><a href="logout.php">로그아웃</a></li>
+          <li><a href="index.php">커뮤니티</a></li>
+        <?php } ?>
       </ul>
     </nav>
     <!-- 토글메뉴 -->
