@@ -23,25 +23,19 @@
     <?php include "header.php"; ?>
   </header>
   <!-- 섹션2 인트로 픽스 -->
-  <!-- <section id="detail-intro">
+  <section id="detail-intro">
     <div class="bg-sticky"></div>
     <div class="bg-wrapper">
       <div id="intro-box1" class="intro-box">
-        <div class="img-box">
-          <img src="./images/detail_hotel.jpg" alt="detail_img" />
-        </div>
         <div class="text-box">반려동물 동반입장 가능한 곳을 찾고 계신가요?</div>
       </div>
       <div id="intro-box2" class="intro-box">
         <div class="text-box">
-          동물병원부터 숙소까지 다양한 장소를 검색해보세요
-        </div>
-        <div class="img-box">
-          <img src="./images/detail_hospital.jpg" alt="detail_img2" />
+          동물병원부터 숙소까지 다양한 장소를 검색해보세요!
         </div>
       </div>
     </div>
-  </section> -->
+  </section>
 
   <!-- api지도 섹션 -->
   <section id="detail-section">
@@ -85,7 +79,7 @@
 
   </footer>
 </body>
-<!-- <script src="./js/detail.js"></script> -->
+<script src="./js/detail.js"></script>
 <script type="module" src="./js/api.js"></script>
 <script type="module" src="./js/map.js"></script>
 
