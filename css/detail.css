@@ -309,7 +309,8 @@
   border-radius: 50px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-.category button:hover {
+.category button:hover,
+.category button:focus {
   background-color: #14471e;
   color: #fff;
 }
