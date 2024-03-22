@@ -130,7 +130,7 @@
     <div class="maxsection-3">
       <div id="section3-event" class="main-text3">
         <p class="title-list3">
-          반려견과 외출시엔<br /> "펫티켓"<br /> 지켜 즐겁고 안전하게!
+          반려견과 외출시엔<br /> <b style="color: #14471E;">"펫티켓"</b><br /> 지켜 즐겁고 안전하게!
         </p>
       </div>
       <div class="listflex3">
@@ -139,25 +139,25 @@
             <div id="section3-textE1">
               <p class="subtitle3">배변봉투 챙기셨나요?</p>
               <p class="subtext3">
-                공공장소에서 반려견의 배설물을 청결하게 처리하여 <br />환경을
-                보호하고,<br />
-                다른 사람들에게 불쾌한 경험을 주지 않기 위해 필수입니다.
+                깨끗한 환경과 공중 보건을 위해 배변봉투는 필수입니다.<br />
+                배변봉투를 이용하여 강아지의 배설물을 주워,<br />
+                모든 사람들이 쾌적한 환경을 즐길 수 있게 해주세요.
               </p>
             </div>
             <div id="section3-textE2">
-              <p class="subtitle3">입마개 착용 여부</p>
+              <p class="subtitle3">외출 시 리드 줄은 필수입니다.</p>
               <p class="subtext3">
-                동물보호법에 따른 맹견으로 규정된 품종이나
-                <br />사람과 다른 개들에게 평소 공격적인 성향을 보인다면
-                <br />입마개를 착용해주세요.
+                안전을 위해 리드 줄을 착용해 주세요.<br/>
+                동물보호법 시행 규칙에 의해 강아지와 외출&산책 시<br />
+                리드 줄 미착용일 경우에는 과태료를 부과하게 됩니다.<br />
               </p>
             </div>
             <div id="section3-textE3">
-              <p class="subtitle3">외출 시 리드줄은 필수입니다.</p>
+              <p class="subtitle3">입마개 착용 여부</p>
               <p class="subtext3">
-                안전을 위해 리드줄을 착용해주세요.<br/>
-                동물보호법 시행 규칙에 의해 강아지와 외출&산책시<br />
-                리드줄 미착용일 경우에는 과태료를 부과하게 됩니다.<br />
+                동물보호법에 따른 맹견으로 규정된 품종이나<br />
+                사람과 다른 개들에게 평소 공격적인 성향을 보인다면<br />
+                입마개를 착용해 주세요.
               </p>
             </div>
           </div>
