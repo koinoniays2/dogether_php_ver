@@ -24,7 +24,6 @@
   </header>
   <!-- 섹션2 인트로 픽스 -->
   <section id="detail-intro">
-    <div class="bg-sticky"></div>
     <div class="bg-wrapper">
       <div id="intro-box1" class="intro-box">
         <div class="text-box">반려동물 동반입장 가능한 곳을 찾고 계신가요?</div>
