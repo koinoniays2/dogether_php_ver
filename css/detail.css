@@ -1,65 +1,9 @@
-/* 디테일 설명 섹션 */
-#detail-intro {
-  width: 100%;
-  /* margin: 100px auto;
-  display: flex;
-  flex-direction: column; */
-  position: relative;
-}
-.bg-sticky,
-.bg-wrapper {
-  height: 0;
-  padding-bottom: 90vh;
-}
-.bg-wrapper {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: -1;
-  overflow: hidden;
-  transform: translateY(30%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.intro-box {
-  max-width: 1280px;
-  display: flex;
-  align-items: center;
-}
-#intro-box1 {
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-#intro-box2 {
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s, opacity 1s ease-in-out;
-}
-.img-box {
-  width: 60%;
-}
-.img-box img {
-  width: 100%;
-}
-.text-box {
-  /* background-color: skyblue; */
-  width: 40%;
-  word-break: keep-all;
-  font-size: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 40px;
-}
-
 /* 디테일 api지도 섹션 */
 
 #detail-section {
-  margin-top: 150px;
+  /* margin-top: 150px; */
   width: 100%;
-  height: calc(100vh-100);
+  /* height: calc(100vh-100); */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -365,20 +309,6 @@
 }
 
 @media screen and (min-width: 375px) and (max-width: 768px) {
-  #intro-box1 {
-    flex-direction: column;
-  }
-  #intro-box2 {
-    flex-direction: column-reverse;
-  }
-  .img-box {
-    width: 90%;
-  }
-  .text-box {
-    width: 90%;
-    padding: 20px 0;
-    font-size: 1.9rem;
-  }
   #detail-section > img {
     width: 80%;
     margin-top: -30px;
