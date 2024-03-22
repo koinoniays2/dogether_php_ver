@@ -52,7 +52,7 @@
                 <div id="login_option">
                     <p>아이디 찾기</p>
                     <p>비밀번호 찾기</p>
-                    <p>회원가입</p>
+                    <p><a href="terms_form.php">회원가입</a></p>
                 </div>
                 <div id="login_social">
                     <div>
