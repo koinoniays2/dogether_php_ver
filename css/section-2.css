@@ -20,7 +20,7 @@
 .section-2-container {
   width: 100%;
   max-width: 1280px;
-  margin: 100px auto;
+  margin: 3rem auto;
   display: flex;
   align-items: center;
   z-index: 90;
@@ -31,7 +31,7 @@
   font-family: "LOTTERIACHAB";
   text-align: center;
   transition: opacity 1s ease;
-  margin: 100px;
+  padding: 2rem 0 5rem 0;
 }
 .listbox {
   width: 80%;
