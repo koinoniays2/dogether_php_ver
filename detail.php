@@ -23,7 +23,7 @@
     <?php include "header.php"; ?>
   </header>
   <!-- 섹션2 인트로 픽스 -->
-  <section id="detail-intro">
+  <!-- <section id="detail-intro">
     <div class="bg-sticky"></div>
     <div class="bg-wrapper">
       <div id="intro-box1" class="intro-box">
@@ -41,7 +41,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- api지도 섹션 -->
   <section id="detail-section">
@@ -85,7 +85,7 @@
 
   </footer>
 </body>
-<script src="./js/detail.js"></script>
+<!-- <script src="./js/detail.js"></script> -->
 <script type="module" src="./js/api.js"></script>
 <script type="module" src="./js/map.js"></script>
 
