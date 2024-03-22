@@ -22,19 +22,19 @@
         <?php include "header.php"; ?>
     </header>
     <?php
-    // if (!isset($_SESSION["agreement"]) || $_SESSION["agreement"] !== true) {
-    //     // 세션에 동의 여부가 없거나 동의하지 않은 경우
-    //     echo "
-    //     <script>
-    //     alert('잘못된 접근입니다.');
-    //     window.location.href = 'index.php';
-    //     </script>";
-    //     exit;
-    // }
+    if (!isset($_SESSION["agreement"]) || $_SESSION["agreement"] !== true) {
+        // 세션에 동의 여부가 없거나 동의하지 않은 경우
+        echo "
+        <script>
+        alert('잘못된 접근입니다.');
+        window.location.href = 'index.php';
+        </script>";
+        exit;
+    }
 
-    // // 동의한 경우에만 페이지를 보여줌
-    // // 여기서 세션 삭제
-    // unset($_SESSION["agreement"]);
+    // 동의한 경우에만 페이지를 보여줌
+    // 여기서 세션 삭제
+    unset($_SESSION["agreement"]);
     ?>
 
     <main>
