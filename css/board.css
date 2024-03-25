@@ -116,7 +116,27 @@ span {
 
 #view_content li span {
   font-size: 1.2rem;
+}
+/* 제목 */
+#view_content div {
+  font-size: 1.2rem;
   line-height: 40px;
+  text-align: start;
+  border-bottom: 2px solid #c0c0c0;
+}
+
+.title_info {
+  padding: 0;
+  margin-top: 5px;
+}
+
+.title_info span {
+  margin-right: 10px;
+}
+
+.content_info {
+  border-top: 2px solid #c0c0c0;
+  margin-top: 5px; /* 내용과 제목/정보 사이에 여백 추가 */
 }
 
 /* 리스트 선 색 */

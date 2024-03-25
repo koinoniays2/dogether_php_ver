@@ -38,31 +38,17 @@
 	// $sql = "update board set hit=$new_hit where num=$num";   
 	mysqli_query($con, $sql);
 ?>		
-	    <ul id="view_content">
-			<li>
-				<span class="col2"><b>제목 :</b></span>
-				<span class="col2"><?=$subject?></span>
-				
-				
-			</li>
-			<li>
-			<span class="col2">내용 :</span>
-				<span class="col2"><?=$content?></span>
-				<!-- <span class="col2"><b>제목 :</b> <?=$subject?></span> -->
-				
-			</li>
-			<li>
-			<span class="col2">글쓴이 :</span>
-				<span class="col2"><?=$name?></span>
-				
-			</li>
-			<li>
-				<span class="col2">><?=$regist_day?></span>
-				
-				
-			</li>
-
-	    </ul>
+	   <ul id="view_content">
+			 <div class="col2"><b>제목 :</b> <?=$subject?></div>
+    <li class="title_info">
+        <span class="col2"><b>글쓴이 :</b> <?=$name?></span>
+        <span class="col2"><b>등록일 :</b> <?=$regist_day?></span>
+    </li>
+    <li class="content_info">
+        <span class="col2">내용 :</span>
+        <span class="col2"><?=$content?></span>
+    </li>
+</ul>
 	    <ul class="buttons">
 				<li><button onclick="location.href='board_list.php?page=<?=$page?>'">목록</button></li>
 				<?php if($userid == $id) { ?>
