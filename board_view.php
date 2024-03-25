@@ -40,7 +40,7 @@
 ?>		
 	    <ul id="view_content">
 			<li>
-				<span class="col2">제목 :</span>
+				<span class="col2"><b>제목 :</b></span>
 				<span class="col2"><?=$subject?></span>
 				
 				
@@ -48,7 +48,7 @@
 			<li>
 			<span class="col2">내용 :</span>
 				<span class="col2"><?=$content?></span>
-				<span class="col2"><b>제목 :</b> <?=$subject?></span>
+				<!-- <span class="col2"><b>제목 :</b> <?=$subject?></span> -->
 				
 			</li>
 			<li>

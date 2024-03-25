@@ -126,7 +126,8 @@
 
 #side_menu {
   position: fixed;
-  width: 50%;
+  width: 100%;
+  max-width: 260px;
   height: 100%;
   background-color: white;
   right: -500px;
