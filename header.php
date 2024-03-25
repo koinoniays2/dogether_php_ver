@@ -22,18 +22,19 @@ else $userlevel = "";
     <nav id="menu">
       <ul>
         <?php if (!$userid) { ?>
+        <li><a href="login_form.php" onclick="alert('로그인 후 이용해주세요.');">커뮤니티</a></li>
         <li><a href="login_form.php">로그인</a></li>
         <li><a href="terms_form.php">회원가입</a></li>
-        <li><a href="login_form.php" onclick="alert('로그인 후 이용해주세요.');">커뮤니티</a></li>
         <?php } else { $logged = $name."님";?>
         <?php if($userlevel==1) {?>
+        <li><a href="board_list.php">커뮤니티</a></li>
         <li><a href="admin.php">관리자 모드</a></li>
         <li><a href="member_modify_form.php">정보수정</a></li>
         <?php } else { ?>
+        <li><a href="board_list.php">커뮤니티</a></li>
         <li><a href="member_modify_form.php"><?php echo $logged; ?></a></li>
         <?php } ?>
         <li><a href="logout.php">로그아웃</a></li>
-        <li><a href="board_list.php">커뮤니티</a></li>
         <?php } ?>
       </ul>
     </nav>
@@ -48,18 +49,19 @@ else $userlevel = "";
       <ul>
         <li style="font-weight: bold;font-size: 20px; margin-top: 30px; margin-bottom: 10px; color: #ee9b01;">USER</li>
         <?php if (!$userid) { ?>
+        <li><a href="login_form.php" onclick="alert('로그인 후 이용해주세요.');">커뮤니티</a></li>
         <li><a href="login_form.php">로그인</a></li>
         <li><a href="terms_form.php">회원가입</a></li>
-        <li><a href="login_form.php" onclick="alert('로그인 후 이용해주세요.');">커뮤니티</a></li>
         <?php } else { $logged = $name."님";?>
         <?php if($userlevel==1) {?>
+        <li><a href="board_list.php">커뮤니티</a></li>
         <li><a href="admin.php">관리자 모드</a></li>
         <li><a href="member_modify_form.php">정보수정</a></li>
         <?php } else { ?>
+        <li><a href="board_list.php">커뮤니티</a></li>
         <li><a href="member_modify_form.php"><?php echo $logged; ?></a></li>
         <?php } ?>
         <li><a href="logout.php">로그아웃</a></li>
-        <li><a href="board_list.php">커뮤니티</a></li>
         <?php } ?>
           
         <div style="width: 100%; border-radius: 1rem; height: 2px; background: #ee9b01; margin-top: 30px;"></div>

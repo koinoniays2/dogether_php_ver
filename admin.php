@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html>
-<head> 
-<meta charset="utf-8">
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- CSS -->
 <link rel="stylesheet" href="css/index.css" type="text/css" />
 <link rel="stylesheet" href="css/header.css" type="text/css" />
 <link rel="stylesheet" href="css/footer.css" type="text/css" />
 <link rel="stylesheet" href="css/admin.css" type="text/css" />
-<title>PHP 프로그래밍 입문</title>
+<title>관리자 페이지</title>
 </head>
 <body> 
 <header id="header">
