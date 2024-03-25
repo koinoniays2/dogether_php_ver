@@ -7,7 +7,7 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url(../images/dogfan.png) no-repeat;
+  background: url("../images/dogfan.png") no-repeat;
   background-position: bottom;
   background-size: 100%;
   opacity: 0.5; /* 배경에만 투명도를 적용 */
@@ -70,7 +70,7 @@ main {
   transition-duration: 0.5s;
 }
 #login_btn:hover {
-  background-color: #EE9B01;
+  background-color: #ee9b01;
 }
 /* 로그인 옵션 */
 #login_option {
@@ -106,7 +106,6 @@ ul {
 
 li {
   position: relative;
-  
 }
 li p {
   position: absolute;
@@ -122,5 +121,5 @@ input {
   border: 3px solid transparent;
 }
 input:focus-within {
-  border: 3px solid #14471e
+  border: 3px solid #14471e;
 }

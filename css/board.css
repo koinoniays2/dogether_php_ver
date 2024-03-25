@@ -1,20 +1,187 @@
-.section-1-container {width: 100%; max-width: 1280px; margin: 100px auto; padding: 0 1rem;}
-.section-1-container form {display: flex; flex-direction: column; padding-top: 2rem; margin: 50px; }
-.section-1-container form input {padding: 1rem 0; height: 5rem; font-size: 1.5rem; width: 100%; background-color: #EEE; border: 2px solid #14471E ;  border-radius: 2px ;}
-.section-1-container form textarea {font-size: 1rem;}
-.section-1-container form div {display: flex; justify-content: flex-end; gap: 0.5rem;}
-.section-1-container form div button {cursor: pointer;}
-#board_form{width: 100%;}
-.col1{font-size: 20px;}
-#board_form li{padding: 12px 0;}
-#board_form textarea { width: 100%;	height: 300px; background-color: #EEE; border: 2px solid #14471E ;  border-radius: 2px ;}
-span { text-align: end; }
-.buttons{display: flex; justify-content: end; gap: 10px;}
+.section-1-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 100px auto;
+  padding: 0 1rem;
+}
+.section-1-container form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+  margin: 50px;
+}
+.section-1-container form input {
+  padding: 1rem 0;
+  height: 5rem;
+  font-size: 1.5rem;
+  width: 100%;
+  background-color: #fff;
+  border: 2px solid #14471e;
+  border-radius: 1rem;
+}
+.section-1-container form textarea {
+  font-size: 1rem;
+}
+.section-1-container form div {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+.section-1-container form div button {
+  cursor: pointer;
+}
+#board_form {
+  width: 100%;
+}
 
+.col1 {
+  font-size: 20px;
+}
+#board_form li {
+  padding: 12px 0;
+}
+#board_form textarea {
+  width: 100%;
+  height: 300px;
+  background-color: #fff;
+  border: 2px solid #14471e;
+  border-radius: 1rem;
+}
+span {
+  text-align: end;
+}
+.buttons {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+}
 
-#board_box{width: 100%; max-width: 1280px; margin: 100px auto; padding: 0 1rem;}
-#board_list{display: flex; flex-direction: column;}
-#board_list > li{display: flex; justify-content: space-between;}
-#page_num{display: flex; justify-content: center;}
+.buttons li {
+  border: 1px solid black;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  background-color: #14471e;
+  color: #fff;
+}
 
-#view_content{display: flex; flex-direction: column;}
+#title {
+  text-align: center;
+  font-family: "LOTTERIACHAB";
+  font-size: 3rem;
+}
+
+#board_box {
+  width: 100%;
+  max-width: 1280px;
+  margin: 100px auto;
+  padding: 0 1rem;
+}
+#board_list {
+  margin-top: 5px;
+  flex-direction: column;
+}
+#board_list > li {
+  display: flex;
+  justify-content: space-between;
+}
+#board_list li:last-child {
+  border-width: 0px 0 2px 0;
+  border-style: solid;
+  border-color: #c0c0c0;
+}
+#board_list li span {
+  width: 25%;
+  text-align: start;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+#page_num {
+  display: flex;
+  justify-content: center;
+}
+
+/* 그림자 */
+#view_content {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  padding: 0.5rem 1rem;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  height: 40vh;
+}
+
+#view_content li span {
+  font-size: 1.2rem;
+  line-height: 40px;
+}
+
+/* 리스트 선 색 */
+#sub_box {
+  border-width: 0px 0 1px 0;
+  border-style: solid;
+  border-color: #c0c0c0;
+}
+/* 페이지 간격조정 */
+#page_num {
+  padding: 1rem;
+  gap: 5px;
+}
+
+#text_area .col2 textarea {
+  font-size: 1rem;
+  padding: 0.4rem;
+}
+
+/* 푸터 */
+.footer_box {
+  background-image: url("../images/body_background.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo_img {
+  width: 5rem;
+  height: 5rem;
+}
+
+/* 푸터 컨1 ------------------------------------ */
+.footer_con1 {
+  max-width: 1024px;
+  display: flex;
+  padding: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.footer_service {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer_service p {
+  padding: 0.5rem 0;
+}
+
+/* 푸터 컨2 ------------------------------------ */
+.footer_con2 {
+  max-width: 1280px;
+  margin-bottom: 20px;
+  padding: 1rem;
+}
+
+/* 미디어쿼리 적용 */
+@media screen and (max-width: 768px) {
+  .footer_con2 .footer_text {
+    font-size: 14px;
+    word-break: keep-all;
+  }
+}

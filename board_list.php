@@ -12,6 +12,7 @@
     <?php include "header.php";?>
 </header>  
 <section>
+	<div id="title">DOGETHER LIST</div>
 	<!-- <div id="main_img_bar">
         <img src="./img/main_img.png">
     </div> -->
@@ -20,7 +21,7 @@
 	    	게시판 > 목록보기
 		</h3>
 	    <ul id="board_list">
-				<li>
+				<li style="border-width: 2px 0 1px 0; border-style: solid; border-color: #c0c0c0;">
 					<span class="col1">번호</span>
 					<span class="col2">제목</span>
 					<span class="col3">글쓴이</span>
@@ -65,7 +66,7 @@
     //   else
     //   	$file_image = " ";
 ?>
-				<li>
+				<li id="sub_box">
 					<span class="col1"><?=$number?></span>
 					<span class="col2"><a href="board_view.php?num=<?=$num?>&page=<?=$page?>"><?=$subject?></a></span>
 					<span class="col3"><?=$name?></span>
@@ -126,6 +127,9 @@
 				</li>
 			</ul>
 	</div> <!-- board_box -->
+	<footer>
+		<?php include "footer.php"; ?>
+	</footer>
 </section> 
 
 </body>
