@@ -20,15 +20,13 @@ document.addEventListener("DOMContentLoaded", function () {
   introBox1.style.opacity = "1";
 
   setTimeout(function () {
-    introBox1.style.opacity = "0";
+    
 
     // 3초 후에 display: none;으로 변경
     setTimeout(function () {
-      introBox1.style.display = "none";
-
       // 1초 뒤에 intro-box2를 서서히 나타나게 설정
       let introBox2 = document.getElementById("intro-box2");
-      introBox2.style.display = "flex"; // 또는 "block" 등을 사용하여 적절한 디스플레이 속성을 설정
+      introBox2.style.display = "block"; // 또는 "block" 등을 사용하여 적절한 디스플레이 속성을 설정
       introBox2.style.visibility = "visible"; // visibility를 visible로 변경
       introBox2.style.transition = "opacity 1s ease-in-out";
       introBox2.style.opacity = "1";
