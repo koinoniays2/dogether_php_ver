@@ -9,7 +9,6 @@
 
 .header-container {
   width: 100%;
-  height: 85px;
   max-width: 1280px;
   margin: 0 auto;
   padding: 0.5rem 1rem;
@@ -93,7 +92,7 @@
 }
 
 #check_box:checked + label > span {
-  background: white;
+  background: black;
 }
 
 #check_box:checked + label > span:nth-child(1) {
@@ -127,9 +126,10 @@
 
 #side_menu {
   position: fixed;
-  width: 50%;
+  width: 100%;
+  max-width: 260px;
   height: 100%;
-  background-color: #14471e;
+  background-color: white;
   right: -500px;
   transition: all 300ms;
   z-index: 1;
@@ -143,9 +143,9 @@
   text-align: end;
 }
 #side_menu ul li {
-  font-family: 'yg-jalnan';
+  /* font-family: 'yg-jalnan'; */
   margin-top: 10px;
-  color: white;
+  color: #14471E;
 }
 
 #check_box:checked + label + #side_menu {

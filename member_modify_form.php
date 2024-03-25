@@ -80,7 +80,7 @@
 							<input type="text" class="sample6_postcode sample6_address" name="address_" value="<?=$address?>" readonly>
 							<div class="btn_box">
                                 <input type="text" id="sample6_detailAddress" placeholder="상세주소" value="<?=$address_detail?>"  name="address_detail">
-                                <button type="button" onclick="sample6_execDaumPostcode()"><i class="fas fa-search"></i></button>
+                                <button type="button" class="search" onclick="sample6_execDaumPostcode()"><i class="fas fa-search"></i></button>
                             </div>
 						</div>                 
 					</div>

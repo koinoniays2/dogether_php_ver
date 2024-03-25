@@ -25,7 +25,7 @@
   <!-- 섹션2 인트로 픽스 -->
   <section id="detail-intro">
     <div id="intro-box1" class="intro-box">
-      <div class="text-box">반려동물 동반입장 가능한 곳을 찾고 계신가요?</div>
+      <div class="text-box">반려동물과 반려인을 위한 서비스 시설을 검색해보세요!</div>
     </div>
   </section>
 
@@ -36,17 +36,17 @@
       <div class="detail-text"></div>
       <!-- 카테고리 부분 -->
       <div class="category"></div>
+      <p style="color:gray; text-align:center;">처음 나오는 정보는 서울지역 애견 동반 정보입니다.
+      <br />메뉴 클릭 시 해당 지역의 정보를 확인할 수 있습니다.</p>
       <!-- map -->
       <div class="map_wrap">
         <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>
         <div id="menu_wrap" class="bg_white">
           <div class="option">
-
             <form id="search_form" onsubmit="searchPlaces(); return false;">
-              <input type="text" value="애견동반" id="keyword" size="15">
+              <input type="text" value="서울 애견동반" id="keyword" size="15">
               <button type="submit"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></button>
             </form>
-
           </div>
           <hr>
           <ul id="placesList"></ul>
