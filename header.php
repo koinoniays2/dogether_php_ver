@@ -27,7 +27,7 @@ else $name = "";
         <?php } else { $logged = $name."님";?>
           <li><a href="member_modify_form.php"><?= $logged ?></a></li>
           <li><a href="logout.php">로그아웃</a></li>
-          <li><a href="index.php">커뮤니티</a></li>
+          <li><a href="board_list.php">커뮤니티</a></li>
         <?php } ?>
       </ul>
     </nav>
