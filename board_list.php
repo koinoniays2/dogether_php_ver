@@ -127,6 +127,9 @@
 				</li>
 			</ul>
 	</div> <!-- board_box -->
+	<footer>
+		<?php include "footer.php"; ?>
+	</footer>
 </section> 
 
 </body>
