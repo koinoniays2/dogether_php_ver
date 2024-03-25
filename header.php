@@ -43,7 +43,7 @@ else $name = "";
         <li style="font-size: 20px; margin-top: 30px; margin-bottom: 10px; color: #ee9b01;">USER</li>
         <li><a href="login_form.php">로그인</a></li>
         <li><a href="terms_form.php">회원가입</a></li>
-        <li><a href="index.php">커뮤니티</a></li>
+        <li><a href="board_list.php">커뮤니티</a></li>
         <div style="width: 100%; border-radius: 1rem; height: 5px; background: #808080; margin-top: 30px;"></div>
         <li style="font-size: 20px; margin-top: 30px; margin-bottom: 10px; color: #ee9b01;">MENU</li>
         <li><a href="detail.php?dataId=병원">동물병원&약국</a></li>
