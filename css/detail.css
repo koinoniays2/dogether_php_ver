@@ -292,6 +292,7 @@
   color: #14471e;
   border-radius: 15px;
   cursor: pointer;
+  width: 80px;
 }
 
 #prev_button:hover,
