@@ -1,9 +1,9 @@
 create table board (
-   num int not null auto_increment,
-   id varchar(255),
-   name varchar(255) not null,
-   subject text not null,
-   content text not null,        
-   regist_day char(20) not null,
+   num INT NOT NULL auto_increment,
+   id VARCHAR(255),
+   name VARCHAR(255),
+   subject TEXT,
+   content TEXT,        
+   regist_day VARCHAR(20),
    primary key(num)
 );

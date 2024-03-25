@@ -11,12 +11,12 @@
     // $address = "$address_.$address_detail"/*."(".$address_option.")"*/;
 
     
-    $regist_day = date("Y-m-d H:i"); // 현재의 '년-월-일-시-분'을 저장
+    $regist_day = date("Y-m-d (H:i)"); 
 
     $con = mysqli_connect("localhost", "admin", "admin", "dogether");
 
-	$sql = "INSERT INTO users(id, password, password_check, name, email, mobile_tel, address, address_detail) ";
-	$sql .= "VALUES('$id', '$password', '$password_check', '$name', '$email', '$mobile_tel', '$address', '$address_detail')";
+	$sql = "INSERT INTO users(id, password, password_check, name, email, mobile_tel, address, address_detail, regist_day) ";
+	$sql .= "VALUES('$id', '$password', '$password_check', '$name', '$email', '$mobile_tel', '$address', '$address_detail', '$regist_day')";
 
     $result = mysqli_query($con, $sql); // $sql 에 저장된 명령 실행
     mysqli_close($con); 

@@ -8,7 +8,8 @@ if (isset($_SESSION["userid"])) $userid = $_SESSION["userid"];
 else $userid = "";
 if (isset($_SESSION["name"])) $name = $_SESSION["name"];
 else $name = "";
-
+if (isset($_SESSION["level"])) $userlevel = $_SESSION["level"];
+else $userlevel = "";
 ?>
 
 <body>
@@ -25,9 +26,14 @@ else $name = "";
         <li><a href="terms_form.php">회원가입</a></li>
         <li><a href="login_form.php" onclick="alert('로그인 후 이용해주세요.');">커뮤니티</a></li>
         <?php } else { $logged = $name."님";?>
-          <li><a href="member_modify_form.php"><?= $logged ?></a></li>
-          <li><a href="logout.php">로그아웃</a></li>
-          <li><a href="board_list.php">커뮤니티</a></li>
+        <?php if($userlevel==1) {?>
+        <li><a href="admin.php">관리자 모드</a></li>
+        <li><a href="member_modify_form.php">정보수정</a></li>
+        <?php } else { ?>
+        <li><a href="member_modify_form.php"><?php echo $logged; ?></a></li>
+        <?php } ?>
+        <li><a href="logout.php">로그아웃</a></li>
+        <li><a href="board_list.php">커뮤니티</a></li>
         <?php } ?>
       </ul>
     </nav>
@@ -44,9 +50,14 @@ else $name = "";
         <?php if (!$userid) { ?>
         <li><a href="login_form.php">로그인</a></li>
         <li><a href="terms_form.php">회원가입</a></li>
-        <li><a href="board_list.php" onclick="alert('로그인 후 이용해주세요.');">커뮤니티</a></li>
+        <li><a href="login_form.php" onclick="alert('로그인 후 이용해주세요.');">커뮤니티</a></li>
         <?php } else { $logged = $name."님";?>
-        <li><a href="member_modify_form.php"><?= $logged ?></a></li>
+        <?php if($userlevel==1) {?>
+        <li><a href="admin.php">관리자 모드</a></li>
+        <li><a href="member_modify_form.php">정보수정</a></li>
+        <?php } else { ?>
+        <li><a href="member_modify_form.php"><?php echo $logged; ?></a></li>
+        <?php } ?>
         <li><a href="logout.php">로그아웃</a></li>
         <li><a href="board_list.php">커뮤니티</a></li>
         <?php } ?>

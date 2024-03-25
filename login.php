@@ -23,6 +23,7 @@ if (!$num_match) {
         session_start();
         $_SESSION["userid"] = $row["id"];
         $_SESSION["name"] = $row["name"];
+        $_SESSION["level"] = $row["level"];
         echo json_encode(array('success' => true, 'redirect' => 'index.php'));
     }
 }
