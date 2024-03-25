@@ -250,11 +250,15 @@
 }
 .category button {
   padding: 1rem;
-  background-color: transparent;
+  /* background-color: transparent; */
   cursor: pointer;
   font-size: 1.25rem;
   border-radius: 50px;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+.focused {
+  background-color: #14471e;
+  color: #fff;
 }
 .category button:hover,
 .category button:focus {
@@ -311,6 +315,8 @@
   width: 50%;
   margin-top: -35px;
 }
+
+.map_wrap { max-width: 600px;}
 
 @media screen and (min-width: 375px) and (max-width: 768px) {
 
