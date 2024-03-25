@@ -98,7 +98,6 @@
   .section-2-container {
     flex-direction: column;
     background-image: none;
-    margin-top: 100px;
   }
   .listbox {
     width: 100%;
@@ -132,7 +131,6 @@
     background-image: none;
     /* background-position: left bottom;
     background-repeat: no-repeat; */
-    margin-top: 100px;
   }
   .section-2-main-text {
     width: 100%;

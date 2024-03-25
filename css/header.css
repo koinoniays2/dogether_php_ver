@@ -92,7 +92,7 @@
 }
 
 #check_box:checked + label > span {
-  background: white;
+  background: black;
 }
 
 #check_box:checked + label > span:nth-child(1) {
