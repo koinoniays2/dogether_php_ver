@@ -21,7 +21,7 @@
 	    	게시판 > 목록보기
 		</h3>
 	    <ul id="board_list">
-				<li style="border-width: 2px 0 1px 0; border-style: solid; border-color: #14471e;">
+				<li style="border-width: 2px 0 1px 0; border-style: solid; border-color: #c0c0c0;">
 					<span class="col1">번호</span>
 					<span class="col2">제목</span>
 					<span class="col3">글쓴이</span>
