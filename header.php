@@ -40,7 +40,7 @@ else $name = "";
     </label>
     <div id="side_menu">
       <ul>
-        <li style="font-size: 20px; margin-top: 30px; margin-bottom: 10px; color: #ee9b01;">USER</li>
+        <li style="font-weight: bold;font-size: 20px; margin-top: 30px; margin-bottom: 10px; color: #ee9b01;">USER</li>
         <?php if (!$userid) { ?>
         <li><a href="login_form.php">로그인</a></li>
         <li><a href="terms_form.php">회원가입</a></li>
@@ -51,8 +51,8 @@ else $name = "";
         <li><a href="board_list.php">커뮤니티</a></li>
         <?php } ?>
           
-        <div style="width: 100%; border-radius: 1rem; height: 5px; background: #808080; margin-top: 30px;"></div>
-        <li style="font-size: 20px; margin-top: 30px; margin-bottom: 10px; color: #ee9b01;">MENU</li>
+        <div style="width: 100%; border-radius: 1rem; height: 2px; background: #ee9b01; margin-top: 30px;"></div>
+        <li style=" font-weight: bold; font-size: 20px; margin-top: 30px; margin-bottom: 10px; color: #ee9b01;">MENU</li>
         <li><a href="detail.php?dataId=병원">동물병원&약국</a></li>
         <li><a href="detail.php?dataId=음식점">음식점</a></li>
         <li><a href="detail.php?dataId=미용">애견 미용샵</a></li>
