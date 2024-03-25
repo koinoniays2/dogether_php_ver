@@ -1,20 +1,121 @@
-.section-1-container {width: 100%; max-width: 1280px; margin: 100px auto; padding: 0 1rem;}
-.section-1-container form {display: flex; flex-direction: column; padding-top: 2rem; margin: 50px; }
-.section-1-container form input {padding: 1rem 0; height: 5rem; font-size: 1.5rem; width: 100%; background-color: #EEE; border: 2px solid #14471E ;  border-radius: 2px ;}
-.section-1-container form textarea {font-size: 1rem;}
-.section-1-container form div {display: flex; justify-content: flex-end; gap: 0.5rem;}
-.section-1-container form div button {cursor: pointer;}
-#board_form{width: 100%;}
-.col1{font-size: 20px;}
-#board_form li{padding: 12px 0;}
-#board_form textarea { width: 100%;	height: 300px; background-color: #EEE; border: 2px solid #14471E ;  border-radius: 2px ;}
-span { text-align: end; }
-.buttons{display: flex; justify-content: end; gap: 10px;}
+.section-1-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 100px auto;
+  padding: 0 1rem;
+}
+.section-1-container form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+  margin: 50px;
+}
+.section-1-container form input {
+  padding: 1rem 0;
+  height: 5rem;
+  font-size: 1.5rem;
+  width: 100%;
+  background-color: #fff;
+  border: 2px solid #14471e;
+  border-radius: 1rem;
+}
+.section-1-container form textarea {
+  font-size: 1rem;
+}
+.section-1-container form div {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+.section-1-container form div button {
+  cursor: pointer;
+}
+#board_form {
+  width: 100%;
+}
 
+.col1 {
+  font-size: 20px;
+}
+#board_form li {
+  padding: 12px 0;
+}
+#board_form textarea {
+  width: 100%;
+  height: 300px;
+  background-color: #fff;
+  border: 2px solid #14471e;
+  border-radius: 1rem;
+}
+span {
+  text-align: end;
+}
+.buttons {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+}
 
-#board_box{width: 100%; max-width: 1280px; margin: 100px auto; padding: 0 1rem;}
-#board_list{display: flex; flex-direction: column;}
-#board_list > li{display: flex; justify-content: space-between;}
-#page_num{display: flex; justify-content: center;}
+.buttons li {
+  border: 1px solid black;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  background-color: #14471e;
+  color: #fff;
+}
 
-#view_content{display: flex; flex-direction: column;}
+#title {
+  text-align: center;
+  font-family: "LOTTERIACHAB";
+  font-size: 3rem;
+}
+
+#board_box {
+  width: 100%;
+  max-width: 1280px;
+  margin: 100px auto;
+  padding: 0 1rem;
+}
+#board_list {
+  margin-top: 5px;
+  flex-direction: column;
+}
+#board_list > li {
+  display: flex;
+  justify-content: space-between;
+}
+#board_list li:last-child {
+  border-width: 0px 0 2px 0;
+  border-style: solid;
+  border-color: #14471e;
+}
+#board_list li span {
+  width: 25%;
+  text-align: start;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+#page_num {
+  display: flex;
+  justify-content: center;
+}
+
+#view_content {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #14471e;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+#sub_box {
+  border-width: 0px 0 1px 0;
+  border-style: solid;
+  border-color: #808080;
+}
+
+#page_num {
+  margin-top: 5px;
+}
