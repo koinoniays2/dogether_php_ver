@@ -20,9 +20,9 @@
         </div>
       </div>
     </div>
-    <!-- <div class="footer_con2">
-      <p class="footer_text">㈜ DOGETHER는 대표 최연성과 구성원들이 반려동물과 함께하는 건강한 일상을 위해 만든 사이트입니다. </p>
-    </div> -->
+    <div class="footer_con2">
+      <p class="footer_text">㈜ DOGETHER는 대표 김지승과 구성원들이 반려동물과 함께하는 건강한 일상을 위해 만든 사이트입니다. </p>
+    </div>
   </div>
 
 
