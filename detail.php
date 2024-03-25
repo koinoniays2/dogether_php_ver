@@ -25,7 +25,7 @@
   <!-- 섹션2 인트로 픽스 -->
   <section id="detail-intro">
     <div id="intro-box1" class="intro-box">
-      <div class="text-box">반려동물 동반입장 가능한 곳을 찾고 계신가요?</div>
+      <div class="text-box">반려동물과 반려인을 위한 서비스 시설을 검색해보세요!</div>
     </div>
   </section>
 
