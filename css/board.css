@@ -151,6 +151,10 @@ span {
   gap: 5px;
 }
 
+#text_area {
+  line-height: 3;
+}
+
 #text_area .col2 textarea {
   font-size: 1rem;
   padding: 0.4rem;
